@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ramantehlan.github.io/blog/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/categories/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,14 +44,15 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/tags/</loc>
+    <loc>https://ramantehlan.github.io/blog/categories/startup/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/</loc>
+    <loc>https://ramantehlan.github.io/blog/tags/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -12,12 +12,25 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://ramantehlan.github.io/blog/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/about/</guid>
+      <description>Hugo is a static site engine written in Go.
+It makes use of a variety of open source projects including:
+ Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
       <title>Design Thinking - Miracle of Innovation</title>
       <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
-      <description>&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;
+
+&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
     </item>
     
   </channel>

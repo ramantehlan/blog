@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>designThinking on Official Blog of Raman Tehlan</title>
+    <title>DesignThinking on Official Blog of Raman Tehlan</title>
     <link>https://ramantehlan.github.io/blog/tags/designthinking/</link>
-    <description>Recent content in designThinking on Official Blog of Raman Tehlan</description>
+    <description>Recent content in DesignThinking on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
@@ -17,7 +17,9 @@
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
-      <description>&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;
+
+&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
     </item>
     
   </channel>
