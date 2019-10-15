@@ -7,15 +7,13 @@ weight: 50
 
 ---
 
-Hugo is a static site engine written in Go.
+Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my <a href="/">website</a>, to know me more personally you can continue reading my blog.
+
+I'm Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems. By the age of 14, I was comfortable in programming in multiple languages, like C++, BASIC, PHP, JavaScript etc. At 17, I started my first company (AlvisAi) and at 19, I started my second company (Cashfog), both are open-source now. I love to attend hackathons and startup weekends and create new projects. Most of my projects are open source since I am also a FOSS enthusiast, I have contributed to many projects. Right now, I am learning new stuff, also looking for new opportunities to apply them in the real world.
+
+I see my life as a tool to improve the lives of souls around me, trying to leave something behind. I use technology as my power to achieve that.
 
 
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Regards<br>
+**Raman Tehlan**
 

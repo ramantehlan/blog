@@ -10,7 +10,49 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/categories/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/categories/experience/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/internshipexperienceudacity/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/tags/internshipexperience/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/tags/</loc>
+    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ramantehlan.github.io/blog/categories/startup/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/tags/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

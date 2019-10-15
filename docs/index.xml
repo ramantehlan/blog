@@ -6,7 +6,7 @@
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 04:12:48 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,14 +23,22 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Internship Experience at Udaicty</title>
+      <link>https://ramantehlan.github.io/blog/post/internshipexperienceudacity/</link>
+      <pubDate>Tue, 15 Oct 2019 04:12:48 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/internshipexperienceudacity/</guid>
+      <description>here comes the preface
+Application Here comes the process of applying.</description>
+    </item>
+    
+    <item>
       <title>Design Thinking - Miracle of Innovation</title>
       <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
-      <description>&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;
-
-&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
+      <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, an entrepreneur, programmer etc. Everyone needs to get lean and do better with limited resources and time. That is where the design thinking comes in the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this story.</description>
     </item>
     
   </channel>
