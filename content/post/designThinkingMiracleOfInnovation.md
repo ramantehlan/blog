@@ -1,13 +1,13 @@
 ---
-title: "First"
-date: 2019-10-15T04:17:48+05:30
-lastmod: 2019-10-15T04:17:48+05:30
+title: "Design Thinking - Miracle of Innovation"
+date: 2018-06-05T04:17:48+05:30
+lastmod: 2018-06-05T04:17:48+05:30
 draft: false
 keywords: []
 description: ""
-tags: []
+tags: ['designThinking']
 categories: []
-author: ""
+author: "Raman Tehlan"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
@@ -40,6 +40,6 @@ sequenceDiagrams:
 
 ---
 
-hello World
+this blog will hold the migrated blog from the medium blog on the same topic I did in 2018
 
 <!--more-->

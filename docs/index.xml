@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Even - A super concise theme for Hugo</title>
+    <title>Official Blog of Raman Tehlan</title>
     <link>https://ramantehlan.github.io/blog/</link>
-    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Oct 2019 04:17:48 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>https://ramantehlan.github.io/blog/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <title>Design Thinking - Miracle of Innovation</title>
+      <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
+      <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://ramantehlan.github.io/blog/post/first/</link>
-      <pubDate>Tue, 15 Oct 2019 04:17:48 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/post/first/</guid>
-      <description>&lt;p&gt;hello World&lt;/p&gt;</description>
+      <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
+      <description>&lt;p&gt;this blog will hold the migrated blog from the medium blog on the same topic I did in 2018&lt;/p&gt;</description>
     </item>
     
   </channel>
