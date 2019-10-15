@@ -3,21 +3,20 @@ title: "Design Thinking - Miracle of Innovation"
 date: 2018-06-05T04:17:48+05:30
 lastmod: 2018-06-05T04:17:48+05:30
 draft: false
-keywords: []
-description: ""
-tags: ['designThinking']
-categories: []
+description: "Miracle of Innovation"
+tags: ['DesignThinking']
+categories: ["startup"]
 author: "Raman Tehlan"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
-comment: false
-toc: false
-autoCollapseToc: false
-postMetaInFooter: false
+comment: true
+toc: true
+autoCollapseToc: true
+postMetaInFooter: true
 hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
+contentCopyright: ''
 reward: false
 mathjax: false
 mathjaxEnableSingleDollar: false
@@ -28,7 +27,7 @@ hideHeaderAndFooter: false
 
 # You can enable or disable out-of-date content warning for individual post.
 # Comment this out to use the global config.
-#enableOutdatedInfoWarning: false
+enableOutdatedInfoWarning: false
 
 flowchartDiagrams:
   enable: false
@@ -39,6 +38,8 @@ sequenceDiagrams:
   options: ""
 
 ---
+
+# Blog
 
 this blog will hold the migrated blog from the medium blog on the same topic I did in 2018
 
