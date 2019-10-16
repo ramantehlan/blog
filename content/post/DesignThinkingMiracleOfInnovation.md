@@ -30,6 +30,7 @@ Design thinking is an approach to resolve issues using the collection of creativ
 <center> *Design Thinking as a problem-solving approach it is human-centred, possibility-driven, option-focused and iterative in its approach.* </center>
 
 ![](https://user-images.githubusercontent.com/29037312/66906328-1ea38580-f025-11e9-8116-1250ad286550.jpeg)
+<center>*Creative process: Designing for growth | System by Jeanne Liedtka*</center>
 
 ## 1. What **is**?
 
@@ -172,6 +173,7 @@ This focus like journey mapping is more likely to produce the kind of deep and o
 # 3. Idea Generation.
 
 ![](https://user-images.githubusercontent.com/29037312/66906327-1e0aef00-f025-11e9-9798-c0e92966d890.jpeg)
+<center>*Idea generation*</center>
 
 ## Projective Techniques
 
@@ -224,7 +226,7 @@ Use connection and insights to create design criteria. To generate design criter
 # 4. Experimentation.
 
 ![](https://user-images.githubusercontent.com/29037312/66906325-1e0aef00-f025-11e9-881b-7efbfe6dc9ec.jpeg)
-
+<center>*wow zone*</center>
 ## Learning Launch
 
 A small experiment that tests your new ideas in the real marketplace, testing an experiment or an assumption, faster in a small area. Before you can move further, you need to find out:
@@ -248,6 +250,7 @@ Search for “big lie”, for confirming and disconfirming facts. Observation is
 5. Permission to speak freely.
 
 ![](https://user-images.githubusercontent.com/29037312/66906323-1d725880-f025-11e9-8693-0be167642be1.jpeg)
+<center>*Iterative loop*</center>
 
 ## Strategic opportunities: How to take advantage of the opportunity?
 
