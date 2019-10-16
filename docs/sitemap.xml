@@ -1,80 +1,59 @@
-<?xml-stylesheet type="text/xsl" href="https://ramantehlan.github.io/blog/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://ramantehlan.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/about/</loc>
+    <loc>https://ramantehlan.github.io/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/categories/experience/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/internshipexperienceudacity/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/tags/internshipexperience/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/tags/</loc>
-    <lastmod>2019-10-15T04:12:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</loc>
+    <loc>https://ramantehlan.github.io/categories/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/tags/designthinking/</loc>
+    <loc>https://ramantehlan.github.io/post/designthinkingmiracleofinnovation/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/startup/</loc>
+    <loc>https://ramantehlan.github.io/tags/designthinking/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/post/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/categories/startup/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/tags/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
