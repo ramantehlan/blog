@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Official Blog of Raman Tehlan</title>
-    <link>https://ramantehlan.github.io/</link>
+    <link>https://ramantehlan.github.io/blog/</link>
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
     
-	<atom:link href="https://ramantehlan.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://ramantehlan.github.io/about/</link>
+      <link>https://ramantehlan.github.io/blog/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>https://ramantehlan.github.io/about/</guid>
+      <guid>https://ramantehlan.github.io/blog/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
     </item>
     
     <item>
       <title>Design Thinking - Miracle of Innovation</title>
-      <link>https://ramantehlan.github.io/post/designthinkingmiracleofinnovation/</link>
+      <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/post/designthinkingmiracleofinnovation/</guid>
+      <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
       <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, an entrepreneur, programmer etc. Everyone needs to get lean and do better with limited resources and time. That is where the design thinking comes in the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this story.</description>
     </item>
     
