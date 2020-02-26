@@ -2,7 +2,7 @@
 title: "Design Thinking - Miracle of Innovation"
 date: 2018-06-05T04:17:48+05:30
 lastmod: 2018-06-05T04:17:48+05:30
-draft: false
+draft: true
 description: "Miracle of Innovation"
 tags: ['DesignThinking']
 keywords: [ "Design-Thinking", "Innovation", "Start Up", "Mind Mapping", "Brainstorming"]
