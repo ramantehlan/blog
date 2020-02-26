@@ -9,14 +9,14 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/post/howtofail/</loc>
+    <loc>https://ramantehlan.github.io/blog/howtofail/</loc>
     <lastmod>2019-11-07T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/post/howtospeak/</loc>
+    <loc>https://ramantehlan.github.io/blog/howtospeak/</loc>
     <lastmod>2019-11-07T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <loc>https://ramantehlan.github.io/blog/pydatanyc/</loc>
     <lastmod>2019-11-07T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -58,6 +58,13 @@
   </url>
   
   <url>
+    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ramantehlan.github.io/blog/tags/</loc>
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
@@ -69,11 +76,6 @@
     <lastmod>2018-06-05T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/pydatanyc/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

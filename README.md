@@ -6,5 +6,9 @@ Personal Blog based on [Hugo](https://gohugo.io) and [Theme-even](https://themes
 ### Dev Server
 `hugo server -D`
 
-### Build 
+### Build
 `hugo -D`
+
+### Add new post
+`hugo new post/foo.md`
+
