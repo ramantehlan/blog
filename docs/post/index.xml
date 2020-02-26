@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 19:39:12 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HowToFail</title>
+      <link>https://ramantehlan.github.io/blog/post/howtofail/</link>
+      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/howtofail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HowToSpeak</title>
+      <link>https://ramantehlan.github.io/blog/post/howtospeak/</link>
+      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/howtospeak/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Unzc731iCUY&#34;&gt;https://www.youtube.com/watch?v=Unzc731iCUY&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Design Thinking - Miracle of Innovation</title>
@@ -18,6 +36,15 @@
       
       <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
       <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, an entrepreneur, programmer etc. Everyone needs to get lean and do better with limited resources and time. That is where the design thinking comes in the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this story.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ramantehlan.github.io/blog/post/pydatanyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/pydatanyc/</guid>
+      <description>PyData NYC I really messed up my talk; I kinda feel it should not even go live, that&amp;rsquo;s the last thing I want my parents/friends or me to see. I think I am bad at calculating situations, I really need to fix it, I don&amp;rsquo;t want to feel like this again. I wish I could go back in time and change stuff, but I can&amp;rsquo;t, so all I can do now is make the future better and make things work.</description>
     </item>
     
   </channel>
