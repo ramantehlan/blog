@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://ramantehlan.github.io/blog/sitemap.xml
