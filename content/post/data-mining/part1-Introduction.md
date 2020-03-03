@@ -52,14 +52,28 @@ Data generated is most often in a very raw format and it's very hard to make sen
 
 The data mining process involves 6 common classes of tasks:
 
+1. Anomaly Detection
+2. Association Rule Learning
+3. Clustering
+4. Classification
+5. Regression
+6. Summarization
+
 ## 1. Anomaly Detection
 <center>
-<img src="https://user-images.githubusercontent.com/29037312/75825871-41fc8080-5dcc-11ea-8465-bcbfff2fae67.png" alt="Anomaly Detection">
+<img src="https://user-images.githubusercontent.com/29037312/75825871-41fc8080-5dcc-11ea-8465-bcbfff2fae67.png" alt="Anomaly Detection" width="350">
 
-*[Source: Wikipedia](https://www.wikiwand.com/en/Anomaly_detection)*
+*[Source: Wikipedia](https://en.wikipedia.org/wiki/Anomaly_detection)*
 </center>
 
-The **process to recognize unusual data records**, that might be an outlier/change/deviation/noise/error that requires further examination. This process is also used in a variety of domains, such as intrusion detection, fraud detection, fault detection, system health monitoring, event detection in sensor networks and detecting ecosystem disturbances.
+The **process to recognize unusual data records, that might be an outlier/change/deviation/noise/error** that requires further examination. This process is also used in a variety of domains, such as intrusion detection, fraud detection, fault detection, system health monitoring, event detection in sensor networks and detecting ecosystem disturbances.
+
+## 2. Association Rule Learning
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75827618-1c717600-5dd0-11ea-97a5-d85a145cfc5b.png" alt="association rule learning" width="350">
+
+*[Source: Wikipedia](https://en.wikipedia.org/wiki/Association_rule_learning)*
+</center>
 
 
 # Data Mining Issues
