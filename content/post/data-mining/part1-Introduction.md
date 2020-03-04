@@ -61,28 +61,60 @@ The data mining process involves 6 common classes of tasks:
 
 ## 1. Anomaly Detection
 <center>
-<img src="https://user-images.githubusercontent.com/29037312/75825871-41fc8080-5dcc-11ea-8465-bcbfff2fae67.png" alt="Anomaly Detection" width="350">
+<img src="https://user-images.githubusercontent.com/29037312/75864107-8bc68480-5e27-11ea-855c-14a17e132145.png" alt="Anomaly Detection" width="350">
 
-*[Source: Wikipedia](https://en.wikipedia.org/wiki/Anomaly_detection)*
+*[Source: Engineering.com](https://www.engineering.com/AdvancedManufacturing/ArticleID/19058/Anomaly-Detection-Industrial-Asset-Insights-Without-Historical-Data.aspx)*
 </center>
 
 The **process to recognize unusual data records, that might be an outlier/change/deviation/noise/error** that requires further examination. This process is also used in a variety of domains, such as intrusion detection, fraud detection, fault detection, system health monitoring, event detection in sensor networks and detecting ecosystem disturbances.
 
 ## 2. Association Rule Learning
 <center>
-<img src="https://user-images.githubusercontent.com/29037312/75827618-1c717600-5dd0-11ea-97a5-d85a145cfc5b.png" alt="association rule learning" width="350">
+<img src="https://user-images.githubusercontent.com/29037312/75864127-92ed9280-5e27-11ea-9805-540ca59f4641.png" alt="association rule learning" width="350">
 
-*[Source: Wikipedia](https://en.wikipedia.org/wiki/Association_rule_learning)*
+*[source: wikipedia](https://en.wikipedia.org/wiki/association_rule_learning)*
 </center>
 
+it is used to **discover relationships between data variables to create a dependency model**. The most popular example is [affinity analysis or market basket analysis](https://www.wikiwand.com/en/Affinity_analysis), let's say from the store data we can determine which product or combination of products are frequently bought together, we can use this information for promotional pricing, product placements or marketing. It is also used for web usage mining, continuous production and bioinformatics.
 
-# Data Mining Issues
-# Decision Support System
-# Dimentional Modelling
-# Data Warehousing
-# OLAP & its tools
-# OLTP
+## 3. Clustering
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75864147-97b24680-5e27-11ea-8336-c0fff0e52b90.png" alt="clustering" width="350">
 
+*[Source: datanovi](https://www.datanovia.com/en/lessons/clara-in-r-clustering-large-applications/)*
+</center>
+
+The **task of grouping data which is in some way or another "similar"**, without using known structures in the data. It is many fields, including machine learning, pattern recognition, image analysis, information retrieval, bioinformatics, data compression, and computer graphics.
+
+## 4. Classification
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75864157-9b45cd80-5e27-11ea-8140-6bbb15662a41.png" alt="clustering" width="350">
+
+</center>
+
+The **task of mapping new or existing data into a set of categories, based on the features of data**. Applications of classification are in domains like computer vision, drug discovery and development, geostatistics, speech recognition, statistical NLP, pattern recognition, recommender system etc.
+
+## 5. Regression
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75864168-9da82780-5e27-11ea-8b17-b3e7673048fe.png" alt="clustering" width="350">
+</center>
+
+It is a **task to find a function which models the data with least error**. It is to estimate the relationships between dependent variables (outcome variables) and one or more independent variables(predictors or features). It is used for sales/market forecasts, risk analysis for investments, quality control, human resources.
+
+## 6. Summarization
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75879218-03ed7400-5e41-11ea-8f6e-7b838ee163e5.png" alt="clustering" width="600">
+
+*Different visualizations used in summarization. Source:[Morphocode](https://morphocode.com/location-time-urban-data-visualization/)*
+</center>
+
+It is a **task of providing a more compact representation of the data set**, including visualization and report generation.
+
+# Architecture
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75909603-69a62400-5e72-11ea-84a8-7a23020ed874.png" alt="clustering" width="400">
+
+*This is the standard data mining architecture. Source: [ResearchGate](https://www.researchgate.net/figure/The-architecture-of-a-data-mining-system_fig1_323401290)* </center>
 
 
 

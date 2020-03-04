@@ -44,8 +44,8 @@ A blog series on Data Mining, which I will publish in 5 parts. I will be taking 
 
 # [Part 1: Introduction to Data Mining](#)
 
-- Data Mining Tasks
-- Data Mining Issues
+- Tasks
+- Issues
 - Decision Support System
 - Dimentional Modelling
 - Data Warehousing
