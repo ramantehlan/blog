@@ -19,13 +19,13 @@ mathjaxEnableAutoNumber: true
 
 ---
 
-You have your our own set of skills and knowledge, which you collect over time from the education or through experiencing life. it's also very important to learn to effectively pass it to other people, no one should go out into life without the ability to communicate. As your success in life will be determined largely by:
+You have your our own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It's also very important to learn to effectively pass it to other people, no one should go out into life without the ability to communicate. Your success in life will be determined largely by:
 
 1. Your ability to speak.
 2. Your ability to write.
 3. The quality of your ideas.
 
-The quality of communication is determined by this formula. Knowledge contributes the most to it, so you can get a lot better than people who may have the inherent talent if you have the right about of knowledge.
+The quality of communication is determined by this formula. Knowledge contributes the most to it, so you can get a lot better than people who may have the inherent talent if you have the right amount of knowledge.
 
 $$
   Q_{uality} = f( 5k\_{nowledge} , 3p\_{ractice} , 2t\_{alent} )
@@ -34,7 +34,7 @@ $$
 # How To Start
 
 **1. Don't Start with a joke.** <br>
-As people are still getting adjusted to your way of speaking and the environment, they might not be ready for a joke.
+As people are still getting adjusted to your way of speaking, they might not be ready for a joke.
 
 **2. Start with an empowerment promise.**<br>
 Tell people what they are going to know by the end of the talk. Show the result they are going to get and then talk about the process.
@@ -42,16 +42,16 @@ Tell people what they are going to know by the end of the talk. Show the result 
 # Samples
 
 ## Circle
-It's a good idea to repeat the subject or key idea multiple times. Tell it at the beginning, middle and in the end. There are many reasons for it, the main one is at any given point 20% of the people won't be paying attention.
+It's a good idea to repeat the subject or key idea multiple times; tell it at the beginning, middle and in the end. There are many reasons for it, the main one is that at any given point 20% of the people won't be paying attention.
 
 ## Build fence
-Many times your idea might be similar to other ideas, and you must clear it to the audience to not confuse it with other ideas, tell them how it is different.
+Many times your idea might be similar but you must clear it to the audience to not confuse it with other ideas, tell them how it is different.
 
-## Verbal Punctuation.
-People fog out fast, it's helpful to provide a landmark to get them back like index or outline.
+## Verbal Punctuation
+People fog out fast, it's helpful to provide a landmark to get them back, you can use an index or outline.
 
 ## Question
-It is a good way to of engaging audience or getting back their attention. However, the question needs to be carefully chosen.
+It is a good way of engaging the audience or getting back their attention. However, the question needs to be carefully chosen:
 
 - If it's too obvious --> People will be too embarrassed to answer it.
 
@@ -66,19 +66,16 @@ It is important to make sure that the time of the talk or lecture is not right a
 
 If the purpose is informing, boards should be preferred. Reason for that is:
 
-- It has **graphic quality**. it easy to add or draw graphic on the fly. 
+- It has the **graphic quality** and it's easy to add or draw graphic on the fly.
 - **Speed** of writing on board is the right amount of speed with which people can learn.
-- It's easy to point or **target**, so you use your hands.
+- It’s easy to point at something using your hands.
 
 ## Slides
 
-- Don't use too many words.
-- don't use too many slides.
-- Stand near slides and be in the image.
-- Don't read slides.
-- Keep images simple.
-- Eliminate clusters. Like if possible, remove page title, you can speak the title, so your audience still has attention on you.
-- Use large fonts.
+- Use large fonts, don't use too many words and slides.
+- To be in the audience's line of vision, stand near slides and be in the image.
+- Don't read out the slides and keep graphics simple.
+- Eliminate clusters: like remove the page title and read it out instead.
 - Don't use leasers. (Use graphic pointer) 
 - Give time people to read, we have only one language processor.
 - **hapax legomenon**: you can get away with too much content on slide exactly once in your presentation. This will be your main slide.
