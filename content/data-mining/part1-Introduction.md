@@ -116,5 +116,33 @@ It is a **task of providing a more compact representation of the data set**, inc
 
 *This is the standard data mining architecture. Source: [ResearchGate](https://www.researchgate.net/figure/The-architecture-of-a-data-mining-system_fig1_323401290)* </center>
 
+## 1. Knowledge Base
+
+This is the domain knowledge that is used to guide the search or evaluate the interestingness of resulting patterns.
+
+## 2. Data Mining Engine
+
+This is essential to the data mining system and ideally consists of a set of functional modules for tasks such as characterization, association and correlation analysis, classification, prediction, cluster analysis, outlier analysis, and evolution analysis.
+
+## 3. Pattern Evaluation Module
+
+This component typically employs interestingness measures interacts with the data mining modules to focus the search toward interesting patterns. It may use interestingness thresholds to filter out discovered patterns. Alternatively, the pattern evaluation module may be integrated with the mining module, depending on the implementation of the data mining method used. For efficient data mining, it is highly recommended to push the evaluation of pattern interestingness as deep as possible into the mining process to confine the search to only the interesting patterns.
+
+## 4. User Interface
+
+This module communicates between users and the data mining system, allowing the user to interact with the system by specifying a data mining query or task, providing information to help focus the search, and performing exploratory data mining based on the intermediate data mining results. Also, this component allows the user to browse database and data warehouse schemas or data structures, evaluate mined patterns, and visualize the patterns in different forms.
+
+# Process
+Data mining is a process of discovering various models, summaries, and derived values from a given collection of data. The general experimental procedure adapted to data-mining problems involves the following steps:
+
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/75933555-48f4c300-5ea0-11ea-94f5-3a24d10aca31.png" alt="clustering" >
+
+*Source: [DigitalTransformationPro](https://digitaltransformationpro.com/data-mining-steps/)* </center>
+
+# Classification of Data Mining Systems
+
+Data mining is an interdisciplinary field, the confluence of a set of disciplines, including database systems, statistics, machine learning, visualization, and information science.
+
 
 

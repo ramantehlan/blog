@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Official Blog of Raman Tehlan</title>
+    <link>https://ramantehlan.github.io/blog/categories/</link>
+    <description>Recent content in Categories on Official Blog of Raman Tehlan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Jun 2018 04:17:48 +0530</lastBuildDate>
+    
+	<atom:link href="https://ramantehlan.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thinking</title>
+      <link>https://ramantehlan.github.io/blog/categories/thinking/</link>
+      <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/categories/thinking/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

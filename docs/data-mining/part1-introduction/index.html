@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Part-1: Introduction to Data Mining - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="" /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/data-mining/part1-introduction/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/blog/dist/even.2c88c3d7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Part-1: Introduction to Data Mining" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/data-mining/part1-introduction/" />
+<meta property="article:published_time" content="2020-03-03T21:43:19+05:30" />
+<meta property="article:modified_time" content="2020-03-03T21:43:19+05:30" />
+<meta itemprop="name" content="Part-1: Introduction to Data Mining">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2020-03-03T21:43:19&#43;05:30" />
+<meta itemprop="dateModified" content="2020-03-03T21:43:19&#43;05:30" />
+<meta itemprop="wordCount" content="735">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Part-1: Introduction to Data Mining"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>Data is growing at astonishing rates, it is being created every second. <a href="https://www.domo.com/learn/data-never-sleeps-6">In 2020, every person will generate 1.7 megabytes every second</a>. This data is powerful, it helps in making data-informed decisions. For example, <a href="https://insidebigdata.com/2018/01/20/netflix-uses-big-data-drive-success/">Netflix saves $1 billion per year on customer retention</a>, they use data to create its strategy to lower subscription cancellation rates by adjusting or adding new features.</p>
+
+<p>Data generated is most often in a very raw format and it&rsquo;s very hard to make sense of it. Which is why we need to process it to get more sophisticated information out of it. <strong>Data Mining is the process of extracting information from a large amount of data</strong>. Given data of ample size and quality, data mining provides the following capabilities:</p>
+
+<ul>
+<li><strong>Predictive</strong>: Predict trends and behaviours.</li>
+<li><strong>Desciptive</strong>: Discover unknown patterns.</li>
+</ul>
+
+<h1 id="tasks">Tasks</h1>
+
+<p>The data mining process involves 6 common classes of tasks:</p>
+
+<ol>
+<li>Anomaly Detection</li>
+<li>Association Rule Learning</li>
+<li>Clustering</li>
+<li>Classification</li>
+<li>Regression</li>
+<li>Summarization</li>
+</ol>
+
+<h2 id="1-anomaly-detection">1. Anomaly Detection</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75864107-8bc68480-5e27-11ea-855c-14a17e132145.png" alt="Anomaly Detection" width="350"></p>
+
+<p><em><a href="https://www.engineering.com/AdvancedManufacturing/ArticleID/19058/Anomaly-Detection-Industrial-Asset-Insights-Without-Historical-Data.aspx">Source: Engineering.com</a></em>
+</center></p>
+
+<p>The <strong>process to recognize unusual data records, that might be an outlier/change/deviation/noise/error</strong> that requires further examination. This process is also used in a variety of domains, such as intrusion detection, fraud detection, fault detection, system health monitoring, event detection in sensor networks and detecting ecosystem disturbances.</p>
+
+<h2 id="2-association-rule-learning">2. Association Rule Learning</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75864127-92ed9280-5e27-11ea-9805-540ca59f4641.png" alt="association rule learning" width="350"></p>
+
+<p><em><a href="https://en.wikipedia.org/wiki/association_rule_learning">source: wikipedia</a></em>
+</center></p>
+
+<p>it is used to <strong>discover relationships between data variables to create a dependency model</strong>. The most popular example is <a href="https://www.wikiwand.com/en/Affinity_analysis">affinity analysis or market basket analysis</a>, let&rsquo;s say from the store data we can determine which product or combination of products are frequently bought together, we can use this information for promotional pricing, product placements or marketing. It is also used for web usage mining, continuous production and bioinformatics.</p>
+
+<h2 id="3-clustering">3. Clustering</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75864147-97b24680-5e27-11ea-8336-c0fff0e52b90.png" alt="clustering" width="350"></p>
+
+<p><em><a href="https://www.datanovia.com/en/lessons/clara-in-r-clustering-large-applications/">Source: datanovi</a></em>
+</center></p>
+
+<p>The <strong>task of grouping data which is in some way or another &ldquo;similar&rdquo;</strong>, without using known structures in the data. It is many fields, including machine learning, pattern recognition, image analysis, information retrieval, bioinformatics, data compression, and computer graphics.</p>
+
+<h2 id="4-classification">4. Classification</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75864157-9b45cd80-5e27-11ea-8140-6bbb15662a41.png" alt="clustering" width="350"></p>
+
+<p></center></p>
+
+<p>The <strong>task of mapping new or existing data into a set of categories, based on the features of data</strong>. Applications of classification are in domains like computer vision, drug discovery and development, geostatistics, speech recognition, statistical NLP, pattern recognition, recommender system etc.</p>
+
+<h2 id="5-regression">5. Regression</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75864168-9da82780-5e27-11ea-8b17-b3e7673048fe.png" alt="clustering" width="350">
+</center></p>
+
+<p>It is a <strong>task to find a function which models the data with least error</strong>. It is to estimate the relationships between dependent variables (outcome variables) and one or more independent variables(predictors or features). It is used for sales/market forecasts, risk analysis for investments, quality control, human resources.</p>
+
+<h2 id="6-summarization">6. Summarization</h2>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75879218-03ed7400-5e41-11ea-8f6e-7b838ee163e5.png" alt="clustering" width="600"></p>
+
+<p><em>Different visualizations used in summarization. Source:<a href="https://morphocode.com/location-time-urban-data-visualization/">Morphocode</a></em>
+</center></p>
+
+<p>It is a <strong>task of providing a more compact representation of the data set</strong>, including visualization and report generation.</p>
+
+<h1 id="architecture">Architecture</h1>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75909603-69a62400-5e72-11ea-84a8-7a23020ed874.png" alt="clustering" width="400"></p>
+
+<p><em>This is the standard data mining architecture. Source: <a href="https://www.researchgate.net/figure/The-architecture-of-a-data-mining-system_fig1_323401290">ResearchGate</a></em> </center></p>
+
+<h2 id="1-knowledge-base">1. Knowledge Base</h2>
+
+<p>This is the domain knowledge that is used to guide the search or evaluate the interestingness of resulting patterns.</p>
+
+<h2 id="2-data-mining-engine">2. Data Mining Engine</h2>
+
+<p>This is essential to the data mining system and ideally consists of a set of functional modules for tasks such as characterization, association and correlation analysis, classification, prediction, cluster analysis, outlier analysis, and evolution analysis.</p>
+
+<h2 id="3-pattern-evaluation-module">3. Pattern Evaluation Module</h2>
+
+<p>This component typically employs interestingness measures interacts with the data mining modules to focus the search toward interesting patterns. It may use interestingness thresholds to filter out discovered patterns. Alternatively, the pattern evaluation module may be integrated with the mining module, depending on the implementation of the data mining method used. For efficient data mining, it is highly recommended to push the evaluation of pattern interestingness as deep as possible into the mining process to confine the search to only the interesting patterns.</p>
+
+<h2 id="4-user-interface">4. User Interface</h2>
+
+<p>This module communicates between users and the data mining system, allowing the user to interact with the system by specifying a data mining query or task, providing information to help focus the search, and performing exploratory data mining based on the intermediate data mining results. Also, this component allows the user to browse database and data warehouse schemas or data structures, evaluate mined patterns, and visualize the patterns in different forms.</p>
+
+<h1 id="process">Process</h1>
+
+<p>Data mining is a process of discovering various models, summaries, and derived values from a given collection of data. The general experimental procedure adapted to data-mining problems involves the following steps:</p>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/75933555-48f4c300-5ea0-11ea-94f5-3a24d10aca31.png" alt="clustering" ></p>
+
+<p><em>Source: <a href="https://digitaltransformationpro.com/data-mining-steps/">DigitalTransformationPro</a></em> </center></p>
+
+<h1 id="classification-of-data-mining-systems">Classification of Data Mining Systems</h1>
+
+<p>Data mining is an interdisciplinary field, the confluence of a set of disciplines, including database systems, statistics, machine learning, visualization, and information science.</p>
+  </div>
+</article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/blog/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.b038315c.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

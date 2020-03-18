@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Official Blog of Raman Tehlan</title>
+    <link>https://ramantehlan.github.io/blog/post/</link>
+    <description>Recent content in Posts on Official Blog of Raman Tehlan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Mar 2020 19:39:12 +0530</lastBuildDate>
+    
+	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Speak</title>
+      <link>https://ramantehlan.github.io/blog/post/howtospeak/</link>
+      <pubDate>Mon, 16 Mar 2020 19:39:12 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/howtospeak/</guid>
+      <description>You have your our own set of skills and knowledge, which you collect over time from the education or through experiencing life. it&amp;rsquo;s also very important to learn to effectively pass it to other people, no one should go out into life without the ability to communicate. As your success in life will be determined largely by:
+ Your ability to speak. Your ability to write. The quality of your ideas.</description>
+    </item>
+    
+    <item>
+      <title>Design Thinking - Miracle of Innovation</title>
+      <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
+      <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
+      <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, an entrepreneur, programmer etc. Everyone needs to get lean and do better with limited resources and time. That is where the design thinking comes in the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this story.</description>
+    </item>
+    
+  </channel>
+</rss>
