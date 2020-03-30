@@ -9,14 +9,21 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/post/howtospeak/</loc>
-    <lastmod>2020-03-16T19:39:12+05:30</lastmod>
+    <loc>https://ramantehlan.github.io/blog/</loc>
+    <lastmod>2020-03-30T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/</loc>
+    <loc>https://ramantehlan.github.io/blog/terminalshortcuts/</loc>
+    <lastmod>2020-03-30T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/howtospeak/</loc>
     <lastmod>2020-03-16T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
