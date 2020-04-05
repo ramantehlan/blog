@@ -82,5 +82,5 @@ Linux is probably the most powerful tool in the world; When I used it for the fi
 
 use `:p` in the end of bang command to preview the command. Ex. `!$:p`
 
-> Let's discuss it on [Reddit]() or [Twitter]()
+> Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvk3cg/terminal_shortcuts/) or [Twitter](https://twitter.com/ramantehlan/status/1246889936550113282)
 
