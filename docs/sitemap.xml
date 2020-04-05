@@ -10,7 +10,7 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2020-04-03T19:39:12+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,7 +23,14 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/terminalshortcuts/</loc>
+    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/terminalshortcuts/</loc>
     <lastmod>2020-03-30T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -31,13 +38,6 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/post/howtospeak/</loc>
-    <lastmod>2020-03-16T19:39:12+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
     <lastmod>2020-03-16T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -80,35 +80,35 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/categories/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ramantehlan.github.io/blog/tags/designthinking/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ramantehlan.github.io/blog/tags/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ramantehlan.github.io/blog/categories/thinking/</loc>
-    <lastmod>2018-06-05T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

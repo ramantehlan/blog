@@ -18,6 +18,7 @@ mathjaxEnableSingleDollar: true
 mathjaxEnableAutoNumber: true
 
 ---
+> This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
 
 You have your own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It's also essential to learn to pass it to other people effectively, no one should go out into life without the ability to communicate. Your success in life is primarily determined by:
 
@@ -156,5 +157,5 @@ If you end it well, all is well. You can **end it with a joke**, which makes peo
 
 **Don't end with thank you**, as it suggests that everybody has stayed that long out of politeness. **End with a salute**, like appreciate the audience for their time and interest.
 
-> This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
+> Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvjrvp/how_to_speak/) or [Twitter](https://twitter.com/ramantehlan/status/1246884226735063040)
 
