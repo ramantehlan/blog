@@ -4,7 +4,7 @@ date: 2018-06-05T04:17:48+05:30
 lastmod: 2020-04-04T04:17:48+05:30
 draft: true
 description: "Miracle of Innovation"
-tags: ['DesignThinking']
+tags: []
 keywords: [ "Design-Thinking", "Innovation", "Start Up", "Mind Mapping", "Brainstorming"]
 categories: ["Thinking"]
 
