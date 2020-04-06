@@ -5,6 +5,7 @@
   padding: 0px;
   font-family: $global-serif-font-family;
   border-radius: 5px;
+
 //  background: $post-toc-backgroud;
 //  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
   word-wrap: break-word;
@@ -15,6 +16,7 @@
     font-size: $post-toc-title-size;
     font-weight: 400;
     text-transform: uppercase;
+    color: #34495e ;
   }
 
   .post-toc-content {
@@ -35,7 +37,16 @@
       ul {
         padding-left: 15px;
         display: none;
+        li,b{
+            color: #34495e ;
+           a,b{
+            color: #34495e ;
+          }
+        }
       }
+        li, a,b{
+            color: #34495e ;
+          }
 
       .has-active > ul {
         display: block;
