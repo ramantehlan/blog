@@ -7,7 +7,7 @@
     font-size: $post-title-font-size;
     font-weight: $post-title-font-weight;
     font-family: $global-serif-font-family;
-    text-align: center;
+    text-align: left;
   }
 
   .post-link {
@@ -17,8 +17,7 @@
   .post-meta {
     font-size: 14px;
     color: $post-meta-font-color;
-    text-align: center;
-    
+    text-align: left;
 
     .post-time {
       font-size: 15px;

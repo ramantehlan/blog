@@ -4,14 +4,14 @@
 
 .posts {
   margin-bottom: $post-list-margin-bottom;
-  border-bottom: $post-border;
+  //border-bottom: $post-border;
 }
 
 .post {
-  padding: $post-padding;
+  //padding: $post-padding;
 
   & + .post {
-    border-top: $post-border;
+    //border-top: $post-border;
   }
 
   @import '_post/header';

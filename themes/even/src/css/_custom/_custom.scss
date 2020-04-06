@@ -2,3 +2,13 @@
 // Custom style
 // ==============================
 // You can override the variables in _variables.scss to customize the style
+$post-title-font-size: 18px;
+$post-title-font-weight: bold;
+$global-body-width: 800px !default;
+$post-toc-margin-left: $global-body-width - 0px !default;
+$post-toc-list-style: none !default;
+$post-toc-width: 260px !default;
+$toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
+$post-toc-title-size: 16px !default;
+
+
