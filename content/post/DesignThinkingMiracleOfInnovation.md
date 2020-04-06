@@ -6,7 +6,7 @@ draft: true
 description: "Miracle of Innovation"
 tags: []
 keywords: [ "Design-Thinking", "Innovation", "Start Up", "Mind Mapping", "Brainstorming"]
-categories: ["Thinking"]
+categories: []
 
 author: "Raman Tehlan"
 

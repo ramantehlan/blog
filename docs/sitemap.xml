@@ -79,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/</loc>
-    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</loc>
     <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
@@ -93,8 +86,7 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/thinking/</loc>
-    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
+    <loc>https://ramantehlan.github.io/blog/categories/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

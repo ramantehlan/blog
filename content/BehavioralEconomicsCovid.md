@@ -1,5 +1,5 @@
 ---
-title: "Quick dive into Behavioral Economics"
+title: "Quick Dive into Behavioral Economics"
 date: 2020-04-03T19:39:12+05:30
 lastmod: 2020-04-03T19:39:12+05:30
 draft: true
