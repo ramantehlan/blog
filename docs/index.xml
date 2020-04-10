@@ -6,7 +6,7 @@
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Apr 2020 19:39:12 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:19 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,12 +22,22 @@ I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 
     </item>
     
     <item>
-      <title>Quick Dive into Behavioral Economics</title>
-      <link>https://ramantehlan.github.io/blog/behavioraleconomicscovid/</link>
-      <pubDate>Fri, 03 Apr 2020 19:39:12 +0530</pubDate>
+      <title>Part-1: Introduction to Data Mining</title>
+      <link>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:19 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/behavioraleconomicscovid/</guid>
-      <description> Part 1: Introducing Behavioral Economics: The Science of Making Real-World Choices Chapter 1: Decoding Behavioral Economics Making Wise Assumptions Making Sense of Choice Growing The Economic Pie Deciphering Bubbles and Busts Understanding Happiness: Money Isn&amp;rsquo;t Everything Chapter 2: Getting Real about Assumptions Defining an Economic Model Contemplating Conventional Economics Assumptions and Real-World Alternatives Understanding Rational Economic Behavior Getting to Know the Behavioral Economics Actor Chapter 3: </description>
+      <guid>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS 0424: Data Mining</title>
+      <link>https://ramantehlan.github.io/blog/store/data-mining/introduction/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/store/data-mining/introduction/</guid>
+      <description>This blog is the index/syllabus for the blog series on Data Mining, which I will publish in 5 parts, and I will mostly use my university notes for it.
+Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Dimentional Modelling Data Warehousing OLAP &amp;amp; its tools OLTP  Part 2: Mining Techniques &amp;amp; Clasification  Introduction Statistical Perspective of Data Mining Decision Tree Neural Networks Genetic Algorithms Issues in Classification Statistic Based Algorithm(Regression) Distance Based Algorithm Decision Tree Based Algorithm(C4.</description>
     </item>
     
     <item>
@@ -45,45 +55,8 @@ I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 
       <pubDate>Mon, 16 Mar 2020 19:39:12 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/howtospeak/</guid>
-      <description>This blog is a collection of my notes from a lecture on How To Speak by Professor Patrick Henry Winston, MIT. He passed away in 2019, and I am writing this blog in his memory.
- You have your own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It&amp;rsquo;s also essential to learn to pass it to other people effectively, no one should go out into life without the ability to communicate.</description>
-    </item>
-    
-    <item>
-      <title>Part-1: Introduction to Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</link>
-      <pubDate>Tue, 03 Mar 2020 21:43:19 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CS 0424: Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/introduction/</link>
-      <pubDate>Tue, 03 Mar 2020 14:51:26 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/introduction/</guid>
-      <description>A blog series on Data Mining, which I will publish in 5 parts. I will be taking reference from many places, listed at the bottom of this blog. This is just the Introduction blog and will give you an overview of what will be covered in this series.
-Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Dimentional Modelling Data Warehousing OLAP &amp;amp; its tools OLTP  Part 2: Mining Techniques &amp;amp; Clasification  Introduction Statistical Perspective of Data Mining Decision Tree Neural Networks Genetic Algorithms Issues in Classification Statistic Based Algorithm(Regression) Distance Based Algorithm Decision Tree Based Algorithm(C4.</description>
-    </item>
-    
-    <item>
-      <title>How To Fail</title>
-      <link>https://ramantehlan.github.io/blog/store/howtofail/</link>
-      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/howtofail/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PyData NYC - 2019</title>
-      <link>https://ramantehlan.github.io/blog/store/pydatanyc/</link>
-      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/pydatanyc/</guid>
-      <description>PyData NYC I really messed up my talk; I kinda feel it should not even go live, that&amp;rsquo;s the last thing I want my parents/friends or me to see. I think I am bad at calculating situations, I really need to fix it, I don&amp;rsquo;t want to feel like this again. I wish I could go back in time and change stuff, but I can&amp;rsquo;t, so all I can do now is make the future better and make things work.</description>
+      <description>You have your own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It&amp;rsquo;s also essential to learn to pass it to other people effectively, no one should go out into life without the ability to communicate. Your success in life is primarily determined by:
+ Your ability to speak. Your ability to write. The quality of your ideas.</description>
     </item>
     
     <item>
@@ -92,8 +65,7 @@ Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Diment
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
-      <description>These are notes from an online course taught by Jeanne M. Liedtka, at coursera, created by the University of Virginia.
- Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, entrepreneur, programmer, etc. Everyone needs to get lean and do better with limited resources and time. That is where design thinking comes into the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this blog.</description>
+      <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, entrepreneur, programmer, etc. Everyone needs to get lean and do better with limited resources and time. That is where design thinking comes into the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this blog. This blog has 4 significant parts.</description>
     </item>
     
   </channel>

@@ -10,14 +10,28 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
+    <lastmod>2020-04-07T00:00:19+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/behavioraleconomicscovid/</loc>
-    <lastmod>2020-04-03T19:39:12+05:30</lastmod>
+    <loc>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</loc>
+    <lastmod>2020-04-07T00:00:19+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/store/</loc>
+    <lastmod>2020-04-07T00:00:19+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/store/data-mining/introduction/</loc>
+    <lastmod>2020-04-07T00:00:00+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39,41 +53,6 @@
   <url>
     <loc>https://ramantehlan.github.io/blog/post/howtospeak/</loc>
     <lastmod>2020-03-16T19:39:12+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</loc>
-    <lastmod>2020-03-03T21:43:19+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/store/</loc>
-    <lastmod>2020-03-03T21:43:19+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/store/data-mining/introduction/</loc>
-    <lastmod>2020-03-03T14:51:26+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/store/howtofail/</loc>
-    <lastmod>2019-11-07T19:39:12+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/store/pydatanyc/</loc>
-    <lastmod>2019-11-07T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

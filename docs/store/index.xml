@@ -6,7 +6,7 @@
     <description>Recent content in Stores on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Mar 2020 21:43:19 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:19 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/store/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Part-1: Introduction to Data Mining</title>
       <link>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</link>
-      <pubDate>Tue, 03 Mar 2020 21:43:19 +0530</pubDate>
+      <pubDate>Tue, 07 Apr 2020 00:00:19 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</guid>
       <description></description>
@@ -23,29 +23,11 @@
     <item>
       <title>CS 0424: Data Mining</title>
       <link>https://ramantehlan.github.io/blog/store/data-mining/introduction/</link>
-      <pubDate>Tue, 03 Mar 2020 14:51:26 +0530</pubDate>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/store/data-mining/introduction/</guid>
-      <description>A blog series on Data Mining, which I will publish in 5 parts. I will be taking reference from many places, listed at the bottom of this blog. This is just the Introduction blog and will give you an overview of what will be covered in this series.
+      <description>This blog is the index/syllabus for the blog series on Data Mining, which I will publish in 5 parts, and I will mostly use my university notes for it.
 Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Dimentional Modelling Data Warehousing OLAP &amp;amp; its tools OLTP  Part 2: Mining Techniques &amp;amp; Clasification  Introduction Statistical Perspective of Data Mining Decision Tree Neural Networks Genetic Algorithms Issues in Classification Statistic Based Algorithm(Regression) Distance Based Algorithm Decision Tree Based Algorithm(C4.</description>
-    </item>
-    
-    <item>
-      <title>How To Fail</title>
-      <link>https://ramantehlan.github.io/blog/store/howtofail/</link>
-      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/howtofail/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PyData NYC - 2019</title>
-      <link>https://ramantehlan.github.io/blog/store/pydatanyc/</link>
-      <pubDate>Thu, 07 Nov 2019 19:39:12 +0530</pubDate>
-      
-      <guid>https://ramantehlan.github.io/blog/store/pydatanyc/</guid>
-      <description>PyData NYC I really messed up my talk; I kinda feel it should not even go live, that&amp;rsquo;s the last thing I want my parents/friends or me to see. I think I am bad at calculating situations, I really need to fix it, I don&amp;rsquo;t want to feel like this again. I wish I could go back in time and change stuff, but I can&amp;rsquo;t, so all I can do now is make the future better and make things work.</description>
     </item>
     
   </channel>

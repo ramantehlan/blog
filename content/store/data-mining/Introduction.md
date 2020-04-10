@@ -1,7 +1,7 @@
 ---
 title: "CS 0424: Data Mining"
-date: 2020-03-03T14:51:26+05:30
-lastmod: 2020-03-03T14:51:26+05:30
+date: 2020-04-07T00:00:00+05:30
+lastmod: 2020-04-07T00:00:00+05:30
 draft: true
 keywords: []
 description: "This is a blog series on Data Mining"
@@ -40,9 +40,9 @@ sequenceDiagrams:
 
 ---
 
-A blog series on Data Mining, which I will publish in 5 parts. I will be taking reference from many places, listed at the bottom of this blog. This is just the Introduction blog and will give you an overview of what will be covered in this series.
+This blog is the index/syllabus for the blog series on Data Mining, which I will publish in 5 parts, and I will mostly use my university notes for it.
 
-# [Part 1: Introduction to Data Mining](#)
+# [Part 1: Introduction to Data Mining](/blog/post/2020/data-mining/part1-introduction/)
 
 - Tasks
 - Issues
@@ -94,10 +94,6 @@ A blog series on Data Mining, which I will publish in 5 parts. I will be taking 
 - Case Study in Building Business Environemnt
 - Application of Data Mining In Government
 - National Data Warehouse and Case Studies
-
-### Reference
-- Margaret H. Dunham, S. Sridhar "Data Mining Introductory & Advance Topics"
-- https://drive.google.com/file/d/1-AroDXTnqWv4UwFX6bPCOr-X94sLKsb4/view
 
 > If you encounter an error in this series or want to add or suggest something, please reach out to me via my email.
 

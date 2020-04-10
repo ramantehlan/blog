@@ -1,7 +1,7 @@
 ---
 title: "Part-1: Introduction to Data Mining"
-date: 2020-03-03T21:43:19+05:30
-lastmod: 2020-03-03T21:43:19+05:30
+date: 2020-04-07T00:00:19+05:30
+lastmod: 2020-04-07T00:00:19+05:30
 draft: true
 keywords: []
 description: ""
@@ -13,9 +13,9 @@ author: "Raman Tehlan"
 # P.S. comment can only be closed
 comment: false
 toc: true
-autoCollapseToc: true
+autoCollapseToc: false
 postMetaInFooter: true
-hiddenFromHomePage: true
+hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: false
 reward: false
@@ -48,7 +48,7 @@ Data generated is most often in a very raw format and it's very hard to make sen
 - **Predictive**: Predict trends and behaviours.
 - **Desciptive**: Discover unknown patterns.
 
-# Tasks
+# **Tasks**
 
 The data mining process involves 6 common classes of tasks:
 
@@ -110,7 +110,7 @@ It is a **task to find a function which models the data with least error**. It i
 
 It is a **task of providing a more compact representation of the data set**, including visualization and report generation.
 
-# Architecture
+# **Architecture**
 <center>
 <img src="https://user-images.githubusercontent.com/29037312/75909603-69a62400-5e72-11ea-84a8-7a23020ed874.png" alt="clustering" width="400">
 
@@ -132,7 +132,7 @@ This component typically employs interestingness measures interacts with the dat
 
 This module communicates between users and the data mining system, allowing the user to interact with the system by specifying a data mining query or task, providing information to help focus the search, and performing exploratory data mining based on the intermediate data mining results. Also, this component allows the user to browse database and data warehouse schemas or data structures, evaluate mined patterns, and visualize the patterns in different forms.
 
-# Process
+# **Process**
 Data mining is a process of discovering various models, summaries, and derived values from a given collection of data. The general experimental procedure adapted to data-mining problems involves the following steps:
 
 <center>
@@ -140,7 +140,7 @@ Data mining is a process of discovering various models, summaries, and derived v
 
 *Source: [DigitalTransformationPro](https://digitaltransformationpro.com/data-mining-steps/)* </center>
 
-# Classification of Data Mining Systems
+# **Classification of Data Mining Systems**
 
 Data mining is an interdisciplinary field, the confluence of a set of disciplines, including database systems, statistics, machine learning, visualization, and information science.
 

@@ -3,7 +3,7 @@ title: "Design Thinking - Miracle of Innovation"
 date: 2018-06-05T04:17:48+05:30
 lastmod: 2020-04-04T04:17:48+05:30
 draft: true
-description: "Miracle of Innovation"
+description: "A look at how we use design thinking innovate and find good ideas."
 tags: []
 keywords: [ "Design-Thinking", "Innovation", "Start Up", "Mind Mapping", "Brainstorming"]
 categories: []
@@ -16,7 +16,7 @@ hideHeaderAndFooter: false
 
 ---
 
-> These are notes from an online course taught by [Jeanne M. Liedtka](https://www.coursera.org/instructor/liedtka), at [coursera](https://www.coursera.org/learn/uva-darden-design-thinking-innovation), created by the University of Virginia.
+<img src="https://user-images.githubusercontent.com/29037312/78961697-fac28780-7b0f-11ea-9350-a348d2f20cce.jpg" width="1000px" />
 
 Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, entrepreneur, programmer, etc. Everyone needs to get lean and do better with limited resources and time. That is where design thinking comes into the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this blog. This blog has 4 significant parts.
 
@@ -278,5 +278,11 @@ We are surrounded by too much music, too many software, too many websites, too m
 
 </center>*“To finish a work? To finish a picture? What nonsense! To finish it means to be through with it, to kill it, to rid it of its soul”* — **Picasso**</center>
 
+# Acknowledgement
+
+These are notes from an online course taught by [Jeanne M. Liedtka](https://www.coursera.org/instructor/liedtka), at [coursera](https://www.coursera.org/learn/uva-darden-design-thinking-innovation), created by the University of Virginia.
+
+Header Photo by [Mike Kononov](https://unsplash.com/@mikofilm) on [Unsplash](https://unsplash.com/photos/lFv0V3_2H6s)
 
 > Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fusmal/design_thinking_miracle_of_innovation/) or [Twitter](https://twitter.com/ramantehlan/status/1246409194221244416)
+

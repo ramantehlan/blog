@@ -18,7 +18,11 @@ mathjaxEnableSingleDollar: true
 mathjaxEnableAutoNumber: true
 
 ---
-> This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
+
+<center>
+<img src="https://user-images.githubusercontent.com/29037312/78960732-8c2ffa80-7b0c-11ea-975b-253054f4024e.jpg" width="1000px" />
+</center>
+
 
 You have your own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It's also essential to learn to pass it to other people effectively, no one should go out into life without the ability to communicate. Your success in life is primarily determined by:
 
@@ -127,9 +131,10 @@ The first thing you might wonder is, why care about getting famous?
 If you treat your ideas like children, you don't want them to go into the world of rags. So you have these techniques on how to present ideas that they're recognized for the value that is in them.
 
 <center>
-<img src="https://user-images.githubusercontent.com/29037312/76932740-a6adf400-6911-11ea-8c16-695fdd896ad3.png" alt="Winston Star" width="500" >
+<img src="https://user-images.githubusercontent.com/29037312/76932740-a6adf400-6911-11ea-8c16-695fdd896ad3.png" alt="Winston Star" width="500" />
+<div style='font-size:12px'>Winston Star by Patrick Winston</div>
+</center>
 
-*Winston Star by Patrick Winston*</center>
 - **Symbol:** Your work should have a symbol that can represent it.
 - **Slogan:** Phrase that provides a handle on the work.
 - **Surprise:** It should have something new or out of the box.
@@ -156,6 +161,13 @@ The final slide **should not** be:
 If you end it well, all is well. You can **end it with a joke**, which makes people feel they had fun all this while.
 
 **Don't end with thank you**, as it suggests that everybody has stayed that long out of politeness. **End with a salute**, like appreciate the audience for their time and interest.
+
+# Acknowledgement
+
+This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
+
+Header Photo by [Kristina Paparo](https://unsplash.com/@krispaparo) on [Unsplash](https://unsplash.com/photos/XSDTr93bhBo)
+
 
 > Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvjrvp/how_to_speak/) or [Twitter](https://twitter.com/ramantehlan/status/1246884226735063040)
 
