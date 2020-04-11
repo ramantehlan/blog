@@ -6,7 +6,7 @@
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Apr 2020 00:00:19 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 11:37:26 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       <guid>https://ramantehlan.github.io/blog/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
+    </item>
+    
+    <item>
+      <title>Modern JavaScript Packaging</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</link>
+      <pubDate>Thu, 09 Apr 2020 11:37:26 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</guid>
+      <description>In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&amp;rsquo;s a language you can&amp;rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1.</description>
     </item>
     
     <item>
@@ -41,7 +50,7 @@ Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Diment
     </item>
     
     <item>
-      <title>Terminal Shortcuts</title>
+      <title>Linux Terminal Shortcuts</title>
       <link>https://ramantehlan.github.io/blog/post/terminalshortcuts/</link>
       <pubDate>Mon, 30 Mar 2020 04:17:48 +0530</pubDate>
       

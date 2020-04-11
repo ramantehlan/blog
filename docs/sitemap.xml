@@ -9,8 +9,22 @@
   </url>
   
   <url>
+    <loc>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</loc>
+    <lastmod>2020-04-12T11:37:26+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2020-04-07T00:00:19+05:30</lastmod>
+    <lastmod>2020-04-12T11:37:26+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <lastmod>2020-04-12T11:37:26+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32,13 +46,6 @@
   <url>
     <loc>https://ramantehlan.github.io/blog/store/data-mining/introduction/</loc>
     <lastmod>2020-04-07T00:00:00+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
-    <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

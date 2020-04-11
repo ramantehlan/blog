@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Modern JavaScript Packaging - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&amp;rsquo;s a language you can&amp;rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1." /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.57.0 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/blog/dist/even.7fb6854c.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Modern JavaScript Packaging" />
+<meta property="og:description" content="In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&rsquo;s a language you can&rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/" />
+<meta property="article:published_time" content="2020-04-09T11:37:26+05:30" />
+<meta property="article:modified_time" content="2020-04-12T11:37:26+05:30" />
+<meta itemprop="name" content="Modern JavaScript Packaging">
+<meta itemprop="description" content="In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&rsquo;s a language you can&rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1.">
+
+
+<meta itemprop="datePublished" content="2020-04-09T11:37:26&#43;05:30" />
+<meta itemprop="dateModified" content="2020-04-12T11:37:26&#43;05:30" />
+<meta itemprop="wordCount" content="1760">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modern JavaScript Packaging"/>
+<meta name="twitter:description" content="In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&rsquo;s a language you can&rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Modern JavaScript Packaging</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-09 </span>
+        
+          <span class="more-meta"> 1760 words </span>
+          <span class="more-meta"> 9 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#packages-and-registry"><strong>Packages and Registry</strong></a></li>
+<li><a href="#package-manager"><strong>Package manager</strong></a></li>
+<li><a href="#example"><strong>Example</strong></a>
+<ul>
+<li><a href="#initialization-package">Initialization Package</a></li>
+<li><a href="#install-dependencies">Install Dependencies</a></li>
+<li><a href="#configure">Configure</a></li>
+<li><a href="#program">Program</a></li>
+</ul></li>
+<li><a href="#publishing"><strong>Publishing</strong></a>
+<ul>
+<li><a href="#npm">NPM</a>
+<ul>
+<li><a href="#authenticate">Authenticate</a></li>
+<li><a href="#publish">Publish</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#un-publish">Un-Publish</a></li>
+</ul></li>
+<li><a href="#github">Github</a>
+<ul>
+<li><a href="#generating-token">Generating Token</a></li>
+<li><a href="#authenticate-1">Authenticate</a></li>
+<li><a href="#publish-1">Publish</a></li>
+<li><a href="#install-1">Install</a></li>
+<li><a href="#un-publish-1">Un-Publish</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><img src="https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg" width=745px/></p>
+
+<p>In 1995, <a href="https://www.wikiwand.com/en/JavaScript">Javascript</a> started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, <a href="https://www.npmjs.com/search?q=keywords:iot&amp;page=0&amp;ranking=optimal">IoT</a>, Desktops, <a href="https://www.npmjs.com/search?ranking=popularity&amp;page=0&amp;q=keywords%3Arobotics">Robotics</a>, etc. It&rsquo;s a language you can&rsquo;t ignore. This popularity can be felt when you look at the <a href="npmjs.com">Node Package Manager(NPM)</a>, which is the package manager for javascript created in 2010. <strong>NPM has 1.5+ million packages; this makes it the world&rsquo;s biggest package registry.</strong></p>
+
+<p>In 2020, <a href="https://blog.npmjs.org/post/612764866888007680/next-phase-montage">Github bought NPM</a>, and In 2019, <a href="https://techcrunch.com/2019/05/10/github-gets-a-package-registry/">Github also announced its Package registry</a> for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and <strong>by the end, you will know everything to build and publish your package to any registry, Github, or NPM.</strong></p>
+
+<blockquote>
+<p>If you are familiar with npm or package building, you can jump directly to the <a href="#publishing">publishing</a> part.</p>
+</blockquote>
+
+<h1 id="packages-and-registry"><strong>Packages and Registry</strong></h1>
+
+<p><strong>A package is a piece of software that is Independent, reusable, and distributable</strong>. In Nodejs, <a href="https://nodejs.org/api/modules.html#modules_modules">each file is treated as a separate module</a>, and a package is made of one or one or more modules, and it might or might not depend on other packages.</p>
+
+<p>Registries stores all the packages and their different versions; they are used to distribute packages via a Package manager. Following are the registries for Javascript Packages:</p>
+
+<ul>
+<li>NPM Registry: <a href="https://registry.npmjs.org/">registry.npmjs.org</a></li>
+<li>Github Registry: <a href="https://npm.pkg.github.com/">npm.pkg.github.com</a></li>
+</ul>
+
+<h1 id="package-manager"><strong>Package manager</strong></h1>
+
+<p><strong>A package manager is used to install, delete, and manage packages</strong>. It searches for the package you are looking for and installs it in the <code>node_modules</code>. It serves as a client for the registry and helps you interact with it. The tree major package managers for Javascript are:</p>
+
+<ul>
+<li><p><a href="https://npmjs.com/"><strong>npm</strong></a>: It is the default package manager created in 2009; it communicates with the registry and works as the interface for it.</p></li>
+
+<li><p><a href="https://yarnpkg.com/"><strong>yarn</strong></a>: It is the most popular alternative; it supports offline cache, Deterministic Installs, License Checks. That makes it secure, fast, and reliable.</p></li>
+
+<li><p><a href="https://pnpm.js.org/"><strong>pnpm</strong></a>:
+It is known for saving disk space by storing one package version just once on the system, and it is faster than npm.</p></li>
+</ul>
+
+<h1 id="example"><strong>Example</strong></h1>
+
+<p>For this blog, we will create a tiny and simple <strong>package to find the distance between a given point and the origin</strong>. I have already published this package <a href="https://github.com/ramantehlan/ts-packaging-101/packages/177465">here</a>, and you can find the source code <a href="https://github.com/ramantehlan/ts-packaging-101">here</a>.</p>
+
+<h2 id="initialization-package">Initialization Package</h2>
+
+<p>We need to create a manifesto file to tell the package manager that a repository is a javascript package, here <a href="https://docs.npmjs.com/files/package.json"><code>package.json</code></a> is the manifesto file. It holds all the crucial details about it, from package name to version, dependencies, etc. To do so, we will create a new folder and initialize npm init, follow the commands given below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir PACKAGE_NAME
+$ <span class="nb">cd</span> PACKAGE_NAME
+$ npm init -y</code></pre></td></tr></table>
+</div>
+</div>
+<p>This will create a file <code>package.json</code>, which should resemble the following file. You also need to fill in the essential details in this manifesto file, like version, description, author, etc.
+Here you can keep any package name, but remember <strong>Github only supports scoped packages, so the name should be formatted as <code>@owner/name</code></strong> and should contain lowercase letters only, even if your owner name is in uppercase.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;@USERNAME/PACKAGE_NAME&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="install-dependencies">Install Dependencies</h2>
+
+<p>We will write our package in <a href="https://www.typescriptlang.org/">Typescript</a>, which is a superset of javascript. The reason for using Typescript is it adds optional static typing to the language. To be able to use Typescript, we need to install the <code>typescript</code> module as a dependency.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install typescript</code></pre></td></tr></table>
+</div>
+</div>
+<p>This will create a <a href="https://docs.npmjs.com/configuring-npm/folders.html"><code>node_modules</code></a> directory, which holds all the dependencies for the project. If you open it, you will see Typescript is installed there. It will also create an autogenerate <a href="https://docs.npmjs.com/configuring-npm/package-lock-json.html"><code>package-lock.json</code></a>, and it describes the exact dependency tree that was generated.</p>
+
+<h2 id="configure">Configure</h2>
+
+<p>We also need to configure the Typescript to use it for our project, and we do it by adding a file <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html"><code>tsconfig.json</code></a>. You can use the configuration given below for this example.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;es5&#34;</span><span class="p">,</span>         <span class="err">/*</span> <span class="err">Specify</span> <span class="err">ECMAScript</span> <span class="err">target</span> <span class="err">version:</span> <span class="err">&#39;ES3&#39;</span> <span class="err">(default),</span> <span class="err">&#39;ES5&#39;,</span> <span class="err">&#39;ES2015&#39;,</span> <span class="err">&#39;ES2016&#39;,</span> <span class="err">&#39;ES2017&#39;,&#39;ES2018&#39;</span> <span class="err">or</span> <span class="err">&#39;ESNEXT&#39;.</span> <span class="err">*/</span>
+    <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>    <span class="err">/*</span> <span class="err">Specify</span> <span class="err">module</span> <span class="err">code</span> <span class="err">generation:</span> <span class="err">&#39;none&#39;,</span> <span class="err">&#39;commonjs&#39;,</span> <span class="err">&#39;amd&#39;,</span> <span class="err">&#39;system&#39;,</span> <span class="err">&#39;umd&#39;,</span> <span class="err">&#39;es2015&#39;,</span> <span class="err">or</span> <span class="err">&#39;ESNext&#39;.</span> <span class="err">*/</span>
+    <span class="nt">&#34;declaration&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="err">/*</span> <span class="err">Generates</span> <span class="err">corresponding</span> <span class="err">&#39;.d.ts&#39;</span> <span class="err">file.</span> <span class="err">*/</span>
+    <span class="nt">&#34;outDir&#34;</span><span class="p">:</span> <span class="s2">&#34;./src&#34;</span><span class="p">,</span>       <span class="err">/*</span> <span class="err">Redirect</span> <span class="err">output</span> <span class="err">structure</span> <span class="err">to</span> <span class="err">the</span> <span class="err">directory.</span> <span class="err">*/</span>
+    <span class="nt">&#34;strict&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>          <span class="err">/*</span> <span class="err">Enable</span> <span class="err">all</span> <span class="err">strict</span> <span class="err">type-checking</span> <span class="err">options.</span> <span class="err">*/</span>
+    <span class="nt">&#34;esModuleInterop&#34;</span><span class="p">:</span> <span class="kc">true</span>  <span class="err">/*</span> <span class="err">Enables</span> <span class="err">emit</span> <span class="err">interoperability</span> <span class="err">between</span> <span class="err">CommonJS</span> <span class="err">and</span> <span class="err">ES</span> <span class="err">Modules</span> <span class="err">via</span> <span class="err">creation</span> <span class="err">of</span> <span class="err">namespace</span> <span class="err">objects</span> <span class="err">for</span> <span class="err">all</span> <span class="err">imports.</span> <span class="err">Implies</span> <span class="err">&#39;allowSyntheticDefaultImports&#39;.</span> <span class="err">*/</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;exclude&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&#34;node_modules&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;src&#34;</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>We also need to configure our <code>package.json</code> to specify the build command and our Github repository. I am assuming you are familiar with Github and can create and push your repository. If you are not, I will suggest you learn about it <a href="https://resources.github.com/whitepapers/How-GitHub-secures-open-source-software/">here</a>.</p>
+
+<p>We need to add the entry point of the package, which is going to be <code>src/index.js</code>, this file is not present yet, but will be once we build the project. We also need to provide the method to build it, for that we are using <code>tsc</code>(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You need to add the following lines to your <code>package.json</code> file to add the above mentions things.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">...</span>
+  <span class="s2">&#34;main&#34;</span><span class="err">:</span> <span class="s2">&#34;src/index.js&#34;</span><span class="err">,</span>
+  <span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc&#34;</span>
+  <span class="p">}</span><span class="err">,</span>
+  <span class="s2">&#34;homepage&#34;</span><span class="err">:</span><span class="s2">&#34;https://github.com/YOUR_USERNAME/PACKAGE_NAME#README&#34;</span><span class="err">,</span>
+  <span class="s2">&#34;repository&#34;</span><span class="err">:</span><span class="p">{</span>
+    <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;git&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;git+https://github.com/YOUR_USERNAME/PACKAGE_NAME.git&#34;</span>
+  <span class="p">}</span><span class="err">,</span>
+<span class="err">...</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="program">Program</h2>
+
+<p>We are going to write an elementary program for this example. It&rsquo;s going to be functional. However, this program is practically useless and is just for demonstration, in the working world, you will be expected to create better and useful packages. This program can be used to find the distance between the given point and the origin. Create an <code>index.ts</code> file the root folder and write the following program init.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-Typescript" data-lang="Typescript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Typescript" data-lang="Typescript"><span class="cm">/*******************************************************
+</span><span class="cm">*  This module is to find the distance between the origin
+</span><span class="cm">*  and the given point.  Root(x^2 + y^2)
+</span><span class="cm">*********************************************************/</span>
+
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">Point</span><span class="p">{</span>
+ <span class="nx">x</span>:<span class="kt">number</span>
+ <span class="nx">y</span>:<span class="kt">number</span>
+ <span class="nx">dist</span>: <span class="kt">number</span>
+
+ <span class="kr">constructor</span><span class="p">(</span><span class="nx">x</span>:<span class="kt">number</span> <span class="p">,</span><span class="nx">y</span>:<span class="kt">number</span><span class="p">){</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">dist</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+ <span class="p">}</span>
+
+ <span class="nx">getDistFromOrigin() {</span>
+   <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">dist</span>
+ <span class="p">}</span>
+
+
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>So far, this is how your file structure looks like. If you run <code>npm run build</code>, it will also create the <code>src/index.js</code>, which is the compiled program and is the entry point.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">.
+├── index.ts
+├── node_modules
+│   └── typescript
+├── package.json
+├── package-lock.json
+└── tsconfig.json</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="publishing"><strong>Publishing</strong></h1>
+
+<p>We have a package that we want to publish to the NPM registry or Github registry. We start by authenticating, which is a little different for NPM and Github.</p>
+
+<h2 id="npm">NPM</h2>
+
+<h3 id="authenticate">Authenticate</h3>
+
+<p>You need to sign up at <a href="https://www.npmjs.com/signup">npmjs.com</a> and use those credentials to log in to npm client.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm login
+Username: NPM_USERNAME
+Password: NPM_PASSWORD
+Email: <span class="o">(</span>this IS public<span class="o">)</span> NPM_EMAIL</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="publish">Publish</h3>
+
+<p>Now we can publish our package; to do so, use the following command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm publish --access public</code></pre></td></tr></table>
+</div>
+</div>
+<p>We are using <code>--access</code> because since scoped naming for packages is usually used for private packages in NPM, so to bypass that, we need to specify that our package is to be public.</p>
+
+<h3 id="install">Install</h3>
+
+<p>To Install packages from NPM registry, users can directly use the package name as shown below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install @OWNER/PACKAGE_NAME</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="un-publish">Un-Publish</h3>
+
+<p>To un-publish a package, you can run the following command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm unpublish</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="github">Github</h2>
+
+<h3 id="generating-token">Generating Token</h3>
+
+<p>To authenticate with Github, we need to generate a <a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">personal access token</a>. You do that by first logging into your Github account, then go to <strong>Settings -&gt; Developer settings -&gt; Personal access tokens</strong>. Click on <strong>Generate new token</strong>. You will be asked to provide a note(name) for the token.</p>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/79050155-ce108c00-7c45-11ea-9fa1-5cb88be25331.png" width="800px">
+</center></p>
+
+<p>And select the <strong>write:packages</strong> permissions for it and click on the <strong>Generate token</strong> button on the bottom of the page.</p>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/79050156-cea92280-7c45-11ea-85da-aae4eaf9288c.png" width="600px">
+</center></p>
+
+<p>This will generate a token for you, which you should save to a safe place as you are going to see it just once.</p>
+
+<p><center>
+<img src="https://user-images.githubusercontent.com/29037312/79050569-7162a080-7c48-11ea-8ff7-2edb338adaeb.png" width="600px">
+</center></p>
+
+<h3 id="authenticate-1">Authenticate</h3>
+
+<p>There are two ways to <a href="https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages">authenticate</a> now:</p>
+
+<ul>
+<li>By adding your access token to your ~/.npmrc file.</li>
+<li>By logging in to npm with your access token.</li>
+</ul>
+
+<p>I am a little opinionated here, and I like the second method because and I am going to use that for this blog. In the first one, there are chances of the file getting committed if you backup your dotfiles, and In case you lose your token, you can always generate it back and log in again.</p>
+
+<p>To authenticate, we can generate the token and login to the Github registry. We do so by following the commands given below.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm login --registry<span class="o">=</span>https://npm.pkg.github.com
+  Username: GITHUB-USERNAME
+  Password: TOKEN
+  Email: PUBLIC-EMAIL-ADDRESS</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="publish-1">Publish</h3>
+
+<p>The package is ready, and we are authenticated to publish the packages. There are two ways to publish your package.</p>
+
+<ul>
+<li><a href="https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#publishing-a-package-using-a-local-npmrc-file">Publishing using a local .npmrc file.</a></li>
+<li><a href="https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#publishing-a-package-using-publishconfig-in-the-packagejson-file">Publishing using <em>publishConfig</em> in the package.json file.</a></li>
+</ul>
+
+<p>For this blog, we are going to use the second method; however you can use any method. The only reason for this decision is that I want to avoid creating one more file. Open your <code>package.json</code> file and add <code>publishConfig</code> section to it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">...</span>
+ <span class="s2">&#34;publishConfig&#34;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&#34;registry&#34;</span><span class="p">:</span><span class="s2">&#34;https://npm.pkg.github.com/&#34;</span>
+  <span class="p">}</span><span class="err">,</span>
+<span class="err">...</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Now we can publish our package; to do so, use the following command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm publish</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="install-1">Install</h3>
+
+<p>To use any package published on Github, users need to add it to their projects .npmrc file, create this file if it doesn&rsquo;t already exist. They need to specify GitHub Packages URL and the account <code>owner</code>. For multiple owners, you need to specify multiple GitHub Packages URL.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-npmrc" data-lang="npmrc"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-npmrc" data-lang="npmrc">registry=https://npm.pkg.github.com/OWNER
+@OWNER:registry=https://npm.pkg.github.com
+@OWNER:registry=https://npm.pkg.github.com</code></pre></td></tr></table>
+</div>
+</div>
+<p>After this, you shall be able to download the packages.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install @OWNER/PACKAGE-NAME</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="un-publish-1">Un-Publish</h3>
+
+<p><a href="https://help.github.com/en/packages/publishing-and-managing-packages/deleting-a-package#about-public-package-deletion"><strong>You can&rsquo;t delete an entire public package or specific versions</strong></a>, Github restricts that to avoid breaking projects that may depend on that package. You can, however, delete private packages. To do so, you can use the command given below.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm unpublish</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="acknowledgement">Acknowledgement</h1>
+
+<ul>
+<li>Hero image by <a href="https://unsplash.com/@emilep">Kristina Paparo</a> on <a href="https://unsplash.com/photos/xrVDYZRGdw4">Unsplash</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Raman Tehlan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/terminalshortcuts/">
+            <span class="next-text nav-default">Linux Terminal Shortcuts</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.b038315c.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

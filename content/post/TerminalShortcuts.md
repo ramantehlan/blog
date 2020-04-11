@@ -1,5 +1,5 @@
 ---
-title: "Terminal Shortcuts"
+title: "Linux Terminal Shortcuts"
 date: 2020-03-30T04:17:48+05:30
 lastmod: 2020-03-30T04:17:48+05:30
 draft: true
@@ -16,9 +16,9 @@ hiddenFromHomePage: false
 
 ---
 
-<img src="https://user-images.githubusercontent.com/29037312/78959612-1b3b1380-7b09-11ea-91b6-d081c554bc8e.png" width="745px" />
+<img src="https://user-images.githubusercontent.com/29037312/79038268-b27d9500-7bf5-11ea-980c-cea7ce97f179.jpg" width="745px" />
 
-Linux is probably the most powerful tool in the world; When I used it for the first time, I instantly felt control over my system, and I started to understand the working of my computer with time. If you are reading this, and are not already using Linux, or haven't used it ever, I strongly recommend you try it out. In Linux, what I like the most is the terminal, it's like magic, it lets you reach the core of your system and work with it. I find it fast, flexible, and simple. This blog list down some of the terminal shortcuts to making your experience pleasant, I am confident it can also help you be more productive and effective.
+**Linux is probably the most powerful tool in the world**; When I used it for the first time, I instantly felt control over my system, and I started to understand the working of my computer with time. If you are reading this, and are not already using Linux, or haven't used it ever, I strongly recommend you try it out. In Linux, what I like the most is the **terminal, it's like magic**, it lets you reach the core of your system and work with it. I find it fast, flexible, and simple. This blog list down some of the terminal shortcuts to making your experience pleasant, I am confident it can also help you be more productive and effective.
 
 > Note: Most essential or recommended shortcuts are in bold.
 
@@ -82,6 +82,12 @@ Linux is probably the most powerful tool in the world; When I used it for the fi
 - `!*`: Display the last word of the previous command.
 
 use `:p` in the end of bang command to preview the command. Ex. `!$:p`
+
+# Acknowledgement
+
+Header Photo by [Kristina Paparo](https://unsplash.com/@designshot) on [Unsplash](https://unsplash.com/photos/7p8R4CZjoQE)
+
+
 
 > Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvk3cg/terminal_shortcuts/) or [Twitter](https://twitter.com/ramantehlan/status/1246889936550113282)
 

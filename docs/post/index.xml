@@ -6,13 +6,22 @@
     <description>Recent content in Posts on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Mar 2020 04:17:48 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 11:37:26 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Terminal Shortcuts</title>
+      <title>Modern JavaScript Packaging</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</link>
+      <pubDate>Thu, 09 Apr 2020 11:37:26 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</guid>
+      <description>In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&amp;rsquo;s a language you can&amp;rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1.</description>
+    </item>
+    
+    <item>
+      <title>Linux Terminal Shortcuts</title>
       <link>https://ramantehlan.github.io/blog/post/terminalshortcuts/</link>
       <pubDate>Mon, 30 Mar 2020 04:17:48 +0530</pubDate>
       
