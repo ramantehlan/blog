@@ -82,9 +82,9 @@ use `:p` in the end of bang command to preview the command. Ex. `!$:p`
 
 # Acknowledgement
 
-- Header Photo by [Kristina Paparo](https://unsplash.com/@designshot) on [Unsplash](https://unsplash.com/photos/7p8R4CZjoQE)
+- Hero Photo by [Kristina Paparo](https://unsplash.com/@designshot) on [Unsplash](https://unsplash.com/photos/7p8R4CZjoQE)
 
 
 
-> Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvk3cg/terminal_shortcuts/) or [Twitter](https://twitter.com/ramantehlan/status/1246889936550113282)
+> Let's discuss it on [Reddit](https://www.reddit.com/search/?q=url%3Ahttps%3A%2F%2Framantehlan.github.io%2Fblog%2Fpost%2Fterminalshortcuts%2F) or [Twitter](https://twitter.com/search?q=https%3A%2F%2Framantehlan.github.io%2Fblog%2Fpost%2Fterminalshortcuts)
 

@@ -299,10 +299,16 @@ $ npm install @OWNER/PACKAGE-NAME
 $ npm unpublish
 ```
 
+# Conclusion
+
+I hope this blog was helpful, and after reading this, you feel a little confident about creating your package and publishing it. I suggest you read more about it from the links I have provided throughout the blog, and you can also look at the [source code](github.com/ramantehlan/ts-packaging-101) and the [published package](https://github.com/ramantehlan/ts-packaging-101/packages/177465). 
+
+If you like this blog, do follow me on [twitter](https://twitter.com/ramantehlan) and share this blog.
 
 # Acknowledgement
 
 - Hero image by [Kristina Paparo](https://unsplash.com/@emilep) on [Unsplash](https://unsplash.com/photos/xrVDYZRGdw4)
 
+> Let's discuss it on [Reddit](https://www.reddit.com/search/?q=url%3Ahttps%3A%2F%2Framantehlan.github.io%2Fblog%2Fpost%2F2020%2Fmodern-javascript-packaging%2F) or [Twitter](https://twitter.com/search?q=https%3A%2F%2Framantehlan.github.io%2Fblog%2Fpost%2F2020%2Fmodern-javascript-packaging%2F)
 
 
