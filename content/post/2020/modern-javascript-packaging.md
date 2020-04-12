@@ -94,32 +94,32 @@ We also need to configure the Typescript to use it for our project, and we do it
 ```json
 {
   "compilerOptions": {
-    "target": "es5",         /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-    "module": "commonjs",    /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-    "declaration": true,     /* Generates corresponding '.d.ts' file. */
-    "outDir": "./src",       /* Redirect output structure to the directory. */
-    "strict": true,          /* Enable all strict type-checking options. */
-    "esModuleInterop": true  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "declaration": true,                   /* Generates corresponding '.d.ts' file. */
+    "outDir": "./pkg",                        /* Redirect output structure to the directory. */
+    "strict": true,                           /* Enable all strict type-checking options. */
+    "esModuleInterop": true                   /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
   },
-  "exclude": [
-        "node_modules",
-        "src"
-    ]
+  "include": ["src"],
+  "exclude": ["node_modules", "pkg"]
 }
-
 ```
 
 We also need to configure our `package.json` to specify the build command and our Github repository. I am assuming you are familiar with Github and can create and push your repository. If you are not, I will suggest you learn about it [here](https://resources.github.com/whitepapers/How-GitHub-secures-open-source-software/).
 
-We need to add the entry point of the package, which is going to be `src/index.js`, this file is not present yet, but will be once we build the project. We also need to provide the method to build it, for that we are using `tsc`(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You need to add the following lines to your `package.json` file to add the above mentions things.
+We need to add the **entry point** of the package, which is going to be `pkg/index.js`, this file is not present yet, but will be once we build the project. We also need to provide the **method to build** it, for that we are using `tsc`(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You also need to add `files` key to package.json, to **whitelist** the files or folders you want to publish.You need to add the following lines to your `package.json` file to add the above mentions things. ,
+
+
 
 ```json
 ...
-  "main": "src/index.js",
+  "main": "pkg/index.js",
   "scripts": {
     "build": "tsc"
   },
   "homepage":"https://github.com/YOUR_USERNAME/PACKAGE_NAME#README",
+  "files": ["pkg/**"],
   "repository":{
     "type": "git",
     "url": "git+https://github.com/YOUR_USERNAME/PACKAGE_NAME.git"
@@ -129,7 +129,7 @@ We need to add the entry point of the package, which is going to be `src/index.j
 
 ## Program
 
-We are going to write an elementary program for this example. It's going to be functional. However, this program is practically useless and is just for demonstration, in the working world, you will be expected to create better and useful packages. This program can be used to find the distance between the given point and the origin. Create an `index.ts` file the root folder and write the following program init.
+We are going to write an elementary program for this example. It's going to be functional. However, this program is practically useless and is just for demonstration, in the working world, you will be expected to create better and useful packages. This program can be used to find the distance between the given point and the origin. Create an `index.ts` file the './src' folder and write the following program init.
 
 ```Typescript
 /*******************************************************
@@ -156,16 +156,17 @@ export class Point{
 }
 ```
 
-So far, this is how your file structure looks like. If you run `npm run build`, it will also create the `src/index.js`, which is the compiled program and is the entry point.
+So far, this is how your file structure looks like. If you run `npm run build`, it will also create the `pkg/index.js`, which is the compiled program and is the entry point.
 
 ```bash
 .
-├── index.ts
-├── node_modules
-│   └── typescript
 ├── package.json
 ├── package-lock.json
-└── tsconfig.json
+├── tsconfig.json
+├── node_modules
+│   └── typescript
+└── src
+    └── index.ts
 ```
 
 # **Publishing**
@@ -205,11 +206,12 @@ npm install @OWNER/PACKAGE_NAME
 
 ### Un-Publish
 
-To un-publish a package, you can run the following command.
+You can’t unpublish after 24 hours of publishing a package, or it’s version. Before that, to un-publish a package, you can run the following command.
 
 ```bash
 npm unpublish
 ```
+
 
 ## Github
 
