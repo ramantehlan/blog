@@ -85,7 +85,7 @@ use `:p` in the end of bang command to preview the command. Ex. `!$:p`
 
 # Acknowledgement
 
-Header Photo by [Kristina Paparo](https://unsplash.com/@designshot) on [Unsplash](https://unsplash.com/photos/7p8R4CZjoQE)
+- Header Photo by [Kristina Paparo](https://unsplash.com/@designshot) on [Unsplash](https://unsplash.com/photos/7p8R4CZjoQE)
 
 
 

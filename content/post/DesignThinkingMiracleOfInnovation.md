@@ -280,9 +280,9 @@ We are surrounded by too much music, too many software, too many websites, too m
 
 # Acknowledgement
 
-These are notes from an online course taught by [Jeanne M. Liedtka](https://www.coursera.org/instructor/liedtka), at [coursera](https://www.coursera.org/learn/uva-darden-design-thinking-innovation), created by the University of Virginia.
+- These are notes from an online course taught by [Jeanne M. Liedtka](https://www.coursera.org/instructor/liedtka), at [coursera](https://www.coursera.org/learn/uva-darden-design-thinking-innovation), created by the University of Virginia.
 
-Header Photo by [Mike Kononov](https://unsplash.com/@mikofilm) on [Unsplash](https://unsplash.com/photos/lFv0V3_2H6s)
+- Header Photo by [Mike Kononov](https://unsplash.com/@mikofilm) on [Unsplash](https://unsplash.com/photos/lFv0V3_2H6s)
 
 > Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fusmal/design_thinking_miracle_of_innovation/) or [Twitter](https://twitter.com/ramantehlan/status/1246409194221244416)
 

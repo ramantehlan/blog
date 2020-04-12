@@ -9,6 +9,7 @@ categories: []
 keywords: []
 author: "Raman Tehlan"
 
+
 toc: true
 autoCollapseToc: false
 hiddenFromHomePage: false
@@ -164,9 +165,9 @@ If you end it well, all is well. You can **end it with a joke**, which makes peo
 
 # Acknowledgement
 
-This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
+- This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.
 
-Header Photo by [Kristina Paparo](https://unsplash.com/@krispaparo) on [Unsplash](https://unsplash.com/photos/XSDTr93bhBo)
+- Header Photo by [Kristina Paparo](https://unsplash.com/@krispaparo) on [Unsplash](https://unsplash.com/photos/XSDTr93bhBo)
 
 
 > Let's discuss it on [Reddit](https://www.reddit.com/user/ramantehlan/comments/fvjrvp/how_to_speak/) or [Twitter](https://twitter.com/ramantehlan/status/1246884226735063040)
