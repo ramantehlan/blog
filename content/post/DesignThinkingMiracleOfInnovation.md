@@ -7,11 +7,10 @@ description: "A look at how we use design thinking innovate and find good ideas.
 tags: []
 keywords: [ "Design-Thinking", "Innovation", "Start Up", "Mind Mapping", "Brainstorming"]
 categories: []
-
 author: "Raman Tehlan"
 
-autoCollapseToc: false
-hideHeaderAndFooter: false
+images: ["https://user-images.githubusercontent.com/29037312/78961697-fac28780-7b0f-11ea-9350-a348d2f20cce.jpg"]
+
 
 
 ---

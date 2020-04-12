@@ -7,12 +7,9 @@ description: "This blog list down some of the terminal shortcuts to making your 
 tags: []
 keywords: []
 categories: []
-
 author: "Raman Tehlan"
 
-toc: true
-autoCollapseToc: false
-hiddenFromHomePage: false
+images: ["https://user-images.githubusercontent.com/29037312/79038268-b27d9500-7bf5-11ea-980c-cea7ce97f179.jpg"]
 
 ---
 

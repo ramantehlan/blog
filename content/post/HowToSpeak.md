@@ -9,10 +9,7 @@ categories: []
 keywords: []
 author: "Raman Tehlan"
 
-
-toc: true
-autoCollapseToc: false
-hiddenFromHomePage: false
+images: ["https://user-images.githubusercontent.com/29037312/78960732-8c2ffa80-7b0c-11ea-975b-253054f4024e.jpg"]
 
 mathjax: true
 mathjaxEnableSingleDollar: true

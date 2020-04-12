@@ -4,20 +4,12 @@ date: 2020-04-09T11:37:26+05:30
 lastmod: 2020-04-12T11:37:26+05:30
 draft: true
 keywords: []
-description: ""
+description: "Learn how to package Javascript"
 tags: []
 categories: []
-author: ""
+author: "Raman Tehlan"
 
-comment: true
-toc: true
-autoCollapseToc: false
-postMetaInFooter: true
-hiddenFromHomePage: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
-reward: false
-
+images: ["https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg"]
 
 ---
 
