@@ -16,11 +16,7 @@ images: ["https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7
 
 <img src="https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg" width=745px/>
 
-In 1995, [Javascript](https://www.wikiwand.com/en/JavaScript) started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, [IoT](https://www.npmjs.com/search?q=keywords:iot&page=0&ranking=optimal), Desktops, [Robotics](https://www.npmjs.com/search?ranking=popularity&page=0&q=keywords%3Arobotics), etc. It's a language you can't ignore. This popularity can be felt when you look at the [Node Package Manager(NPM)](npmjs.com), which is the package manager for javascript created in 2010. **NPM has 1.5+ million packages; this makes it the world's biggest package registry.**
-
-
-
-In 2020, [Github bought NPM](https://blog.npmjs.org/post/612764866888007680/next-phase-montage), and In 2019, [Github also announced its Package registry](https://techcrunch.com/2019/05/10/github-gets-a-package-registry/) for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and **by the end, you will know everything to build and publish your package to any registry, Github, or NPM.**
+In 2019, [Github announced its Package registry](https://techcrunch.com/2019/05/10/github-gets-a-package-registry/) for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and **by the end, you will know everything to build and publish your package to any registry, Github, or NPM.**
 
 > If you are familiar with npm or package building, you can jump directly to the [publishing](#publishing) part.
 
@@ -47,15 +43,15 @@ It is known for saving disk space by storing one package version just once on th
 
 # **Example**
 
-For this blog, we will create a tiny and simple **package to find the distance between a given point and the origin**. I have already published this package [here](https://github.com/ramantehlan/ts-packaging-101/packages/177465), and you can find the source code [here](https://github.com/ramantehlan/ts-packaging-101).
+For this blog, we will create a tiny and simple **package to find the distance between a given point and the origin**. I have already published this [package](https://github.com/ramantehlan/ts-packaging-101/packages/177465), and you can find the source code [here](https://github.com/ramantehlan/ts-packaging-101).
 
 ## Initialization Package
 
-We need to create a manifesto file to tell the package manager that a repository is a javascript package, here [`package.json`](https://docs.npmjs.com/files/package.json) is the manifesto file. It holds all the crucial details about it, from package name to version, dependencies, etc. To do so, we will create a new folder and initialize npm init, follow the commands given below:
+We need to create a manifesto file to tell the package manager that a repository is a javascript package, here [package.json](https://docs.npmjs.com/files/package.json) is the manifesto file. It holds all the crucial details about it, from package name to version, dependencies, etc. To do so, we will create a new folder and initialize npm init, follow the commands given below:
 
 ```bash
-$ mkdir PACKAGE_NAME
-$ cd PACKAGE_NAME
+$ mkdir ts-packaging-101
+$ cd ts-packaging-101
 $ npm init -y
 ```
 
@@ -64,7 +60,7 @@ Here you can keep any package name, but remember **Github only supports scoped p
 
 ```json
 {
-  "name": "@USERNAME/PACKAGE_NAME",
+  "name": "@ramantehlan/ts-packaging",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -79,50 +75,55 @@ Here you can keep any package name, but remember **Github only supports scoped p
 
 ## Install Dependencies
 
-We will write our package in [Typescript](https://www.typescriptlang.org/), which is a superset of javascript. The reason for using Typescript is it adds optional static typing to the language. To be able to use Typescript, we need to install the `typescript` module as a dependency.
+We will write our package in [Typescript](https://www.typescriptlang.org/), which is a superset of javascript. The reason for using Typescript are: 
+
+- Optional static typing.
+- The ability to compile down to a version of JavaScript that runs on all browsers.
+
+To be able to use Typescript, we need to install the `typescript` module as a development dependency.
 
 ```bash
-$ npm install typescript
+$ npm install --save-dev typescript
 ```
 
 This will create a [`node_modules`](https://docs.npmjs.com/configuring-npm/folders.html) directory, which holds all the dependencies for the project. If you open it, you will see Typescript is installed there. It will also create an autogenerate [`package-lock.json`](https://docs.npmjs.com/configuring-npm/package-lock-json.html), and it describes the exact dependency tree that was generated.
 
 ## Configure
 
-We also need to configure the Typescript to use it for our project, and we do it by adding a file [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html). You can use the configuration given below for this example.
+We also need to configure the Typescript to use it for our project, and we do it by adding a file [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html). You can use the configuration given below for this example.
 
 ```json
 {
   "compilerOptions": {
-    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-    "declaration": true,                   /* Generates corresponding '.d.ts' file. */
-    "outDir": "./pkg",                        /* Redirect output structure to the directory. */
-    "strict": true,                           /* Enable all strict type-checking options. */
-    "esModuleInterop": true                   /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "target": "es5",        /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "commonjs",   /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "declaration": true,    /* Generates corresponding '.d.ts' file so that the package can be used with Typescript too. */
+    "outDir": "./dist",     /* Redirect output structure to the directory. */
+    "strict": true,         /* Enable all strict type-checking options. */
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
   },
   "include": ["src"],
-  "exclude": ["node_modules", "pkg"]
+  "exclude": ["node_modules", "dist"]
 }
 ```
 
 We also need to configure our `package.json` to specify the build command and our Github repository. I am assuming you are familiar with Github and can create and push your repository. If you are not, I will suggest you learn about it [here](https://resources.github.com/whitepapers/How-GitHub-secures-open-source-software/).
 
-We need to add the **entry point** of the package, which is going to be `pkg/index.js`, this file is not present yet, but will be once we build the project. We also need to provide the **method to build** it, for that we are using `tsc`(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You also need to add `files` key to package.json, to **whitelist** the files or folders you want to publish.You need to add the following lines to your `package.json` file to add the above mentions things. ,
+We need to add the **entry point** of the package, which is going to be `dist/index.js`, this file is not present yet, but will be once we build the project. We also need to provide the **method to build** it, for that we are using `tsc`(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You also need to add `files` key to package.json, to **whitelist** the files or folders you want to publish.You need to add the following lines to your `package.json` file to add the above mentions things.
 
 
 
 ```json
 ...
-  "main": "pkg/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc"
   },
-  "homepage":"https://github.com/YOUR_USERNAME/PACKAGE_NAME#README",
-  "files": ["pkg/**"],
+  "homepage":"https://github.com/ramantehlan/ts-packaging-101#README",
+  "files": ["dist/**"],
   "repository":{
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/PACKAGE_NAME.git"
+    "url": "git+https://github.com/ramantehlan/ts-packaging-101.git"
   },
 ...
 ```
@@ -156,7 +157,7 @@ export class Point{
 }
 ```
 
-So far, this is how your file structure looks like. If you run `npm run build`, it will also create the `pkg/index.js`, which is the compiled program and is the entry point.
+So far, this is how your file structure looks like. If you run `npm run build`, it will also create the `dist/index.js`, which is the compiled program and is the entry point.
 
 ```bash
 .
@@ -206,7 +207,9 @@ npm install @OWNER/PACKAGE_NAME
 
 ### Un-Publish
 
-You can’t unpublish after 24 hours of publishing a package, or it’s version. Before that, to un-publish a package, you can run the following command.
+Unpublishing your package is not recommended. Instead, you can depreciate it. 
+
+[According to the unpublish policy of NPM](https://www.npmjs.com/policies/unpublish), **you can't unpublish a version after 24 hours of publishing it, and you can't unpublish a package after 72 hours of publishing** and only if there are no dependents on it. Before that, to un-publish a package, you can run the following command.
 
 ```bash
 npm unpublish

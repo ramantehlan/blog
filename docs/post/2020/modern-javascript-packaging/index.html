@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2020-04-09T11:37:26&#43;05:30" />
 <meta itemprop="dateModified" content="2020-04-12T11:37:26&#43;05:30" />
-<meta itemprop="wordCount" content="1871">
+<meta itemprop="wordCount" content="1840">
 
   <meta itemprop="image" content="https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg">
 
@@ -125,7 +125,7 @@
       <div class="post-meta">
         <span class="post-time"> 2020-04-09 </span>
         
-          <span class="more-meta"> 1871 words </span>
+          <span class="more-meta"> 1840 words </span>
           <span class="more-meta"> 9 mins read </span>
         
       </div>
@@ -174,9 +174,7 @@
 
 <p><img src="https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg" width=745px/></p>
 
-<p>In 1995, <a href="https://www.wikiwand.com/en/JavaScript">Javascript</a> started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, <a href="https://www.npmjs.com/search?q=keywords:iot&amp;page=0&amp;ranking=optimal">IoT</a>, Desktops, <a href="https://www.npmjs.com/search?ranking=popularity&amp;page=0&amp;q=keywords%3Arobotics">Robotics</a>, etc. It&rsquo;s a language you can&rsquo;t ignore. This popularity can be felt when you look at the <a href="npmjs.com">Node Package Manager(NPM)</a>, which is the package manager for javascript created in 2010. <strong>NPM has 1.5+ million packages; this makes it the world&rsquo;s biggest package registry.</strong></p>
-
-<p>In 2020, <a href="https://blog.npmjs.org/post/612764866888007680/next-phase-montage">Github bought NPM</a>, and In 2019, <a href="https://techcrunch.com/2019/05/10/github-gets-a-package-registry/">Github also announced its Package registry</a> for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and <strong>by the end, you will know everything to build and publish your package to any registry, Github, or NPM.</strong></p>
+<p>In 2019, <a href="https://techcrunch.com/2019/05/10/github-gets-a-package-registry/">Github announced its Package registry</a> for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and <strong>by the end, you will know everything to build and publish your package to any registry, Github, or NPM.</strong></p>
 
 <blockquote>
 <p>If you are familiar with npm or package building, you can jump directly to the <a href="#publishing">publishing</a> part.</p>
@@ -208,11 +206,11 @@ It is known for saving disk space by storing one package version just once on th
 
 <h1 id="example"><strong>Example</strong></h1>
 
-<p>For this blog, we will create a tiny and simple <strong>package to find the distance between a given point and the origin</strong>. I have already published this package <a href="https://github.com/ramantehlan/ts-packaging-101/packages/177465">here</a>, and you can find the source code <a href="https://github.com/ramantehlan/ts-packaging-101">here</a>.</p>
+<p>For this blog, we will create a tiny and simple <strong>package to find the distance between a given point and the origin</strong>. I have already published this <a href="https://github.com/ramantehlan/ts-packaging-101/packages/177465">package</a>, and you can find the source code <a href="https://github.com/ramantehlan/ts-packaging-101">here</a>.</p>
 
 <h2 id="initialization-package">Initialization Package</h2>
 
-<p>We need to create a manifesto file to tell the package manager that a repository is a javascript package, here <a href="https://docs.npmjs.com/files/package.json"><code>package.json</code></a> is the manifesto file. It holds all the crucial details about it, from package name to version, dependencies, etc. To do so, we will create a new folder and initialize npm init, follow the commands given below:</p>
+<p>We need to create a manifesto file to tell the package manager that a repository is a javascript package, here <a href="https://docs.npmjs.com/files/package.json">package.json</a> is the manifesto file. It holds all the crucial details about it, from package name to version, dependencies, etc. To do so, we will create a new folder and initialize npm init, follow the commands given below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -220,8 +218,8 @@ It is known for saving disk space by storing one package version just once on th
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir PACKAGE_NAME
-$ <span class="nb">cd</span> PACKAGE_NAME
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir ts-packaging-101
+$ <span class="nb">cd</span> ts-packaging-101
 $ npm init -y</code></pre></td></tr></table>
 </div>
 </div>
@@ -244,7 +242,7 @@ Here you can keep any package name, but remember <strong>Github only supports sc
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;@USERNAME/PACKAGE_NAME&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;@ramantehlan/ts-packaging&#34;</span><span class="p">,</span>
   <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
   <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
   <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
@@ -259,20 +257,27 @@ Here you can keep any package name, but remember <strong>Github only supports sc
 </div>
 <h2 id="install-dependencies">Install Dependencies</h2>
 
-<p>We will write our package in <a href="https://www.typescriptlang.org/">Typescript</a>, which is a superset of javascript. The reason for using Typescript is it adds optional static typing to the language. To be able to use Typescript, we need to install the <code>typescript</code> module as a dependency.</p>
+<p>We will write our package in <a href="https://www.typescriptlang.org/">Typescript</a>, which is a superset of javascript. The reason for using Typescript are:</p>
+
+<ul>
+<li>Optional static typing.</li>
+<li>The ability to compile down to a version of JavaScript that runs on all browsers.</li>
+</ul>
+
+<p>To be able to use Typescript, we need to install the <code>typescript</code> module as a development dependency.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install typescript</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install --save-dev typescript</code></pre></td></tr></table>
 </div>
 </div>
 <p>This will create a <a href="https://docs.npmjs.com/configuring-npm/folders.html"><code>node_modules</code></a> directory, which holds all the dependencies for the project. If you open it, you will see Typescript is installed there. It will also create an autogenerate <a href="https://docs.npmjs.com/configuring-npm/package-lock-json.html"><code>package-lock.json</code></a>, and it describes the exact dependency tree that was generated.</p>
 
 <h2 id="configure">Configure</h2>
 
-<p>We also need to configure the Typescript to use it for our project, and we do it by adding a file <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html"><code>tsconfig.json</code></a>. You can use the configuration given below for this example.</p>
+<p>We also need to configure the Typescript to use it for our project, and we do it by adding a file <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json</a>. You can use the configuration given below for this example.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
@@ -291,21 +296,21 @@ Here you can keep any package name, but remember <strong>Github only supports sc
 <td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
   <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;es5&#34;</span><span class="p">,</span>                          <span class="err">/*</span> <span class="err">Specify</span> <span class="err">ECMAScript</span> <span class="err">target</span> <span class="err">version:</span> <span class="err">&#39;ES3&#39;</span> <span class="err">(default),</span> <span class="err">&#39;ES5&#39;,</span> <span class="err">&#39;ES2015&#39;,</span> <span class="err">&#39;ES2016&#39;,</span> <span class="err">&#39;ES2017&#39;,&#39;ES2018&#39;</span> <span class="err">or</span> <span class="err">&#39;ESNEXT&#39;.</span> <span class="err">*/</span>
-    <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>                     <span class="err">/*</span> <span class="err">Specify</span> <span class="err">module</span> <span class="err">code</span> <span class="err">generation:</span> <span class="err">&#39;none&#39;,</span> <span class="err">&#39;commonjs&#39;,</span> <span class="err">&#39;amd&#39;,</span> <span class="err">&#39;system&#39;,</span> <span class="err">&#39;umd&#39;,</span> <span class="err">&#39;es2015&#39;,</span> <span class="err">or</span> <span class="err">&#39;ESNext&#39;.</span> <span class="err">*/</span>
-    <span class="nt">&#34;declaration&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>                   <span class="err">/*</span> <span class="err">Generates</span> <span class="err">corresponding</span> <span class="err">&#39;.d.ts&#39;</span> <span class="err">file.</span> <span class="err">*/</span>
-    <span class="nt">&#34;outDir&#34;</span><span class="p">:</span> <span class="s2">&#34;./pkg&#34;</span><span class="p">,</span>                        <span class="err">/*</span> <span class="err">Redirect</span> <span class="err">output</span> <span class="err">structure</span> <span class="err">to</span> <span class="err">the</span> <span class="err">directory.</span> <span class="err">*/</span>
-    <span class="nt">&#34;strict&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>                           <span class="err">/*</span> <span class="err">Enable</span> <span class="err">all</span> <span class="err">strict</span> <span class="err">type-checking</span> <span class="err">options.</span> <span class="err">*/</span>
-    <span class="nt">&#34;esModuleInterop&#34;</span><span class="p">:</span> <span class="kc">true</span>                   <span class="err">/*</span> <span class="err">Enables</span> <span class="err">emit</span> <span class="err">interoperability</span> <span class="err">between</span> <span class="err">CommonJS</span> <span class="err">and</span> <span class="err">ES</span> <span class="err">Modules</span> <span class="err">via</span> <span class="err">creation</span> <span class="err">of</span> <span class="err">namespace</span> <span class="err">objects</span> <span class="err">for</span> <span class="err">all</span> <span class="err">imports.</span> <span class="err">Implies</span> <span class="err">&#39;allowSyntheticDefaultImports&#39;.</span> <span class="err">*/</span>
+    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;es5&#34;</span><span class="p">,</span>        <span class="err">/*</span> <span class="err">Specify</span> <span class="err">ECMAScript</span> <span class="err">target</span> <span class="err">version:</span> <span class="err">&#39;ES3&#39;</span> <span class="err">(default),</span> <span class="err">&#39;ES5&#39;,</span> <span class="err">&#39;ES2015&#39;,</span> <span class="err">&#39;ES2016&#39;,</span> <span class="err">&#39;ES2017&#39;,&#39;ES2018&#39;</span> <span class="err">or</span> <span class="err">&#39;ESNEXT&#39;.</span> <span class="err">*/</span>
+    <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>   <span class="err">/*</span> <span class="err">Specify</span> <span class="err">module</span> <span class="err">code</span> <span class="err">generation:</span> <span class="err">&#39;none&#39;,</span> <span class="err">&#39;commonjs&#39;,</span> <span class="err">&#39;amd&#39;,</span> <span class="err">&#39;system&#39;,</span> <span class="err">&#39;umd&#39;,</span> <span class="err">&#39;es2015&#39;,</span> <span class="err">or</span> <span class="err">&#39;ESNext&#39;.</span> <span class="err">*/</span>
+    <span class="nt">&#34;declaration&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>    <span class="err">/*</span> <span class="err">Generates</span> <span class="err">corresponding</span> <span class="err">&#39;.d.ts&#39;</span> <span class="err">file</span> <span class="err">so</span> <span class="err">that</span> <span class="err">the</span> <span class="err">package</span> <span class="err">can</span> <span class="err">be</span> <span class="err">used</span> <span class="err">with</span> <span class="err">Typescript</span> <span class="err">too.</span> <span class="err">*/</span>
+    <span class="nt">&#34;outDir&#34;</span><span class="p">:</span> <span class="s2">&#34;./dist&#34;</span><span class="p">,</span>     <span class="err">/*</span> <span class="err">Redirect</span> <span class="err">output</span> <span class="err">structure</span> <span class="err">to</span> <span class="err">the</span> <span class="err">directory.</span> <span class="err">*/</span>
+    <span class="nt">&#34;strict&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>         <span class="err">/*</span> <span class="err">Enable</span> <span class="err">all</span> <span class="err">strict</span> <span class="err">type-checking</span> <span class="err">options.</span> <span class="err">*/</span>
+    <span class="nt">&#34;esModuleInterop&#34;</span><span class="p">:</span> <span class="kc">true</span> <span class="err">/*</span> <span class="err">Enables</span> <span class="err">emit</span> <span class="err">interoperability</span> <span class="err">between</span> <span class="err">CommonJS</span> <span class="err">and</span> <span class="err">ES</span> <span class="err">Modules</span> <span class="err">via</span> <span class="err">creation</span> <span class="err">of</span> <span class="err">namespace</span> <span class="err">objects</span> <span class="err">for</span> <span class="err">all</span> <span class="err">imports.</span> <span class="err">Implies</span> <span class="err">&#39;allowSyntheticDefaultImports&#39;.</span> <span class="err">*/</span>
   <span class="p">},</span>
   <span class="nt">&#34;include&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;src&#34;</span><span class="p">],</span>
-  <span class="nt">&#34;exclude&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;node_modules&#34;</span><span class="p">,</span> <span class="s2">&#34;pkg&#34;</span><span class="p">]</span>
+  <span class="nt">&#34;exclude&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;node_modules&#34;</span><span class="p">,</span> <span class="s2">&#34;dist&#34;</span><span class="p">]</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>We also need to configure our <code>package.json</code> to specify the build command and our Github repository. I am assuming you are familiar with Github and can create and push your repository. If you are not, I will suggest you learn about it <a href="https://resources.github.com/whitepapers/How-GitHub-secures-open-source-software/">here</a>.</p>
 
-<p>We need to add the <strong>entry point</strong> of the package, which is going to be <code>pkg/index.js</code>, this file is not present yet, but will be once we build the project. We also need to provide the <strong>method to build</strong> it, for that we are using <code>tsc</code>(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You also need to add <code>files</code> key to package.json, to <strong>whitelist</strong> the files or folders you want to publish.You need to add the following lines to your <code>package.json</code> file to add the above mentions things. ,</p>
+<p>We need to add the <strong>entry point</strong> of the package, which is going to be <code>dist/index.js</code>, this file is not present yet, but will be once we build the project. We also need to provide the <strong>method to build</strong> it, for that we are using <code>tsc</code>(Typescript compiler). We need to provide the Github repository for the project. It is required to publish your package to Github Registry. You also need to add <code>files</code> key to package.json, to <strong>whitelist</strong> the files or folders you want to publish.You need to add the following lines to your <code>package.json</code> file to add the above mentions things.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
@@ -323,15 +328,15 @@ Here you can keep any package name, but remember <strong>Github only supports sc
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="err">...</span>
-  <span class="s2">&#34;main&#34;</span><span class="err">:</span> <span class="s2">&#34;pkg/index.js&#34;</span><span class="err">,</span>
+  <span class="s2">&#34;main&#34;</span><span class="err">:</span> <span class="s2">&#34;dist/index.js&#34;</span><span class="err">,</span>
   <span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc&#34;</span>
   <span class="p">}</span><span class="err">,</span>
-  <span class="s2">&#34;homepage&#34;</span><span class="err">:</span><span class="s2">&#34;https://github.com/YOUR_USERNAME/PACKAGE_NAME#README&#34;</span><span class="err">,</span>
-  <span class="s2">&#34;files&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;pkg/**&#34;</span><span class="p">]</span><span class="err">,</span>
+  <span class="s2">&#34;homepage&#34;</span><span class="err">:</span><span class="s2">&#34;https://github.com/ramantehlan/ts-packaging-101#README&#34;</span><span class="err">,</span>
+  <span class="s2">&#34;files&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;dist/**&#34;</span><span class="p">]</span><span class="err">,</span>
   <span class="s2">&#34;repository&#34;</span><span class="err">:</span><span class="p">{</span>
     <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;git&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;git+https://github.com/YOUR_USERNAME/PACKAGE_NAME.git&#34;</span>
+    <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;git+https://github.com/ramantehlan/ts-packaging-101.git&#34;</span>
   <span class="p">}</span><span class="err">,</span>
 <span class="err">...</span></code></pre></td></tr></table>
 </div>
@@ -389,7 +394,7 @@ Here you can keep any package name, but remember <strong>Github only supports sc
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>So far, this is how your file structure looks like. If you run <code>npm run build</code>, it will also create the <code>pkg/index.js</code>, which is the compiled program and is the entry point.</p>
+<p>So far, this is how your file structure looks like. If you run <code>npm run build</code>, it will also create the <code>dist/index.js</code>, which is the compiled program and is the entry point.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -461,7 +466,9 @@ Email: <span class="o">(</span>this IS public<span class="o">)</span> NPM_EMAIL<
 </div>
 <h3 id="un-publish">Un-Publish</h3>
 
-<p>You can’t unpublish after 24 hours of publishing a package, or it’s version. Before that, to un-publish a package, you can run the following command.</p>
+<p>Unpublishing your package is not recommended. Instead, you can depreciate it.</p>
+
+<p><a href="https://www.npmjs.com/policies/unpublish">According to the unpublish policy of NPM</a>, <strong>you can&rsquo;t unpublish a version after 24 hours of publishing it, and you can&rsquo;t unpublish a package after 72 hours of publishing</strong> and only if there are no dependents on it. Before that, to un-publish a package, you can run the following command.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1

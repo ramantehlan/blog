@@ -17,7 +17,8 @@
       <pubDate>Thu, 09 Apr 2020 11:37:26 +0530</pubDate>
       
       <guid>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</guid>
-      <description>In 1995, Javascript started as a language of web or as a browser-side language. But today, It is used all over the world, and in so many areas, from full-stack development to Mobile Apps, IoT, Desktops, Robotics, etc. It&amp;rsquo;s a language you can&amp;rsquo;t ignore. This popularity can be felt when you look at the Node Package Manager(NPM), which is the package manager for javascript created in 2010. NPM has 1.</description>
+      <description>In 2019, Github announced its Package registry for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and by the end, you will know everything to build and publish your package to any registry, Github, or NPM.
+ If you are familiar with npm or package building, you can jump directly to the publishing part.</description>
     </item>
     
     <item>
