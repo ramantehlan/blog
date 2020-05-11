@@ -2,8 +2,8 @@
 title: "Modern JavaScript Packaging"
 date: 2020-04-09T11:37:26+05:30
 lastmod: 2020-04-12T11:37:26+05:30
-draft: true
-keywords: []
+draft: false
+keywords: [ "javascript", "packaging", "typescript", "npm", "yarn", "raman tehlan", "ramantehlan"]
 description: "Learn how to package Javascript"
 tags: []
 categories: []

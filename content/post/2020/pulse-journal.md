@@ -2,12 +2,15 @@
 title: "Pulse Journal"
 date: 2020-05-10T15:05:47+05:30
 lastmod: 2020-05-10T15:05:47+05:30
-draft: true
+draft: false
 keywords: []
-description: ""
+description: "Pulse is a heartbeat monitor; it connects with your smart band and fetches your pulse in real-time to display it on a dashboard."
 tags: []
 categories: []
-author: ""
+author: "Raman Tehlan"
+
+images: ["https://raw.githubusercontent.com/ramantehlan/pulse/master/resources/pulse.png"]
+
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
