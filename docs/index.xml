@@ -6,7 +6,7 @@
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 11:37:26 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 15:05:47 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       <guid>https://ramantehlan.github.io/blog/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
+    </item>
+    
+    <item>
+      <title>Pulse Journal</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</link>
+      <pubDate>Sun, 10 May 2020 15:05:47 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</guid>
+      <description></description>
     </item>
     
     <item>

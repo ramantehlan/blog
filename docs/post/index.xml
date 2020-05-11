@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 11:37:26 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 15:05:47 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pulse Journal</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</link>
+      <pubDate>Sun, 10 May 2020 15:05:47 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Modern JavaScript Packaging</title>
