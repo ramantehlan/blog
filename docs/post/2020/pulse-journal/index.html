@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2020-05-10T15:05:47&#43;05:30" />
 <meta itemprop="dateModified" content="2020-05-10T15:05:47&#43;05:30" />
-<meta itemprop="wordCount" content="1547">
+<meta itemprop="wordCount" content="1549">
 
   <meta itemprop="image" content="https://raw.githubusercontent.com/ramantehlan/pulse/master/resources/pulse.png">
 
@@ -125,7 +125,7 @@
       <div class="post-meta">
         <span class="post-time"> 2020-05-10 </span>
         
-          <span class="more-meta"> 1547 words </span>
+          <span class="more-meta"> 1549 words </span>
           <span class="more-meta"> 8 mins read </span>
         
       </div>
@@ -174,15 +174,15 @@
 
 <p>This project was initially <strong>conceptualized during a hackathon</strong>(Ultrahack Delhi - 2019). I had this very <strong>raw idea of analysing health data and predicting diseases</strong>, and after teaming with 4 of my friends we came up with this idea of using the smart band(Miband 3) and ECG sensor to get data and then analyse it and together we created <a href="https://github.com/ramantehlan/Curie"><strong>curie</strong></a>. It worked great, the exciting thing is, while presenting it, I was wearing the band and <strong>judges could see my heartbeat in realtime on a chart!</strong> However, we didn&rsquo;t win, but it was a pleasant experience.</p>
 
-<p>A year later, in my final semester, I needed to create a project for submission; that&rsquo;s when I decided to take another look the idea and recreate it with a more robust and practical application. That&rsquo;s how pulse was created.</p>
+<p>A year later, in my final semester, I needed to create a project for submission; that&rsquo;s when I decided to take another look at the idea and recreate it with a more robust and practical application. That&rsquo;s how pulse was created.</p>
 
 <h1 id="vision">Vision</h1>
 
 <p>As I see it, in the future, Imagine a <strong>subscription service provided by your hospitals</strong>, with a partnership with other companies they will give you a smart bands/watch or other wearable devices, and they will then privately and securely connect with that device to analyse your health vitals in realtime, to <strong>predict the health problems you might have in your lifetime</strong>.</p>
 
-<p>Or, think of an application to help <strong>athletes to tap into their health insights</strong> and help them in making smart and informed health decisions, by recommending health diets or fitness routine etc. These are just two examples. Otherwise, there are many many applications for it.</p>
+<p>Or, think of an application to help <strong>athletes to tap into their health insights</strong> and help them in making smart and informed health decisions, by recommending health diets or fitness routines etc. These are just two examples. Otherwise, there are many many applications for it.</p>
 
-<p><strong>Future needs cheap and advance health analysis, something that can be easily and rapidly implemented even in the poorest countries</strong>. It&rsquo;s not like it&rsquo;s not already happening; it is, but this project is just an experiment to discover and create one of the ways to implement it.</p>
+<p><strong>Future needs cheap and advanced health analysis, something that can be easily and rapidly implemented even in the poorest countries</strong>. It&rsquo;s not like it&rsquo;s not already happening; it is, but this project is just an experiment to discover and create one of the ways to implement it.</p>
 
 <h1 id="design-process">Design Process</h1>
 
@@ -193,7 +193,7 @@ Initially, I wanted to write the application in just one language(Go) and use th
 
 <p>To do so, I also need to compile the frontend files in the binary, and for the I used <a href="https://github.com/markbates/pkger"><strong>pkger</strong></a>, it was a little tricky to configure it, but after trying out for few days, I was able to generate <code>pkger.go</code> file which contained the frontend files.</p>
 
-<p>The second thing I had to do was find a way to connect to Bluetooth devices in Go, and I came across a few options and decided to go with <a href="https://github.com/paypal/gatt"><strong>Paypal/gatt</strong></a> package. Even though this package wasn&rsquo;t maintained form a long time, but it was still the most stared and forked package from other options.</p>
+<p>The second thing I had to do was find a way to connect to Bluetooth devices in Go, and I came across a few options and decided to go with <a href="https://github.com/paypal/gatt"><strong>Paypal/gatt</strong></a> package. Even though this package wasn&rsquo;t maintained for a long time, it was still the most starred and forked package from other options.</p>
 
 <p>However, now when I think about it, it wasn&rsquo;t the right package to pick, I was able to discover and connect to devices, but I wasn&rsquo;t able to pass data or fetch services from the Bluetooth device, even after spending countless hours I wasn&rsquo;t able to figure it out, and if your have to spend days to do a very simple task using a library then probably it&rsquo;s a wrong library you are using.</p>
 
@@ -215,7 +215,7 @@ Initially, I wanted to write the application in just one language(Go) and use th
 <li>Then I thought of using go binding for python(<a href="https://github.com/DataDog/go-python3">Go-python-3</a>), but while testing it, it did work, but it turned out to be somewhat tricky and wasn&rsquo;t a reliable solution or a long term solution.</li>
 </ul>
 
-<p>In the end, I decided to create a separate service for Miband3 and communicate with the pulse command using gRPC. It does break my initial goal of creating a single binary for it, but it works and probably is the best solution for the given problem that could be created in a limited time. Also note, the goal of creating the binary was to make it distributable, so this service is designed in a way that you can build <strong>.whl</strong> file for it and install it on your system. The ideal solution will be to make the gatt package working in Go and rewrite the Miband3 in Go, which don&rsquo;t just involve reinventing the wheel but also delays the solution.</p>
+<p>In the end, I decided to create a separate service for Miband3 and communicate with the pulse command using gRPC. It does break my initial goal of creating a single binary for it, but it works and probably is the best solution for the given problem that could be created in a limited time. Also note, the goal of creating the binary was to make it distributable, so this service is designed in a way that you can build a <strong>.whl</strong> file for it and install it on your system. The ideal solution will be to make the gatt package working in Go and rewrite the Miband3 in Go, which doesn&rsquo;t just involve reinventing the wheel but also delays the solution.</p>
 
 <p>➕ <strong>Take away</strong></p>
 
@@ -245,8 +245,8 @@ Initially, I wanted to write the application in just one language(Go) and use th
 <p><strong>Take Away</strong></p>
 
 <ul>
-<li>If you have a problem, the break it down into subproblems and then solve it, if you are still not able to solve it, then probably you need to find more way to break it down.</li>
-<li><em>Personal Opinion</em>; It&rsquo;s better to manage an application where services are not talking to each other directly, but via a central program, like in this application, all the services only connects to <code>pulse</code> service and not to other services directly, even when they can, as <code>pulseExplorer</code> can also directly send devices list to the frontend. However, right now it&rsquo;s sending it first to <code>pulse</code> and then <code>pulse</code> send it to the frontend, this gives more control over the communication and makes it simple.</li>
+<li>If you have a problem, then break it down into subproblems and then solve it, if you are still not able to solve it, then probably you need to find more ways to break it down.</li>
+<li><em>Personal Opinion</em>; It&rsquo;s better to manage an application where services are not talking to each other directly, but via a central program, like in this application, all the services only connects to <code>pulse</code> service and not to other services directly, even when they can, as <code>pulseExplorer</code> can also directly send devices list to the frontend. However, right now it&rsquo;s sending it first to <code>pulse</code> and then <code>pulse</code> sends it to the frontend, this gives more control over the communication and makes it simple.</li>
 </ul>
 
 <h2 id="result">Result</h2>
@@ -261,7 +261,7 @@ Initially, I wanted to write the application in just one language(Go) and use th
 
 <p><strong>Note</strong><br></p>
 
-<p>this project is more like an experiment or a prototype. So if there are bugs or better coding practices, I will appreciate if you can politely point them out via Github issues. Also, if you like this project or my other projects, you can follow me on <a href="https://twitter.com/ramantehlan">Twitter</a> or <a href="https://github.com/ramantehlan">Github</a> and also maybe give this project a star. ☺️ ⭐️</p>
+<p>This project is more like an experiment or a prototype. So if there are bugs or better coding practices, I will appreciate it if you can politely point them out via Github issues. Also, if you like this project or my other projects, you can follow me on <a href="https://twitter.com/ramantehlan">Twitter</a> or <a href="https://github.com/ramantehlan">Github</a> and also maybe give this project a star. ☺️ ⭐️</p>
 
 <h1 id="acknowledgement">Acknowledgement</h1>
 
