@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2020 15:05:47 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 04:40:08 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Enabling Reproducible Computing in nteract Play</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/</link>
+      <pubDate>Wed, 27 May 2020 04:40:08 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The open-source summer of 2020</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/intro/</link>
+      <pubDate>Tue, 26 May 2020 23:26:56 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/intro/</guid>
+      <description>On May 4th, 2020, I was trying to focus on my to-do-list for the day while desperately trying not to think about the Google Summer of Code result. Remembering how the last two times I applied, and it didn’t go down well, it unnerved me a little; preparing me better for this year’s results. On one hand, I was frantically refreshing the page, and on the other, I was also exploring something new to pursue and deviate my attention.</description>
+    </item>
     
     <item>
       <title>Pulse Journal</title>

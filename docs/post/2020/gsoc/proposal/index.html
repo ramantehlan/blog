@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Enabling Reproducible Computing in nteract Play - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="This will allow you to share your public notebooks from Github via a unique URL, and let other people start a session to reproduce your work." /><meta name="keywords" content="nteract, gsoc, google summer of code, 2020, NumFOCUS, ramantehlan, raman tehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Enabling Reproducible Computing in nteract Play" />
+<meta property="og:description" content="This will allow you to share your public notebooks from Github via a unique URL, and let other people start a session to reproduce your work." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/82072552-8625ce80-96f5-11ea-951d-a893dc60358d.jpg" />
+<meta property="article:published_time" content="2020-05-27T04:40:08+05:30" />
+<meta property="article:modified_time" content="2020-05-27T04:40:08+05:30" />
+<meta itemprop="name" content="Enabling Reproducible Computing in nteract Play">
+<meta itemprop="description" content="This will allow you to share your public notebooks from Github via a unique URL, and let other people start a session to reproduce your work.">
+
+
+<meta itemprop="datePublished" content="2020-05-27T04:40:08&#43;05:30" />
+<meta itemprop="dateModified" content="2020-05-27T04:40:08&#43;05:30" />
+<meta itemprop="wordCount" content="1026">
+
+  <meta itemprop="image" content="https://user-images.githubusercontent.com/29037312/82072552-8625ce80-96f5-11ea-951d-a893dc60358d.jpg">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/82072552-8625ce80-96f5-11ea-951d-a893dc60358d.jpg"/>
+
+<meta name="twitter:title" content="Enabling Reproducible Computing in nteract Play"/>
+<meta name="twitter:description" content="This will allow you to share your public notebooks from Github via a unique URL, and let other people start a session to reproduce your work."/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Enabling Reproducible Computing in nteract Play</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-27 </span>
+        
+          <span class="more-meta"> 1026 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#what-is-nteract">What is nteract?</a></li>
+<li><a href="#proposal">Proposal</a>
+<ul>
+<li><a href="#why-this-proposal">Why this proposal?</a></li>
+</ul></li>
+<li><a href="#phases">Phases</a>
+<ul>
+<li><a href="#phase-1-github-integration">Phase 1: <strong>Github Integration</strong></a>
+<ul>
+<li><a href="#user-authorizing">User Authorizing</a></li>
+<li><a href="#fetch-data">Fetch Data</a></li>
+<li><a href="#saving-data">Saving Data</a></li>
+</ul></li>
+<li><a href="#phase-2-mybinder-integration">Phase 2: <strong>MyBinder Integration</strong></a>
+<ul>
+<li><a href="#launching">Launching</a></li>
+<li><a href="#communicating">Communicating</a></li>
+<li><a href="#executing">Executing</a></li>
+</ul></li>
+<li><a href="#phase-3-ui-ux-integration">Phase 3: <strong>UI/UX Integration</strong></a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p align="center">
+<img src="https://user-images.githubusercontent.com/29037312/82077369-ebc98900-96fc-11ea-8bc6-ce835bd89593.jpg" />
+</p>
+
+<p style="text-align: justify;">
+<a href="https://summerofcode.withgoogle.com/projects/#4917324802424832">My project</a> is accepted for <a href="https://summerofcode.withgoogle.com/">GSoC</a> 2020 for the <a href="https://nteract.io/">nteract organization</a> under <a href="https://numfocus.org/">NumFOCUS</a>. If you haven't already read the
+announcement post, read it <a href="/blog/post/2020/gsoc/intro">here</a>. I am excited to spend my summer developing nteract play to support
+reproducible computing.
+</p>
+
+<p style="text-align: justify;">
+This post is to describe the proposal briefly. I will cover all the significant steps and topics, some of the
+topics will also be explained in sub-posts. Note some steps might be altered during development, but most
+will remain the same.
+</p>
+
+<p align="center" style="margin-top:50px;margin-bottom:50px">
+<img src="https://user-images.githubusercontent.com/29037312/82098839-66a59a80-9723-11ea-8485-4c301d4e4941.gif" width="250"/>
+</p>
+
+<h1 id="what-is-nteract">What is nteract?</h1>
+
+<p><a href="">nteract</a> is an ecosystem of SDKs, applications, and libraries created by the <a href="">nteract community</a> to help you
+and your team make the most of interactive notebooks and REPLs.</p>
+
+<ul>
+<li><a href="">Core SDK</a> to help you bring the power of notebooks to every application by enabling you to create your
+own computing experience.</li>
+<li>A <a href="">Suite of applications</a> allows you to quickly create and publish notebooks in the cloud and on the
+desktop.</li>
+<li><a href="">Libraries</a> to enhance your notebook workflows from end-to-end.</li>
+</ul>
+
+<p><br>
+<strong>What is nteract play?</strong><br><br>
+<a href="">nteract play</a> is a web application that provides an interactive playground for users to run code samples
+against a Binder instance.</p>
+
+<p align="center" style="margin-top:50px;margin-bottom:50px">
+<img src="https://user-images.githubusercontent.com/29037312/82072552-8625ce80-96f5-11ea-951d-a893dc60358d.jpg" width="800"/>
+</p>
+
+<h1 id="proposal">Proposal</h1>
+
+<p style="text-align:justify;">
+My proposal is to add support for reproducible computing in nteract play. <b>This will allow you to share your
+public notebooks from Github via a unique URL, and let other people start a session to reproduce your
+work.</b> This will also allow you and others to make edits and save them back to Github.
+</p>
+
+<h2 id="why-this-proposal">Why this proposal?</h2>
+
+<p>There are many uses cases of reproducible computing, few are mentioned below:</p>
+
+<ul>
+<li>It will empower researchers to easily showcase their findings without fretting if users can set up the
+environment.</li>
+<li>It will save your time when reproducing someone’s work.</li>
+<li>It can be used by professors and teachers to teach their class.</li>
+<li>New students can use it to quickly learn and test different concepts.</li>
+</ul>
+
+<h1 id="phases">Phases</h1>
+
+<p>This project is divided into three phases.</p>
+
+<h2 id="phase-1-github-integration">Phase 1: <strong>Github Integration</strong></h2>
+
+<p style="text-align:justify;">
+We take Github's details from the URL query or the menu and use <a href="https://developer.github.com/v3/">GitHub API</a> to perform different
+operations like fetching, committing, and so forth. GitHub provides the official library <a href="">octokit/rest.js</a> to interact with Github API.
+</p>
+
+<h3 id="user-authorizing">User Authorizing</h3>
+
+<p style="text-align:justify;">
+We don’t need to authorize a user to work with public repositories and to test them but is required to commit changes and to fork the repository. We can authorize users using the GitHub OAuth and save the access token in the browser web storage. Web storage has no expiration date, and even if the token gets deleted for some reason, the reauthorization is quick this time, as the app is already allowed by the user.
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&#34;github-access-token&#34;</span><span class="p">,</span><span class="s2">&#34;as2j9xl17kn30jmxc3&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="fetch-data">Fetch Data</h3>
+
+<p>Using the octokit/rest.js, we will fetch data like directory list, file content, modification date, etc. It will not just make the app content-rich but will also take off the load from the MyBinder Instance.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">octokit</span><span class="p">.</span><span class="nx">repos</span><span class="p">.</span><span class="nx">getContents</span><span class="p">({</span>
+  <span class="nx">owner</span><span class="o">:</span><span class="s2">&#34;username&#34;</span><span class="p">,</span>
+  <span class="nx">repo</span><span class="o">:</span><span class="s2">&#34;repo&#34;</span><span class="p">,</span>
+  <span class="nx">path</span><span class="o">:</span><span class="s2">&#34;/filepath/file.ipynb&#34;</span><span class="p">,</span>
+  <span class="nx">ref</span><span class="o">:</span><span class="s2">&#34;master&#34;</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="saving-data">Saving Data</h3>
+
+<p>When saving data, there can be two cases:</p>
+
+<ul>
+<li><p><i>The user is authentic to commit to the repo</i>. In this case, changes can be easily auto-committed.</p></li>
+
+<li><p><i>The user is not authentic to commit to the repo</i>. In this case, we will need to fork the repo first or find the already forked repo and then push the changes to auto-commit.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">octokit</span><span class="p">.</span><span class="nx">repos</span><span class="p">.</span><span class="nx">createFork</span><span class="p">({</span>
+<span class="nx">owner</span><span class="o">:</span><span class="s2">&#34;username&#34;</span><span class="p">,</span>
+<span class="nx">repo</span><span class="s2">&#34;repo&#34;</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>There can be three cases:</p>
+
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Commit Quality</th>
+<th>Commit Frequency</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>On Change</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>On Run</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+
+<tr>
+<td>On Save</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+
+<p>For this project, we will go with <code>on run</code>. <b>We will also create a program to take in changes and generate appropriate commit message based on the changes</b>. In the future, we can incorporate the <code>on save</code> action and also allow users to pick their commit messages.</p>
+
+<h2 id="phase-2-mybinder-integration">Phase 2: <strong>MyBinder Integration</strong></h2>
+
+<p align="center" >
+<img src="https://user-images.githubusercontent.com/29037312/82091141-7964a300-9714-11ea-8435-efa895bdf849.png" width="300"/>
+</p>
+
+<p style="text-align:justify;">
+We plan to use <a href="https://mybinder.org/">mybinder.org</a> to launch and manage binder instances, running a jupyter-notebook from our Github repo. Once that is up, we use the <a href="https://jupyter-client.readthedocs.io/en/stable/#">jupyter-client</a> to communicate and manage jupyter kernels.
+</p>
+
+<h3 id="launching">Launching</h3>
+
+<p style="text-align:justify;">
+To  launch  a  binder instance, we  use <a href="https://packages.nteract.io/modules/rx_binder.html">rx-binder</a>,  which  uses mybinder build link[mybinder.org/build/gh/{USER}/{REPO}/{GITREF}] to launch the instance.
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span><span class="p">{</span><span class="nx">binder</span><span class="p">}</span><span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;rx-binder&#34;</span><span class="p">);</span>
+<span class="nx">binder</span><span class="p">({</span><span class="nx">repo</span><span class="o">:</span><span class="s2">&#34;{user}/{repo}&#34;</span><span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>It returns an object with a token and URL of the remote Jupyter Server.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<span class="err">...</span>
+<span class="nt">&#34;token&#34;</span><span class="p">:</span><span class="s2">&#34;8e_31VblTOO0Nobk0OuFtQ&#34;</span><span class="p">,</span>
+<span class="nt">&#34;url&#34;</span><span class="p">:</span><span class="s2">&#34;https://notebooks.gesis.org/binder/jupyter/user/ramantehlan-mybinder-play-474q6pqs/&#34;</span>
+<span class="err">...</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="communicating">Communicating</h3>
+
+<p style="text-align:justify">
+We use <a href="https://packages.nteract.io/modules/rx_jupyter.html">rx-jupyter</a>, which uses <a href="http://jupyter-api.surge.sh/">Jupyter-API</a> to run queries on remote Jupyter Server. We already have the URL and token, so the API calls look like this:
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">http://{url}/api/{endpoint}?_={token}</pre></td></tr></table>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>EndPoint</th>
+<th>Use</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>/content</td>
+<td>Fetch, save, delete, create, rename, list files and folders.</td>
+</tr>
+
+<tr>
+<td>/sessions</td>
+<td>Delete, create, rename, list sessions.</td>
+</tr>
+
+<tr>
+<td>/kernels</td>
+<td>Start, kill, interrupt, restart kernels.</td>
+</tr>
+
+<tr>
+<td>/kernelspecs</td>
+<td>Get kernel specs./configGet or update configuration of session.</td>
+</tr>
+
+<tr>
+<td>/terminals</td>
+<td>Create, get and delete terminal.</td>
+</tr>
+
+<tr>
+<td>/status</td>
+<td>Get status of the server.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="executing">Executing</h3>
+
+<p><a href="https://jupyter-client.readthedocs.io/en/stable/messaging.html">Messaging in Jupyter</a> uses sockets to execute commands and exchange input and output. We use <a href="https://packages.nteract.io/modules/messaging.html">@nteract/messaging</a> on the frontend to work with sockets to execute the command and fetch the output.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">constmessage</span><span class="o">=</span><span class="nx">createMessage</span><span class="p">(</span><span class="s2">&#34;inspect_request&#34;</span><span class="p">,{</span>
+  <span class="nx">code</span><span class="o">:</span><span class="s2">&#34;string.for&#34;</span><span class="p">,</span>
+  <span class="nx">cursor_pos</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+  <span class="nx">detail_level</span><span class="o">:</span><span class="mi">1</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="phase-3-ui-ux-integration">Phase 3: <strong>UI/UX Integration</strong></h2>
+
+<p>To make the nteract-play application more interactive, we can create new UI/UX by introducing the following new/improved components and functionality.</p>
+
+<ul>
+<li>FileExplorer<br>
+List all the files in the repo, which on click is visible on the editor or the viewer.</li>
+<li>Viewer<br>
+It is to display different file types with syntax highlighting.</li>
+
+<li><p>Editor<br>
+To edit notebooks using the nteract environment.</p></li>
+
+<li><p>Console<br>
+It is placed on the bottom of the page as users are familiar with this UX, and we can console more information about binder and notebook activities.</p></li>
+
+<li><p>Notification<br>
+It is to notify about the connection failure or success, or other important messages for the user.</p></li>
+
+<li><p>Loading<br>
+To give a visual confirmation on processing something or loading something.</p></li>
+</ul>
+
+<p>The idea is to give users a smooth and playful experience on the application, so we can also introduce more components as per requirement during the development of this project.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>This proposal is projected to take 3 months or so to complete, and as mentioned above, a lot of steps anddetails will change during the development. I will write a blog at the end of the GSoC period to include all the changes done in the development.</p>
+
+<h1 id="acknowledgement">Acknowledgement</h1>
+
+<ul>
+<li>Hero Image and “Understanding Nteract” by <a href="https://twitter.com/fabric_8">@fabric_8</a></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2020/gsoc/intro/">
+            <span class="next-text nav-default">The open-source summer of 2020</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="ramantehlan/blog-comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
