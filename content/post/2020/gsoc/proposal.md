@@ -70,18 +70,18 @@ will remain the same.
 
 # What is nteract?
 
-<a href="">nteract</a> is an ecosystem of SDKs, applications, and libraries created by the <a href="">nteract community</a> to help you
+<a href="https://nteract.io/">nteract</a> is an ecosystem of SDKs, applications, and libraries created by the <a href="https://github.com/nteract/">nteract community</a> to help you
 and your team make the most of interactive notebooks and REPLs.
 
-- <a href="">Core SDK</a> to help you bring the power of notebooks to every application by enabling you to create your
+- <a href="https://nteract.io/sdk">Core SDK</a> to help you bring the power of notebooks to every application by enabling you to create your
 own computing experience.
-- A <a href="">Suite of applications</a> allows you to quickly create and publish notebooks in the cloud and on the
+- A <a href="https://nteract.io/applications">Suite of applications</a> allows you to quickly create and publish notebooks in the cloud and on the
 desktop.
-- <a href="">Libraries</a> to enhance your notebook workflows from end-to-end.
+- <a href="https://nteract.io/libraries">Libraries</a> to enhance your notebook workflows from end-to-end.
 
 <br>
 **What is nteract play?**<br><br>
-<a href="">nteract play</a> is a web application that provides an interactive playground for users to run code samples
+<a href="https://play.nteract.io/">nteract play</a> is a web application that provides an interactive playground for users to run code samples
 against a Binder instance.
 
 <p align="center" style="margin-top:50px;margin-bottom:50px">
@@ -113,7 +113,7 @@ This project is divided into three phases.
 
 <p style="text-align:justify;">
 We take Github's details from the URL query or the menu and use <a href="https://developer.github.com/v3/">GitHub API</a> to perform different
-operations like fetching, committing, and so forth. GitHub provides the official library <a href="">octokit/rest.js</a> to interact with Github API.
+operations like fetching, committing, and so forth. GitHub provides the official library <a href="https://github.com/octokit/rest.js/">octokit/rest.js</a> to interact with Github API.
 </p>
 
 ### User Authorizing 
