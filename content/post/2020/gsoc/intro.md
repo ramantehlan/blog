@@ -1,7 +1,7 @@
 ---
 title: "The open-source summer of 2020"
 date: 2020-05-26T23:26:56+05:30
-lastmod: 2020-05-26T23:26:56+05:30
+lastmod: 2020-06-18T23:26:56+05:30
 draft: false
 keywords: ["nteract", "gsoc", "introduction to project", "raman tehlan", "ramantehlan"]
 description: "About summer of 2020 and GSoC project."

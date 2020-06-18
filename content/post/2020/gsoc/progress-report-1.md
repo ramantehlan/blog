@@ -3,8 +3,8 @@ title: "What's it like to strategize and build the sails for nteract-play"
 date: 2020-06-10T16:26:45+05:30
 lastmod: 2020-06-14T16:26:45+05:30
 draft: true
-keywords: []
-description: ""
+keywords: [ "GSOC", "raman tehlan", "progress report", "nteract-play", "ramantehlan"]
+description: "1st Progress report by Raman Tehlan on nteract-play project for Google Summer of Code"
 tags: []
 categories: []
 author: "Raman Tehlan"
