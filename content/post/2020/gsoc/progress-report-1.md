@@ -75,7 +75,7 @@ Let’s look at the in-depth progress so far, shall we?
 # Workflow
 
 <p style="text-align: justify;">
-I am working a different repository, before moving the code to nteract-play. Now you must be wondering why, so let’s just kill the suspense already because I am working on it to eventually make it a part of <a href="https://nteract.io/applications">nteract ecosystem</a>. It will not only lead to individual success, instead, but it shall also influence both the projects and push forward towards success.
+I am working on a different repository, before moving the code to nteract-play. Now you must be wondering why, so let’s just kill the suspense already because I am working on it to eventually make it a part of <a href="https://nteract.io/applications">nteract ecosystem</a>. It will not only lead to individual success, instead, but it shall also influence both the projects and push forward towards success.
 </p>
 
 <p style="text-align: justify;">
