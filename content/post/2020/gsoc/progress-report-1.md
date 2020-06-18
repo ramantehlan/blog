@@ -63,7 +63,7 @@ sequenceDiagrams:
 <img src="https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg">
 
 <p style="text-align: justify;">
-Building an application is like building a ship. At various stages, you have to wear different hats of diverse perspectives to understand what goes where and next and plan accordingly. At one point, you are thinking about the engine(algorithm), and at another, you are thinking about the design. You have to consider every small detail, to keep the boat afloat amidst storms of technical crises and bugs along with taking care of the fact that every passenger is provided with their own safety kits, here pointing towards the accessibility factor. 
+Building an application is like building a ship. At various stages, you have to wear different hats of diverse perspectives to understand what goes where next and plan accordingly. At one point, you are thinking about the engine(algorithm), and at another, you are thinking about the design. You have to consider every small detail, to keep the boat afloat amidst storms of technical crises and bugs along with taking care of the fact that every passenger is provided with their own safety kits, here pointing towards the accessibility factor. 
 </p>
 
 <p style="text-align: justify;">
@@ -173,11 +173,11 @@ I will be using the already created <a href="https://github.com/nteract/oauth-se
 <img src="https://user-images.githubusercontent.com/29037312/84603563-ed799e80-aeac-11ea-9e48-1cb168a87493.gif" />
 
 <p style="text-align: justify;">
-I used <a href="https://www.figma.com">Figma</a> for the first time to create the above prototype, and it was really helpful. If you are a non-designer (like me) and have to design something, always think about making it <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">accessible</a> for all. I thought I considered it, but then Safia pointed out issues in font and colour. After reading more about it, I reconsidered it. It’s crucial-- you must think about it and improvise accordingly.
+I used <a href="https://www.figma.com">Figma</a> for the first time to create the above prototype, and it was really helpful. If you are a non-designer (like me) and have to design something, always think about making it <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">accessible</a> for all. I considered it, but then Safia pointed out issues in font and colour. After reading more about it, I reconsidered it. It’s crucial-- you must think about it and improvise accordingly.
 </p>
 
 <p style="text-align: justify;">
-If you are not a designer or have issues with differentiating with colours or are influenced by colour-blindness -- I would recommend using colour-palettes or taking help from your designer friends. You can also use plugins like A11y-Color Contrast Checker or Color-Blind. If you are using React, then skim through <a href="https://reactjs.org/docs/accessibility.html">this page</a> once as it might serve to be of some help to you.
+If you are not a designer or have issues with differentiating colours or are influenced by colour-blindness -- I would recommend using colour-palettes or taking help from your designer friends. You can also use plugins like A11y-Color Contrast Checker or Color-Blind. If you are using React, then skim through <a href="https://reactjs.org/docs/accessibility.html">this page</a> once as it might serve to be of some help to you.
 </p>
 
 <p style="text-align: justify;">
