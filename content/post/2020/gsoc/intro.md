@@ -107,9 +107,7 @@ link all my related posts for you all to read right here! Go on, brace yourself 
 
 </p>
 
-- Proposal: <a href="/blog/post/2020/gsoc/proposal">Enabling Reproducible computing in nteract play</a>
-
-
-
+- Proposal: <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/">Enabling Reproducible computing in nteract play</a>
+- Progress Report 1: <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/">What's it like to strategize and build the sails for nteract-play</a>
 
 
