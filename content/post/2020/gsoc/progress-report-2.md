@@ -99,7 +99,7 @@ I am glad that I passed my 1st evaluation, and I get to continue to work on the 
 
 <p style="text-align: justify;">
 <b>
-The focus for the coming evaluation will be on implementing the notebook, saving the changes to Github and making the FileExplorer work</b>.  Safia and I feel this PR is too big, so all the pending tasks after 2nd evaluation will be done in a new PR. 
+The focus for the 2nd evaluation will be on implementing the notebook, saving the changes to Github and making the FileExplorer work</b>.  Safia and I feel this PR is too big, so all the pending tasks after 2nd evaluation will be done in a new PR. 
 </p>
 
 
