@@ -17,7 +17,7 @@ images: ["https://raw.githubusercontent.com/ramantehlan/pulse/master/resources/p
 comment: true
 toc: true
 autoCollapseToc: false
-postMetaInFooter: false
+postMetaInFooter: true
 hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 reward: false

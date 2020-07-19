@@ -14,6 +14,7 @@ images: ["https://user-images.githubusercontent.com/29037312/78960732-8c2ffa80-7
 mathjax: true
 mathjaxEnableSingleDollar: true
 mathjaxEnableAutoNumber: true
+postMetaInFooter: true
 
 ---
 

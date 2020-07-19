@@ -11,6 +11,7 @@ author: "Raman Tehlan"
 
 images: ["https://user-images.githubusercontent.com/29037312/79023992-48d29c00-7b9f-11ea-924c-1e0318389ec8.jpg"]
 
+postMetaInFooter: true
 ---
 
 

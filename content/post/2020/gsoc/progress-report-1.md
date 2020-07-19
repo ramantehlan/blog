@@ -17,10 +17,8 @@ images: ["https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b
 comment: true
 toc: true
 autoCollapseToc: false
-postMetaInFooter: false
+postMetaInFooter: true
 hiddenFromHomePage: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
 reward: false
 mathjax: false
 mathjaxEnableSingleDollar: false

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 16:26:45 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 17:59:09 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <guid>https://ramantehlan.github.io/blog/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
+    </item>
+    
+    <item>
+      <title>1st Evaluation of nteract-play</title>
+      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/</link>
+      <pubDate>Thu, 16 Jul 2020 17:59:09 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/</guid>
+      <description></description>
     </item>
     
     <item>
