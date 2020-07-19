@@ -57,7 +57,7 @@ After 1st evaluation, let’s look at how far along we are with the project.
 </p>
 
 
-### UI/UX Integration
+## UI/UX Integration
 
 - [x] Layout
 - [x] BinderMenu
@@ -74,7 +74,7 @@ After 1st evaluation, let’s look at how far along we are with the project.
 - [ ] Notebook rendering.
 - [ ] FileExplorer 
 
-### Github Integration
+## Github Integration
 
 - [x] Complete authentication
 - [x] Fetch user's public info
@@ -82,7 +82,7 @@ After 1st evaluation, let’s look at how far along we are with the project.
 - [x] List and create a fork for repo
 - [ ] Save back changes to the repo or the fork 
 
-### MyBinder Integration
+## MyBinder Integration
 
 - [ ] Launch MyBinder instance on start
 - [ ] Communicate with JupyterServer.
@@ -91,7 +91,7 @@ After 1st evaluation, let’s look at how far along we are with the project.
 
 </p>
 
-# Conclusion
+## Conclusion
 
 <p style="text-align: justify;">
 I am pleased that I passed my 1st evaluation, and I get to continue to work on the project and complete the rest of the tasks.
