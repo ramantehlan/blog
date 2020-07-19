@@ -47,9 +47,9 @@ sequenceDiagrams:
 It’s been a while that I have shared my progress on nteract play. That’s because I was on a 15 days break for my exams, so couldn’t update sooner, but I believe, better late than never, so here is my progress so far with nteract-play. 
 </p>
 
-In my last blog, I talked about two main tasks, 
+In my last blog, I talked about two main tasks:
 
-1. Developing the project using a blueprint I created in Figma. 
+1. Developing the project using a blueprint created in Figma. 
 2. Integrating Github API in nteract play. 
 
 <p style="text-align: justify;">
@@ -94,11 +94,12 @@ After 1st evaluation, let’s look at how far along we are with the project.
 ## Conclusion
 
 <p style="text-align: justify;">
-I am pleased that I passed my 1st evaluation, and I get to continue to work on the project and complete the rest of the tasks.
+I am glad that I passed my 1st evaluation, and I get to continue to work on the project and complete the rest of the tasks.
 </p>
 
 <p style="text-align: justify;">
-<b>The focus for the coming evaluation will be on implementing the notebook, saving the changes to Github and making the FileExplorer work</b>. Safia and I feel this PR is too big, so all the pending tasks will be done in the next PR.
+<b>
+The focus for the coming evaluation will be on implementing the notebook, saving the changes to Github and making the FileExplorer work</b>.  Safia and I feel this PR is too big, so all the pending tasks after 2nd evaluation will be done in a new PR. 
 </p>
 
 
