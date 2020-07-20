@@ -9,7 +9,7 @@ tags: []
 categories: []
 author: "Raman Tehlan"
 
-images: ["https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg"]
+images: ["https://user-images.githubusercontent.com/29037312/82072552-8625ce80-96f5-11ea-951d-a893dc60358d.jpg"]
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
