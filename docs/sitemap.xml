@@ -1,119 +1,119 @@
-<?xml-stylesheet type="text/xsl" href="https://blog.ramantehlan.com/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://ramantehlan.com/blog/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.ramantehlan.com/about/</loc>
+    <loc>https://ramantehlan.com/blog/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-2/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/gsoc/progress-report-2/</loc>
     <lastmod>2020-07-16T17:59:09+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/</loc>
+    <loc>https://ramantehlan.com/blog/</loc>
     <lastmod>2020-07-16T17:59:09+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/</loc>
+    <loc>https://ramantehlan.com/blog/post/</loc>
     <lastmod>2020-07-16T17:59:09+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-1/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/gsoc/progress-report-1/</loc>
     <lastmod>2020-06-14T16:26:45+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/gsoc/proposal/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/gsoc/proposal/</loc>
     <lastmod>2020-05-27T04:40:08+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/gsoc/intro/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/gsoc/intro/</loc>
     <lastmod>2020-06-18T23:26:56+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/pulse-journal/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/pulse-journal/</loc>
     <lastmod>2020-05-10T15:05:47+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/modern-javascript-packaging/</loc>
+    <loc>https://ramantehlan.com/blog/post/2020/modern-javascript-packaging/</loc>
     <lastmod>2020-04-12T11:37:26+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</loc>
+    <loc>https://ramantehlan.com/blog/store/data-mining/part1-introduction/</loc>
     <lastmod>2020-04-07T00:00:19+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/store/</loc>
+    <loc>https://ramantehlan.com/blog/store/</loc>
     <lastmod>2020-04-07T00:00:19+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/store/data-mining/introduction/</loc>
+    <loc>https://ramantehlan.com/blog/store/data-mining/introduction/</loc>
     <lastmod>2020-04-07T00:00:00+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/terminalshortcuts/</loc>
+    <loc>https://ramantehlan.com/blog/post/terminalshortcuts/</loc>
     <lastmod>2020-03-30T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/howtospeak/</loc>
+    <loc>https://ramantehlan.com/blog/post/howtospeak/</loc>
     <lastmod>2020-03-16T19:39:12+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/designthinkingmiracleofinnovation/</loc>
+    <loc>https://ramantehlan.com/blog/post/designthinkingmiracleofinnovation/</loc>
     <lastmod>2020-04-04T04:17:48+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/categories/</loc>
+    <loc>https://ramantehlan.com/blog/categories/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/tags/</loc>
+    <loc>https://ramantehlan.com/blog/tags/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
