@@ -44,7 +44,6 @@ sequenceDiagrams:
 <!--more-->
 
 <p style="text-align: justify;">
-It’s been a while that I have shared my progress on nteract play. That’s because I was on a 15 days break for my exams, so couldn’t update sooner, but I believe, better late than never, so here is my progress so far with nteract-play. 
 </p>
 
 In my last blog, I talked about two main tasks:

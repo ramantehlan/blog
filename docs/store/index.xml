@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stores on Official Blog of Raman Tehlan</title>
-    <link>https://ramantehlan.github.io/blog/store/</link>
+    <link>https://blog.ramantehlan.com/store/</link>
     <description>Recent content in Stores on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
     <lastBuildDate>Tue, 07 Apr 2020 00:00:19 +0530</lastBuildDate>
     
-	<atom:link href="https://ramantehlan.github.io/blog/store/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.ramantehlan.com/store/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Part-1: Introduction to Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</link>
+      <link>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:19 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</guid>
+      <guid>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CS 0424: Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/introduction/</link>
+      <link>https://blog.ramantehlan.com/store/data-mining/introduction/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/introduction/</guid>
+      <guid>https://blog.ramantehlan.com/store/data-mining/introduction/</guid>
       <description>This blog is the index/syllabus for the blog series on Data Mining, which I will publish in 5 parts, and I will mostly use my university notes for it.
 Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Dimentional Modelling Data Warehousing OLAP &amp;amp; its tools OLTP  Part 2: Mining Techniques &amp;amp; Clasification  Introduction Statistical Perspective of Data Mining Decision Tree Neural Networks Genetic Algorithms Issues in Classification Statistic Based Algorithm(Regression) Distance Based Algorithm Decision Tree Based Algorithm(C4.</description>
     </item>

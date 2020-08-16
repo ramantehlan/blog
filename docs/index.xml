@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Official Blog of Raman Tehlan</title>
-    <link>https://ramantehlan.github.io/blog/</link>
+    <link>https://blog.ramantehlan.com/</link>
     <description>Recent content on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
     <lastBuildDate>Thu, 16 Jul 2020 17:59:09 +0530</lastBuildDate>
     
-	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.ramantehlan.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://ramantehlan.github.io/blog/about/</link>
+      <link>https://blog.ramantehlan.com/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/about/</guid>
+      <guid>https://blog.ramantehlan.com/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
     </item>
     
     <item>
       <title>1st Evaluation of nteract-play</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/</link>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-2/</link>
       <pubDate>Thu, 16 Jul 2020 17:59:09 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What&#39;s it like to strategize and build the sails for nteract-play</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/</link>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-1/</link>
       <pubDate>Wed, 10 Jun 2020 16:26:45 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Enabling Reproducible Computing in nteract Play</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/</link>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/proposal/</link>
       <pubDate>Wed, 27 May 2020 04:40:08 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/proposal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The open-source summer of 2020</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/gsoc/intro/</link>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/intro/</link>
       <pubDate>Tue, 26 May 2020 23:26:56 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/gsoc/intro/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/intro/</guid>
       <description>On May 4th, 2020, I was trying to focus on my to-do-list for the day while desperately trying not to think about the Google Summer of Code result. Remembering how the last two times I applied, and it didn’t go down well, it unnerved me a little; preparing me better for this year’s results. On one hand, I was frantically refreshing the page, and on the other, I was also exploring something new to pursue and deviate my attention.</description>
     </item>
     
     <item>
       <title>Pulse Journal</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</link>
+      <link>https://blog.ramantehlan.com/post/2020/pulse-journal/</link>
       <pubDate>Sun, 10 May 2020 15:05:47 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/pulse-journal/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/pulse-journal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modern JavaScript Packaging</title>
-      <link>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</link>
+      <link>https://blog.ramantehlan.com/post/2020/modern-javascript-packaging/</link>
       <pubDate>Thu, 09 Apr 2020 11:37:26 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/2020/modern-javascript-packaging/</guid>
+      <guid>https://blog.ramantehlan.com/post/2020/modern-javascript-packaging/</guid>
       <description>In 2019, Github announced its Package registry for Javascript and few other languages, which means now you can publish and manage your packages on both Github and NPM and use any package manager client. Through this blog, I will try to explain how you can do it, and by the end, you will know everything to build and publish your package to any registry, Github, or NPM.
  If you are familiar with npm or package building, you can jump directly to the publishing part.</description>
     </item>
     
     <item>
       <title>Part-1: Introduction to Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</link>
+      <link>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:19 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/part1-introduction/</guid>
+      <guid>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CS 0424: Data Mining</title>
-      <link>https://ramantehlan.github.io/blog/store/data-mining/introduction/</link>
+      <link>https://blog.ramantehlan.com/store/data-mining/introduction/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/store/data-mining/introduction/</guid>
+      <guid>https://blog.ramantehlan.com/store/data-mining/introduction/</guid>
       <description>This blog is the index/syllabus for the blog series on Data Mining, which I will publish in 5 parts, and I will mostly use my university notes for it.
 Part 1: Introduction to Data Mining  Tasks Issues Decision Support System Dimentional Modelling Data Warehousing OLAP &amp;amp; its tools OLTP  Part 2: Mining Techniques &amp;amp; Clasification  Introduction Statistical Perspective of Data Mining Decision Tree Neural Networks Genetic Algorithms Issues in Classification Statistic Based Algorithm(Regression) Distance Based Algorithm Decision Tree Based Algorithm(C4.</description>
     </item>
     
     <item>
       <title>Linux Terminal Shortcuts</title>
-      <link>https://ramantehlan.github.io/blog/post/terminalshortcuts/</link>
+      <link>https://blog.ramantehlan.com/post/terminalshortcuts/</link>
       <pubDate>Mon, 30 Mar 2020 04:17:48 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/terminalshortcuts/</guid>
+      <guid>https://blog.ramantehlan.com/post/terminalshortcuts/</guid>
       <description>Linux is probably the most powerful tool in the world; When I used it for the first time, I instantly felt control over my system, and I started to understand the working of my computer with time. If you are reading this, and are not already using Linux, or haven&amp;rsquo;t used it ever, I strongly recommend you try it out. In Linux, what I like the most is the terminal, it&amp;rsquo;s like magic, it lets you reach the core of your system and work with it.</description>
     </item>
     
     <item>
       <title>How To Speak</title>
-      <link>https://ramantehlan.github.io/blog/post/howtospeak/</link>
+      <link>https://blog.ramantehlan.com/post/howtospeak/</link>
       <pubDate>Mon, 16 Mar 2020 19:39:12 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/howtospeak/</guid>
+      <guid>https://blog.ramantehlan.com/post/howtospeak/</guid>
       <description>You have your own set of skills and knowledge, which you collect over time from the education system or through experiencing life. It&amp;rsquo;s also essential to learn to pass it to other people effectively, no one should go out into life without the ability to communicate. Your success in life is primarily determined by:
  Your ability to speak. Your ability to write. The quality of your ideas.</description>
     </item>
     
     <item>
       <title>Design Thinking - Miracle of Innovation</title>
-      <link>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</link>
+      <link>https://blog.ramantehlan.com/post/designthinkingmiracleofinnovation/</link>
       <pubDate>Tue, 05 Jun 2018 04:17:48 +0530</pubDate>
       
-      <guid>https://ramantehlan.github.io/blog/post/designthinkingmiracleofinnovation/</guid>
+      <guid>https://blog.ramantehlan.com/post/designthinkingmiracleofinnovation/</guid>
       <description>Today, we need innovation more than we ever did in history. Everybody needs it, whether you are a teacher, global corporation, salesman, entrepreneur, programmer, etc. Everyone needs to get lean and do better with limited resources and time. That is where design thinking comes into the role. Design Thinking can make your mind proactive, and you will become more innovative and creative by the end of this blog. This blog has 4 significant parts.</description>
     </item>
     
