@@ -43,8 +43,6 @@ sequenceDiagrams:
 
 <!--more-->
 
-<p style="text-align: justify;">
-</p>
 
 In my last blog, I talked about two main tasks:
 

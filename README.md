@@ -12,3 +12,6 @@ Personal Blog based on [Hugo](https://gohugo.io) and [Theme-even](https://themes
 ### Add new post
 `hugo new post/foo.md`
 
+> When using the default domain provided by github, update baseurl in config file to https://ramantehlan.github.io/blog
+
+
