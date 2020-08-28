@@ -53,12 +53,12 @@ The 2nd evaluation of GSoC is complete, and I have passed it (Yay!). I had less 
 Initially, I was going to use the component created for nteract Desktop. But after considering the efforts required to make that component work with nteract web, creating a new component from scratch seemed like a better option. So, below is the FileExplorer component, used to load files and folders from Github repo. 
 </p>
 
-<img src="https://user-images.githubusercontent.com/29037312/90334447-5683ac80-dfeb-11ea-8a91-1c409ba8f61f.gif" />
+<img src="https://user-images.githubusercontent.com/29037312/90346794-ae510080-e049-11ea-942a-cdd34b505cfa.gif" />
 
 # Saving back to Github.
 
 <p style="text-align: justify;">
-Once you make your changes to files, you can save your changes back to Github. The logic of Github integration was discussed in the <a href="https://blog.ramantehlan.com/post/2020/gsoc/progress-report-1/">first report</a>.  
+Once you make your changes to files, you can save your changes back to Github. The logic of Github integration was discussed in the <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/">first report</a>.  
 </p>
 
 # 3rd phase
