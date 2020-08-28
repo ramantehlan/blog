@@ -3,8 +3,8 @@ title: "GSoC 2020: Final Report of nteract play"
 date: 2020-08-20T22:53:30+05:30
 lastmod: 2020-08-20T22:53:30+05:30
 draft: true
-keywords: []
-description: ""
+keywords: ["GSOC", "Raman Tehlan", "nteract", "nteract web", "nteract play", "ramantehlan", "nteract SDK", "ramantehlan"]
+description: "Final report on the GSoC 2020 project with nteract and NumFOCUS."
 tags: []
 categories: []
 author: "Raman Tehlan"
@@ -53,14 +53,18 @@ On 31st August 2020, the 3rd and final phase of Google Summer of Code will end. 
 
 **Title:** Reproducible computing with nteract play
 
+**Organization:** <a href="https://numfocus.org/">NumFOCUS</a>
+
+**Project:** <a href="http://nteract.io/">nteract</a>
+
 **Abstract:** This project aims to support reproducible computing using nteract and Binder—the ability to start an interactive session via a unique URL, with content provided by any version control system and executed in a remote environment. To begin with, Github API can be used to fetch and save content, but the scope of the project can be adjusted to deal with different VCS. The Github repo can be launched on a binder instance, and the code samples can run on it.
 
 ## **Implementation**
-In my <a href="#">proposal</a>, I divided my work into 3 phases. However, when I started working on the application, I began with UI/UX Integration. 
+In my <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/intro/">proposal</a>, I divided my work into 3 phases. However, when I started working on the application, I began with UI/UX Integration. 
 
-Github Integration
-MyBinder Integration
-UI/UX Integration
+- Github Integration
+- MyBinder Integration
+- UI/UX Integration
 
 ### 1st Month
 
@@ -86,12 +90,13 @@ UI/UX Integration
 
 You can read more about my journey and implementation in the following blogs.
 
+- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/intro/">The open-source summer of 2020</a>
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/">Enabling Reproducible computing in nteract play</a> **`Proposal`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/">What's it like to strategize and build the sails for nteract-play</a> **`Progress Report 1`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/">1st Evaluation of nteract-play</a> **`1st Evaluation`** 
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-3/">2nd Evaluation of nteract-play</a> **`2nd Evaluation`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">Demystifying nteract SDK</a>
-- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">GSoC 2020: Final report of nteract play</a> **`Final Report`**
+- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/final-report/">GSoC 2020: Final report of nteract play</a> **`Final Report`**
 
 
 ## **Source Code**

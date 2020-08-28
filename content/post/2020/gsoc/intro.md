@@ -93,8 +93,7 @@ people involved with the projects. I absolutely <i>love</i> this community.
 <p style="text-align:justify;">
 Even though I was looking forward to cracking the opportunity for a lot of reasons but mainly because of
 the mentorship provided at GSoC. I have a tendency to value any advice I get, it means something to me. I
-was feeling just a wee bit proud and enthralled because well, I get to work under the leadership of <a href="https://twitter.com/captainsafia">@captiansafia</a>, my mentor. She looks after the organisation and maintains the nteract ecosystem along with working
-at Microsoft.
+was feeling just a wee bit proud and enthralled because well, I get to work under the leadership of <a href="https://twitter.com/captainsafia">@captiansafia</a>, my mentor. She looks after the organisation and maintains the nteract ecosystem along with working at Microsoft.
 </p>
 
 
@@ -107,9 +106,10 @@ link all my related posts for you all to read right here! Go on, brace yourself 
 
 </p>
 
+- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/intro/">The open-source summer of 2020</a> **`Proposal`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/">Enabling Reproducible computing in nteract play</a> **`Proposal`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/">What's it like to strategize and build the sails for nteract-play</a> **`Progress Report 1`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/">1st Evaluation of nteract-play</a> **`1st Evaluation`** 
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-3/">2nd Evaluation of nteract-play</a> **`2nd Evaluation`**
 - <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">Demystifying nteract SDK</a>
-- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">GSoC 2020: Final report of nteract play</a> **`Final Report`**
+- <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/final-report/">GSoC 2020: Final report of nteract play</a> **`Final Report`**

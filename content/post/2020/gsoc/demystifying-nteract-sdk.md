@@ -3,8 +3,8 @@ title: "Demystifying nteract SDK"
 date: 2020-08-16T10:38:40+05:30
 lastmod: 2020-08-16T10:38:40+05:30
 draft: true
-keywords: ["GSOC", "Raman Tehlan", "nteract", "nteract web", "nteract play", "ramantehlan", "nteract core"]
-description: "2nd Evaluation for nteract-play project for Google Summer of Code"
+keywords: ["GSOC", "Raman Tehlan", "nteract", "nteract web", "nteract play", "ramantehlan", "nteract SDK", "ramantehlan"]
+description: "This blog is about understanding nteract ecosystem and nteract SDK."
 tags: []
 categories: []
 author: "Raman Tehlan"
@@ -26,10 +26,6 @@ mathjaxEnableAutoNumber: false
 
 # You unlisted posts you might want not want the header or footer to show
 hideHeaderAndFooter: false
-
-# You can enable or disable out-of-date content warning for individual post.
-# Comment this out to use the global config.
-# enableOutdatedInfoWarning: false
 
 flowchartDiagrams:
   enable: false
