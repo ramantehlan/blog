@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Tue, 04 Aug 2020 10:38:40 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 22:53:30 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ramantehlan.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,24 @@
       <guid>https://blog.ramantehlan.com/about/</guid>
       <description>Welcome to my tiny space on the internet, here I share about my work, life and everything in between. If you are just interested in my career, feel free go directly to my website, to know me more personally you can continue reading my blog.
 I&amp;rsquo;m Raman Tehlan, I was first introduced to programming at the age of 11. The first language I used was BASIC, I used it for calculation and to solve simple math problems.</description>
+    </item>
+    
+    <item>
+      <title>GSoC 2020: Final Report of nteract play</title>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/final-report/</link>
+      <pubDate>Thu, 20 Aug 2020 22:53:30 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/final-report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demystifying nteract SDK</title>
+      <link>https://blog.ramantehlan.com/post/2020/gsoc/demystifying-nteract-sdk/</link>
+      <pubDate>Sun, 16 Aug 2020 10:38:40 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2020/gsoc/demystifying-nteract-sdk/</guid>
+      <description></description>
     </item>
     
     <item>

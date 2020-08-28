@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GSoC 2020: Final Report of nteract play - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="" /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.57.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.ramantehlan.com/post/2020/gsoc/final-report/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="GSoC 2020: Final Report of nteract play" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.ramantehlan.com/post/2020/gsoc/final-report/" />
+
+<meta property="og:image" content="https://images.unsplash.com/photo-1531262951893-05a0ffb31b27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
+<meta property="article:published_time" content="2020-08-20T22:53:30+05:30" />
+<meta property="article:modified_time" content="2020-08-20T22:53:30+05:30" />
+<meta itemprop="name" content="GSoC 2020: Final Report of nteract play">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2020-08-20T22:53:30&#43;05:30" />
+<meta itemprop="dateModified" content="2020-08-20T22:53:30&#43;05:30" />
+<meta itemprop="wordCount" content="1050">
+
+  <meta itemprop="image" content="https://images.unsplash.com/photo-1531262951893-05a0ffb31b27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1531262951893-05a0ffb31b27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/>
+
+<meta name="twitter:title" content="GSoC 2020: Final Report of nteract play"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">GSoC 2020: Final Report of nteract play</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-08-20 </span>
+        
+          <span class="more-meta"> 1050 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#project">Project</a>
+<ul>
+<li><a href="#implementation"><strong>Implementation</strong></a>
+<ul>
+<li><a href="#1st-month">1st Month</a></li>
+<li><a href="#2nd-month">2nd Month</a></li>
+<li><a href="#3rd-month">3rd Month</a></li>
+</ul></li>
+<li><a href="#source-code"><strong>Source Code</strong></a>
+<ul>
+<li><a href="#prs-before-coding-period">PRs Before coding period</a></li>
+<li><a href="#prs-during-coding-period">PRs During coding period</a></li>
+</ul></li>
+<li><a href="#result"><strong>Result</strong></a></li>
+<li><a href="#future-scope"><strong>Future Scope</strong></a></li>
+</ul></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+<li><a href="#conslusion">Conslusion</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p align="center">
+<img src="https://images.unsplash.com/photo-1531262951893-05a0ffb31b27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
+</p>
+
+<p>On 31st August 2020, the 3rd and final phase of Google Summer of Code will end. I had a really good time working with nteract this summer, and it turned out to be a unique experience. This blog is my final report on the project, and I will talk about the implementation, the source etc.</p>
+
+<h1 id="project">Project</h1>
+
+<p><strong>Title:</strong> Reproducible computing with nteract play</p>
+
+<p><strong>Abstract:</strong> This project aims to support reproducible computing using nteract and Binder—the ability to start an interactive session via a unique URL, with content provided by any version control system and executed in a remote environment. To begin with, Github API can be used to fetch and save content, but the scope of the project can be adjusted to deal with different VCS. The Github repo can be launched on a binder instance, and the code samples can run on it.</p>
+
+<h2 id="implementation"><strong>Implementation</strong></h2>
+
+<p>In my <a href="#">proposal</a>, I divided my work into 3 phases. However, when I started working on the application, I began with UI/UX Integration.</p>
+
+<p>Github Integration
+MyBinder Integration
+UI/UX Integration</p>
+
+<h3 id="1st-month">1st Month</h3>
+
+<ul>
+<li><p>Before starting to write code, I created the moke ups of the application in Figma and shared it with Safia. I also make a logical flow for the Github Integration. Initially, I also spend some time in sharping my React and other skills.</p></li>
+
+<li><p>One can say it was a slow start, but I believe in &ldquo;Think twice and code once&rdquo;. So when I started working, things were moving fast.</p></li>
+
+<li><p>I started by developing a component inventory in React from the mockups and tested it in a storybook in <code>UI-web</code> repository. Right after creating new components, I integrated them with the <code>nteract/web</code> application.
+<img src="https://user-images.githubusercontent.com/29037312/91600198-2d690180-e985-11ea-9bbb-63be300a1ee8.png" /></p></li>
+
+<li><p>Along with this, I was also testing Github integration features like fetching content, folders etc. and was adding them to the application. I completed the OAuth server and launched it via vercel and successfully implemented the Github OAuth.</p></li>
+
+<li><p>I also added a Landing page and Authentication page to the application.
+<img src="https://user-images.githubusercontent.com/29037312/91600338-6bfebc00-e985-11ea-8875-74e1d4de4688.png" /></p></li>
+</ul>
+
+<h3 id="2nd-month">2nd Month</h3>
+
+<ul>
+<li>I had half time this month due to exams, but because I made extra efforts(Worked on the weekends) in the first month, I was able to catch up. I added the file explorer component to the application. I completed the last part of Github integration, which was saving back the changes.</li>
+</ul>
+
+<h3 id="3rd-month">3rd Month</h3>
+
+<ul>
+<li>I added Notification and Notebook component, which marks the completion of UI/UX integration. I did the code cleaning and formatting, added documentation and comments. I fixed the routing issues and some other minor issues. I also added console logs. Launched and connected to the MyBinder server.</li>
+</ul>
+
+<p>You can read more about my journey and implementation in the following blogs.</p>
+
+<ul>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/proposal/">Enabling Reproducible computing in nteract play</a> <strong><code>Proposal</code></strong></li>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-1/">What&rsquo;s it like to strategize and build the sails for nteract-play</a> <strong><code>Progress Report 1</code></strong></li>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-2/">1st Evaluation of nteract-play</a> <strong><code>1st Evaluation</code></strong></li>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/progress-report-3/">2nd Evaluation of nteract-play</a> <strong><code>2nd Evaluation</code></strong></li>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">Demystifying nteract SDK</a></li>
+<li><a href="https://ramantehlan.github.io/blog/post/2020/gsoc/demystifying-nteract-sdk/">GSoC 2020: Final report of nteract play</a> <strong><code>Final Report</code></strong></li>
+</ul>
+
+<h2 id="source-code"><strong>Source Code</strong></h2>
+
+<p>The source code of the work I did this summer can be found in the following repositories.</p>
+
+<ul>
+<li><a href="https://github.com/nteract/nteract/tree/main/applications/web">nteract/web</a></li>
+<li><a href="https://github.com/nteract/play-oauth-server">play-oauth-server</a></li>
+<li><a href="https://github.com/nteract/ui-web">ui-web</a></li>
+</ul>
+
+<p>Further, you can look into the raised PRs to see the detailed implementation of the work.</p>
+
+<h3 id="prs-before-coding-period">PRs Before coding period</h3>
+
+<ul>
+<li><a href="https://github.com/nteract/nteract/pull/4966">[nteract/web] Alpha webapp layout</a></li>
+</ul>
+
+<h3 id="prs-during-coding-period">PRs During coding period</h3>
+
+<ul>
+<li><a href="https://github.com/nteract/nteract/pull/5167">[nteract/web] New layout and OAuth in @nteract/web</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5240">[nteract/web] Save/upload to Github and other improvements</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5246">[nteract/web] Add project details in main and landing page</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5249">[nteract/web] Add language detection for editor and move functions out of main file</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5251">[nteract/web] Replace routes with query</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5261">[nteract/web] Clean Code | Fix Formatting</a></li>
+<li><a href="https://github.com/nteract/nteract/pull/5257">[nteract/web] Add notebook component and wrap up for beta and GSoC</a> <code>not merged yet</code></li>
+</ul>
+
+<h2 id="result"><strong>Result</strong></h2>
+
+<p>I have talked about how the implementation of the project and the journey. Now let&rsquo;s talk about the final shape of the project. Below is the working of the application.</p>
+
+<p><img src="https://user-images.githubusercontent.com/29037312/91562211-722b7300-e95a-11ea-8fd0-b8340c788f0e.gif" /></p>
+
+<h2 id="future-scope"><strong>Future Scope</strong></h2>
+
+<p style="text-align:justify;">
+Just like any application or product, there will always be more that can be done with nteract play. One of the most ambitious possibility is to integrate nteract play/web with nteract desktop, which will make it super easy to have an interactive environment connected with a remote server.
+</p>
+
+<p>Some of the more practical things that can be done shortly are given below.</p>
+
+<ul>
+<li><p><strong>Pending Tasks</strong></p>
+
+<ul>
+<li>Upload OAuth server from the official account.</li>
+<li>Update OAuth application in GitHub to point to nteract play, instead of localhost.</li>
+</ul></li>
+
+<li><p><strong>Bugs</strong></p>
+
+<ul>
+<li>FileExplorer gets reset, fix that by storing the state to redux.</li>
+<li>Handle “Github update too soon” error, which happens when we try to save changes again within ~2 minutes of saving.</li>
+</ul></li>
+
+<li><p><strong>Features</strong></p>
+
+<ul>
+<li>We can use iterm.js or similar library to add terminal support in the console.</li>
+<li>Click to copy sharable link button.</li>
+<li>Add star repo button.</li>
+<li>Add option to strip output from the notebook.</li>
+</ul></li>
+
+<li><p><strong>Improvements</strong></p>
+
+<ul>
+<li>Add state verification code to Github OAuth.</li>
+<li>Add a loading experience.</li>
+<li>Replace local component store with the redux store.</li>
+</ul></li>
+</ul>
+
+<h1 id="acknowledgement">Acknowledgement</h1>
+
+<p style="text-align:justify;">
+I want to thank my mentor Safia(<a href="https://twitter.com/captainsafia">@captionsafia</a>). It was a pleasure working with her. I got to learn a lot from her in the past three months. She helped me throughout the coding period, and that kept things on track. Her feedbacks in each evaluation were very constructive, and I will always use them as an anchor in my developer journey. 
+</p>
+
+<p style="text-align:justify;">
+I also want to thank the awesome nteract community for the platform and all the projects in it. Open source is thriving because of organisations like this. 
+</p>
+
+<p style="text-align:justify;">
+I am thankful to google for creating and continuing an internship program like GSoC. I feel such programs can boost the skills of those students about to enter the industry and get familiar with FOSS culture early.
+</p>
+
+<p style="text-align:justify;">
+In the end, I want to thank all the open-source libraries I used in making this application. I respect and appreciate all the hard work people have done to make the source code of so many excellent libraries for others to use.
+</p>
+
+<h1 id="conslusion">Conslusion</h1>
+
+<p style="text-align:justify;">
+nteract is an incredible ecosystem and community to be a part. I am glad I picked it as my organization under GSoC. I also feel great that I got to work on the nteract play project and push it towards the finish line. We will be releasing it as a public beta soon. I can't wait to see it online and use it for my projects, and hopefully, many people will find it useful too.
+</p>
+
+<blockquote>
+<p>Hero image by <a href="https://unsplash.com/@aldyrkhanov">Artur Aldyrkhanov</a> on <a href="https://unsplash.com/photos/CDpCbaOThwg">Unsplash</a></p>
+</blockquote>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Raman Tehlan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-08-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2020/gsoc/demystifying-nteract-sdk/">
+            <span class="next-text nav-default">Demystifying nteract SDK</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="ramantehlan/blog-comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.ramantehlan.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Demystifying nteract SDK - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="2nd Evaluation for nteract-play project for Google Summer of Code" /><meta name="keywords" content="GSOC, Raman Tehlan, nteract, nteract web, nteract play, ramantehlan, nteract core" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.57.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.ramantehlan.com/post/2020/gsoc/demystifying-nteract-sdk/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Demystifying nteract SDK" />
+<meta property="og:description" content="2nd Evaluation for nteract-play project for Google Summer of Code" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.ramantehlan.com/post/2020/gsoc/demystifying-nteract-sdk/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/82077369-ebc98900-96fc-11ea-8bc6-ce835bd89593.jpg" />
+<meta property="article:published_time" content="2020-08-16T10:38:40+05:30" />
+<meta property="article:modified_time" content="2020-08-16T10:38:40+05:30" />
+<meta itemprop="name" content="Demystifying nteract SDK">
+<meta itemprop="description" content="2nd Evaluation for nteract-play project for Google Summer of Code">
+
+
+<meta itemprop="datePublished" content="2020-08-16T10:38:40&#43;05:30" />
+<meta itemprop="dateModified" content="2020-08-16T10:38:40&#43;05:30" />
+<meta itemprop="wordCount" content="1215">
+
+  <meta itemprop="image" content="https://user-images.githubusercontent.com/29037312/82077369-ebc98900-96fc-11ea-8bc6-ce835bd89593.jpg">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/82077369-ebc98900-96fc-11ea-8bc6-ce835bd89593.jpg"/>
+
+<meta name="twitter:title" content="Demystifying nteract SDK"/>
+<meta name="twitter:description" content="2nd Evaluation for nteract-play project for Google Summer of Code"/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Demystifying nteract SDK</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-08-16 </span>
+        
+          <span class="more-meta"> 1215 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#audience">Audience</a></li>
+<li><a href="#nteract-organization">nteract organization</a></li>
+<li><a href="#nteract-sdk">nteract SDK</a>
+<ul>
+<li><a href="#core-packages"><strong>Core Packages</strong></a>
+<ul>
+<li><a href="#nteract-types">@nteract/types</a></li>
+<li><a href="#nteract-actions">@nteract/actions</a></li>
+<li><a href="#nteract-reducers">@nteract/reducers</a></li>
+<li><a href="#nteract-selectors">@nteract/selectors</a></li>
+<li><a href="#nteract-epics">@nteract/epics</a></li>
+</ul></li>
+<li><a href="#ui-packages"><strong>UI Packages</strong></a></li>
+<li><a href="#jupyter-packages"><strong>Jupyter Packages</strong></a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#acknowledgment">Acknowledgment</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p align="center">
+<img src="https://user-images.githubusercontent.com/29037312/90440851-87500880-e0f5-11ea-8f86-92673cd4c80c.jpeg" />
+</p>
+
+<p style="text-align: justify;">
+In the past 2.5 months, I got to learn a lot of new things. I got to create complex react components; I learned about creating effective UI/UX, I feel I am better at making decisions about product development now. I also enjoyed getting familiar with developing notebook apps using nteract. 
+
+</p>
+
+<p style="text-align: justify;">
+As I was learning more about nteract and getting more involved with the community. I noticed that people do show interest in contributing to nteract. However, only a small portion of interested people end up moving forward. What I feel is that there are not many blogs and other resources about the core principle. 
+
+</p>
+
+<p style="text-align: justify;">
+In this blog, I will try to demystify nteract and cover nteract SDK in detail. The aim here is to make the engineering behind notebooks simple and more approachable. 
+</p>
+
+<h1 id="audience">Audience</h1>
+
+<p style="text-align: justify;">
+This blog is for anyone interested in either using nteract SDK in their project or someone who wants to contribute to it. 
+
+There are no hard prerequisites to understand the concept. However, if you are already familiar with Javascript, RxJs, React or Redux, It will be easy for you to understand and get started with it. If you are not familiar with any or some of them, don't worry, the important thing is the willingness to learn. The language for this blog is generic and easy to understand.
+</p>
+
+<h1 id="nteract-organization">nteract organization</h1>
+
+<p>Let&rsquo;s start by looking at the zoomed-out view and see what nteract organization does and look at the overview of its ecosystem.</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/29037312/90455308-65657e80-e113-11ea-9243-dd63f9569623.png" width="800" />
+</p>
+
+<p style="text-align: justify;">
+You can find all the applications and libraries on the nteract's <a href="https://github.com/nteract"/>Github page</a>. All the libraries and some applications have their respective repositories with proper documentation for you to get started. 
+</p>
+
+<p style="text-align: justify;">
+Now let's talk about nteract SDK in-depth, which is used to create interactive notebook applications.
+</p>
+
+<h1 id="nteract-sdk">nteract SDK</h1>
+
+<p style="text-align: justify;">
+nteract SDK is a group of javascript packages used to create notebook apps. They all are developed and managed under a mono-repo here. This mono-repo is also used to manage applications based on nteract SDK, like nteract Desktop, nteract Web etc. 
+</p>
+
+<p style="text-align: justify;">
+There is no official segmentation, but to make it easy to understand, we can divide nteract SDK into three sections. 
+</p>
+
+<ul>
+<li>Core Packages</li>
+<li>UI Packages</li>
+<li>Jupyter Packages</li>
+</ul>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/29037312/91505336-f6dfa800-e8ec-11ea-8ee9-9c12cc4eaf15.png" width="800" />
+</p>
+
+<h2 id="core-packages"><strong>Core Packages</strong></h2>
+
+<p style="text-align: justify;">
+Core packages provide the basic/core functionality of the notebook. To use core packages, you have to import one package, @nteract/core. This package encapsulates all five core packages. The reason for encapsulating the packages in one is to keep the version the same and reduce errors due to package version mismatch. 
+<br/><br/>
+You can read about the principle behind core packages <a href="https://docs.nteract.io/nteract/core/overview/">here</a>. Five core packages are:
+</p>
+
+<ol>
+<li><a href="https://github.com/nteract/nteract/tree/main/packages/types">@nteract/types</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/main/packages/actions">@nteract/actions</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/main/packages/reducers">@nteract/reducers</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/main/packages/selectors">@nteract/selectors</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/main/packages/epics">@nteract/epics</a></li>
+</ol>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/29037312/91542212-1b627100-e93b-11ea-9b4f-d610e3a26570.png" />
+</p>
+
+<h3 id="nteract-types">@nteract/types</h3>
+
+<p>This package contains definitions of different data types used in nteract application. These data types are used to store data for kernels, notebooks, hosts etc.</p>
+
+<p>For example, below is how  <code>KernelspecMetadata</code> and <code>KernelspecInfo</code> data types are defined in this package.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">export</span> <span class="kr">interface</span> <span class="nx">KernelspecMetadata</span> <span class="p">{</span>
+  <span class="nx">display_name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">language</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">argv</span><span class="o">:</span> <span class="nx">string</span><span class="p">[];</span>
+  <span class="nx">name</span><span class="o">?:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">env</span><span class="o">?:</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nx">variable</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">KernelspecInfo</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">spec</span><span class="o">:</span> <span class="nx">KernelspecMetadata</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="nteract-actions">@nteract/actions</h3>
+
+<p style="text-align: justify;">
+This package contains definitions of constants and action creators that can be used to create Redux actions in nteract application. These actions can be dispatched to create new cells, launch kernels, create new notebooks, execute cells, and much more.
+</p>
+ 
+
+<p style="text-align: justify;">
+ For example, below is how you define an action to update kernel specifications. Also note it uses the `KernelspecInfo` data type as parameters(payload), which is defined above. 
+ </p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Define the action type
+</span><span class="c1"></span><span class="k">export</span> <span class="k">const</span> <span class="nx">SET_KERNELSPEC_INFO</span>   <span class="o">=</span> <span class="s2">&#34;SET_KERNELSPEC_INFO&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define the payload
+</span><span class="c1"></span><span class="k">export</span> <span class="nx">type</span> <span class="nx">SetKernelspecInfo</span> <span class="o">=</span> <span class="nx">Action</span> <span class="o">&lt;</span><span class="k">typeof</span> <span class="nx">SET_KERNELSPEC_INFO</span><span class="p">,</span>  <span class="nx">HasContent</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="nx">kernelInfo</span><span class="o">:</span> <span class="nx">KernelspecInfo</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// Create action
+</span><span class="c1"></span><span class="k">export</span> <span class="k">const</span> <span class="nx">setKernelspecInfo</span>  <span class="o">=</span> <span class="nx">makeActionFunction</span> <span class="o">&lt;</span><span class="nx">SetKernelspecInfo</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">SET_KERNELSPEC_INFO</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="nteract-reducers">@nteract/reducers</h3>
+
+<p style="text-align: justify;">
+This package contains a set of Redux reducers for use in nteract applications. Reducers describe the change in the application's state in response to actions sent to the store.
+</p>
+ 
+
+<p style="text-align: justify;">
+ Below is how reducer sets the kernel information when `SetKernelspecInfo` action is dispatched.
+ </p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="k">case</span> <span class="nx">actionTypes</span><span class="p">.</span><span class="nx">SET_KERNEL_INFO</span><span class="o">:</span>
+      <span class="nx">typedAction</span> <span class="o">=</span> <span class="nx">action</span> <span class="nx">as</span> <span class="nx">actionTypes</span><span class="p">.</span><span class="nx">SetKernelInfo</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">codemirrorMode</span> <span class="o">=</span> <span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">codemirrorMode</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">codemirrorMode</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">codemirrorMode</span> <span class="o">=</span> <span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">languageName</span><span class="p">;</span>
+      <span class="p">}</span>
+
+         <span class="k">switch</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">codemirrorMode</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="k">case</span> <span class="s2">&#34;string&#34;</span><span class="o">:</span>
+                    <span class="c1">// already set as we want it
+</span><span class="c1"></span>                 <span class="k">break</span><span class="p">;</span>
+                 <span class="k">case</span> <span class="s2">&#34;object&#34;</span><span class="o">:</span>
+                    <span class="nx">codemirrorMode</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">(</span><span class="nx">codemirrorMode</span> <span class="nx">as</span> <span class="nx">JSONObject</span><span class="p">);</span>
+                 <span class="k">break</span><span class="p">;</span>
+                 <span class="k">default</span><span class="o">:</span>
+                    <span class="c1">// any other case results in falling back to language name
+</span><span class="c1"></span>                    <span class="nx">codemirrorMode</span> <span class="o">=</span> <span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">languageName</span><span class="p">;</span>
+           <span class="p">}</span>
+
+        <span class="k">const</span> <span class="nx">helpLinks</span> <span class="o">=</span> <span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">helpLinks</span>
+                <span class="o">?</span> <span class="nx">List</span><span class="p">(</span>
+                    <span class="p">(</span><span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">.</span><span class="nx">helpLinks</span> <span class="nx">as</span> <span class="nx">HelpLink</span><span class="p">[]).</span><span class="nx">map</span><span class="p">(</span>
+                        <span class="nx">makeHelpLinkRecord</span>
+                    <span class="p">)</span>
+                  <span class="p">)</span>
+            <span class="o">:</span> <span class="nx">List</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">setIn</span><span class="p">(</span>
+                <span class="p">[</span><span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">kernelRef</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">],</span>
+                <span class="nx">makeKernelInfoRecord</span><span class="p">(</span><span class="nx">typedAction</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">info</span><span class="p">).</span><span class="nx">merge</span><span class="p">({</span>
+                  <span class="nx">helpLinks</span><span class="p">,</span>
+                  <span class="nx">codemirrorMode</span>
+                <span class="p">})</span>
+              <span class="p">);</span>
+<span class="p">...</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="nteract-selectors">@nteract/selectors</h3>
+
+<p style="text-align: justify;">
+This package provides a set of selectors and functions that allow you to extract important information from the state of your nteract application. To see a full set of the data stored in application state that be extracted with this package, you can view the AppState type. 
+</p>
+
+<p>Below is how the currentKernel selector is defined.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm"> * Returns the kernelspec of the kernel that we are currently connected to.
+</span><span class="cm"> * Returns null if there is no kernel.
+</span><span class="cm"> */</span>
+<span class="k">export</span> <span class="k">const</span> <span class="nx">currentKernel</span> <span class="o">=</span> <span class="nx">createSelector</span><span class="p">(</span>
+  <span class="p">[</span><span class="nx">currentKernelRef</span><span class="p">,</span> <span class="nx">kernelsByRef</span><span class="p">],</span>
+  <span class="p">(</span><span class="nx">kernelRef</span><span class="p">,</span> <span class="nx">byRef</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">kernelRef</span> <span class="o">?</span> <span class="nx">byRef</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">kernelRef</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Below is how we use the selector in epics or in UI library</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">selectors</span> <span class="nx">from</span> <span class="s2">&#34;@nteract/selectors&#34;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="nx">kernel</span> <span class="o">=</span> <span class="nx">selectors</span><span class="p">.</span><span class="nx">currentKernel</span><span class="p">(</span><span class="nx">state$</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">...</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="nteract-epics">@nteract/epics</h3>
+
+<p style="text-align: justify;">
+This package contains a set of Redux-Observable epics for use in nteract applications. It is a function which takes a stream of actions and returns a stream of actions.
+</p>
+
+<p>Below is how <code>acquireKernelInfoEpic</code> is defined.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm"> * Gets information about newly launched kernel.
+</span><span class="cm"> *
+</span><span class="cm"> * @param  {ActionObservable}  The action type
+</span><span class="cm"> */</span>
+ <span class="k">export</span> <span class="k">const</span> <span class="nx">acquireKernelInfoEpic</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="nx">action$</span><span class="o">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">actions</span><span class="p">.</span><span class="nx">NewKernelAction</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="nx">state$</span><span class="o">:</span> <span class="nx">StateObservable</span><span class="o">&lt;</span><span class="nx">AppState</span><span class="o">&gt;</span>
+ <span class="p">)</span> <span class="p">=&gt;</span>
+  <span class="nx">action$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+    <span class="nx">ofType</span><span class="p">(</span><span class="nx">actions</span><span class="p">.</span><span class="nx">LAUNCH_KERNEL_SUCCESSFUL</span><span class="p">),</span>
+    <span class="nx">switchMap</span><span class="p">((</span><span class="nx">action</span><span class="o">:</span> <span class="nx">actions</span><span class="p">.</span><span class="nx">NewKernelAction</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">const</span> <span class="p">{</span>
+         <span class="nx">payload</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">kernel</span><span class="o">:</span> <span class="p">{</span> <span class="nx">channels</span><span class="p">,</span> <span class="nx">kernelSpecName</span> <span class="p">},</span>
+            <span class="nx">kernelRef</span><span class="p">,</span>
+            <span class="nx">contentRef</span>
+          <span class="p">}</span>
+       <span class="p">}</span> <span class="o">=</span> <span class="nx">action</span><span class="p">;</span>
+      
+      <span class="k">return</span> <span class="nx">acquireKernelInfo</span><span class="p">(</span>
+         <span class="nx">channels</span><span class="p">,</span>
+         <span class="nx">kernelRef</span><span class="p">,</span>
+         <span class="nx">contentRef</span><span class="p">,</span>
+         <span class="nx">state$</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+         <span class="nx">kernelSpecName</span>
+      <span class="p">);</span>
+    <span class="p">})</span>
+ <span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="ui-packages"><strong>UI Packages</strong></h2>
+
+<p style="text-align: justify;">
+UI Packages are react based components used to created different UI elements of the nteract ecosystems like notebook, cells, buttons etc. Some of the packages are stateful, but some are not and require you to set up your store. If you want to help with improving the UI of nteract, these are the packages you can explore. 
+</p>
+
+<ul>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/editor">@nteract/editor</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/monaco-editor">@nteract/monaco-editor</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/mythic-notifications">@nteract/mythic-notifications</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/notebook-app-component">@nteract/notebook-app-component</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/presentational-components">@nteract/presentational-components</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/stateful-components">@nteract/stateful-components</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/styles">@nteract/styles</a></li>
+<li><a href="https://github.com/nteract/directory-listing">@nteract/directory-listing</a></li>
+<li><a href="https://github.com/nteract/dropdown-menu">@nteract/dropdown-menu</a></li>
+<li><a href="https://github.com/nteract/logos">@nteract/logos</a></li>
+<li><a href="https://github.com/nteract/markdown">@nteract/markdown</a></li>
+<li><a href="https://github.com/nteract/mathjax">@nteract/mathjax</a></li>
+<li><a href="https://github.com/nteract/octicons">@nteract/octicons</a></li>
+<li><a href="https://github.com/nteract/outputs">@nteract/outputs</a></li>
+<li><a href="https://github.com/nteract/styled-blueprintjsx">@nteract/styled-blueprintjsx</a></li>
+</ul>
+
+<h2 id="jupyter-packages"><strong>Jupyter Packages</strong></h2>
+
+<p style="text-align: justify;">
+Jupyter packages help in interacting with different components of Jupyter ecosystem, like jupyter server, binder etc. Following are the jupyter packages in nteract ecosystem. 
+</p>
+
+<ul>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/host-cache">@nteract/host-cache</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/messaging">@nteract/messaging</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/rx-binder">@nteract/rx-binder</a></li>
+<li><a href="https://github.com/nteract/nteract/tree/49983455451c1038a59408537e8698ebca9f074a/packages/rx-jupyter">@nteract/rx-jupyter</a></li>
+<li><a href="https://github.com/nteract/enchannel-zmq-backend">@nteract/enchannel-zmq-backend</a></li>
+</ul>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p><p style="text-align: justify;">
+I hope this blog has given you some more confidence in getting started with nteract SDK and contribute to it. If you are planning to use it for development, this blog should be a good starting point in understanding the working of it. I will suggest you read more about it on <a href="https://github.com/nteract">Github</a> and join the community on <a href="https://nteract.slack.com/">Slack</a>
+&lt;/p.</p>
+
+<h1 id="acknowledgment">Acknowledgment</h1>
+
+<ul>
+<li>Hero image by <a href="https://unsplash.com/@dollargill">Dollar Gill</a> on <a href="https://unsplash.com/photos/0V7_N62zZcU">Unsplash</a></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Raman Tehlan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-08-16
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2020/gsoc/final-report/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">GSoC 2020: Final Report of nteract play</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2020/gsoc/progress-report-3/">
+            <span class="next-text nav-default">2nd Evaluation of nteract-play</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="ramantehlan/blog-comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.ramantehlan.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

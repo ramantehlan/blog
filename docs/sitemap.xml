@@ -9,21 +9,35 @@
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-3/</loc>
-    <lastmod>2020-08-04T10:38:40+05:30</lastmod>
+    <loc>https://blog.ramantehlan.com/post/2020/gsoc/final-report/</loc>
+    <lastmod>2020-08-20T22:53:30+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.ramantehlan.com/</loc>
-    <lastmod>2020-08-04T10:38:40+05:30</lastmod>
+    <lastmod>2020-08-20T22:53:30+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.ramantehlan.com/post/</loc>
+    <lastmod>2020-08-20T22:53:30+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/post/2020/gsoc/demystifying-nteract-sdk/</loc>
+    <lastmod>2020-08-16T10:38:40+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-3/</loc>
     <lastmod>2020-08-04T10:38:40+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
