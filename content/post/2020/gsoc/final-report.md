@@ -68,7 +68,7 @@ In my <a href="https://ramantehlan.github.io/blog/post/2020/gsoc/intro/">proposa
 
 ### 1st Month
 
-- Before starting to write code, I created the moke ups of the application in Figma and shared it with Safia. I also make a logical flow for the Github Integration. Initially, I also spend some time in sharping my React and other skills. 
+- Before starting to write code, I created the moke ups of the application in Figma and shared it with Safia. I also made a logical flow for the Github Integration. Initially, I also spent some time in sharping my React and other skills. 
 
 - One can say it was a slow start, but I believe in "Think twice and code once". So when I started working, things were moving fast. 
 
@@ -126,6 +126,39 @@ Further, you can look into the raised PRs to see the detailed implementation of 
 
 ## **Result**
 I have talked about how the implementation of the project and the journey. Now let's talk about the final shape of the project. Below is the working of the application.
+
+
+### UI/UX Integration
+
+- [x] Layout
+- [x] BinderMenu
+- [x] Input
+- [x] Menu
+- [x] Button 
+- [x] Avatar
+- [x] Dialog
+- [x] Landing Page
+- [x] Auth page
+- [x] Editor
+- [x] Console
+- [x] FileExplorer
+- [x] Notification
+- [x] Notebook rendering.
+
+### Github Integration
+
+- [x] Complete authentication
+- [x] Fetch user's public info
+- [x] Fetch public files and folders 
+- [x] List and create a fork for repo
+- [x] Save back changes to the repo or the fork 
+
+### MyBinder Integration
+- [x] Launch MyBinder instance on start.
+- [x] Communicate with JupyterServer. Fetch info like sessions etc.
+- [x] Execute the command on MyBinder instance
+- [x] Fetch content from Github and not jupyter server.
+- [ ] Save back changes done to the notebook.
 
 <img src="https://user-images.githubusercontent.com/29037312/91562211-722b7300-e95a-11ea-8fd0-b8340c788f0e.gif" />
 
