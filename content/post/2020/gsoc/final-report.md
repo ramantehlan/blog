@@ -158,7 +158,7 @@ I have talked about how the implementation of the project and the journey. Now l
 - [x] Communicate with JupyterServer. Fetch info like sessions etc.
 - [x] Execute the command on MyBinder instance
 - [x] Fetch content from Github and not jupyter server.
-- [ ] Save back changes done to the notebook.
+- [x] Save back changes done to the notebook.
 
 <img src="https://user-images.githubusercontent.com/29037312/91562211-722b7300-e95a-11ea-8fd0-b8340c788f0e.gif" />
 
