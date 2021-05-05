@@ -47,7 +47,7 @@ sequenceDiagrams:
 <br>
 <br>
 <p align="center">
-<img src="https://raw.githubusercontent.com/ramantehlan/pulse/master/resources/icons/logo.png?token=AG5RGAHB4UGKJMSKJ6TSAO26YEBQW" width="75">
+<img src="https://raw.githubusercontent.com/ramantehlan/pulse/master/resources/icons/logo.png" width="75">
 </p>
 
 <h1 align="center">**Pulse**</h1>

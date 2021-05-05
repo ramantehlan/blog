@@ -161,6 +161,7 @@ If you end it well, all is well. You can **end it with a joke**, which makes peo
 
 **Don't end with thank you**, as it suggests that everybody has stayed that long out of politeness. **End with a salute**, like appreciate the audience for their time and interest.
 
+
 # Acknowledgement
 
 - This blog is a collection of my notes from a lecture on [**How To Speak**](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/#) by Professor [**Patrick Henry Winston**](https://en.wikipedia.org/wiki/Patrick_Winston), MIT. He passed away in 2019, and I am writing this blog in his memory.

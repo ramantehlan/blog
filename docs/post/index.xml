@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Thu, 20 Aug 2020 22:53:30 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 08 Mar 2021 01:05:47 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ramantehlan.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Essence of Probability Part - 1</title>
+      <link>https://blog.ramantehlan.com/post/2021/mathematics/probability/essence_of_probability/</link>
+      <pubDate>Mon, 08 Mar 2021 01:05:47 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2021/mathematics/probability/essence_of_probability/</guid>
+      <description>As a kid, I used to play a lot of board games with my cousins. We all would meet on the weekend, sit in the room near the veranda, on the cold marble ground and spend hours playing them. One thing that was common in all the games was dice. For me, it was fascinating to see how many different games we could play with dice. A dice with just six possible values but can turn the tables at any point in the game.</description>
+    </item>
     
     <item>
       <title>GSoC 2020: Final Report of nteract play</title>

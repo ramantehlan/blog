@@ -1,0 +1,11 @@
+# Bayes Theorem
+
+<p style="text-align: justify;">
+This is probably one of the most important concepts in probability, and I will recommend two videos to understand this well. I will try to put my explanation too, but I think the videos will do a better job. In any case, you can use this as a reference. 
+</p>
+
+{{% youtube "R13BD8qKeTg" %}}
+<br />
+{{% youtube "HZGCoVF3YvM" %}}
+<br />
+

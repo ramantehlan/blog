@@ -311,6 +311,10 @@ I hope this blog was helpful, and after reading this, you feel a little confiden
 
 If you like this blog, do follow me on [twitter](https://twitter.com/ramantehlan) and share this blog.
 
+## Video
+
+{{% youtube "1aV1uM64rk4" %}}
+
 # Acknowledgement
 
 - Hero image by [Kristina Paparo](https://unsplash.com/@emilep) on [Unsplash](https://unsplash.com/photos/xrVDYZRGdw4)
