@@ -126,7 +126,7 @@ $$
 ### Properties of Conditional Probability
 
 - $ P(S | F) = P(F|F) = 1$
-- $ P( \frac{(A \cup B)}{F}) = P(A|F) + P(B|F) - P(\frac{(A \cap B)}{F}) $ If $A$ & $B$ are disjoint, then $ = P(A|F) + P(B|F)$
+- $ P( \frac{(A \cup B)}{F}) = P(A|F) + P(B|F) - P(\frac{(A \cap B)}{F}) $ If $A$ & $B$ are mutually exclusive, then $ = P(A|F) + P(B|F)$
 
 <p align="center">
 <img src="../assets/a_b_c.jpg" width="40%" align="center" \>
