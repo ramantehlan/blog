@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>principle on Official Blog of Raman Tehlan</title>
+    <link>https://blog.ramantehlan.com/categories/principle/</link>
+    <description>Recent content in principle on Official Blog of Raman Tehlan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Raman Tehlan</copyright>
+    <lastBuildDate>Wed, 28 Jul 2021 17:43:36 +0530</lastBuildDate>
+    
+	<atom:link href="https://blog.ramantehlan.com/categories/principle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Standup - Disagree - Commit</title>
+      <link>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</link>
+      <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</guid>
+      <description>Hero image by Desiray Green on Unsplash 
+I was recently part of a brainstorming session at work. We planned the session to think of new features in our application. We discussed many ideas, and naturally, I agreed and disagreed with a few of them. And I presented both of them to the team. When the meeting came to an end, we decided on some action items. It also had a few ideas I disagreed with, and I couldn&#39;t understand why we chose to go with them.</description>
+    </item>
+    
+  </channel>
+</rss>

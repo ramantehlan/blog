@@ -7,9 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
+    <lastBuildDate>Wed, 28 Jul 2021 17:43:36 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ramantehlan.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>principle</title>
+      <link>https://blog.ramantehlan.com/tags/principle/</link>
+      <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/tags/principle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>team-work</title>
+      <link>https://blog.ramantehlan.com/tags/team-work/</link>
+      <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/tags/team-work/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

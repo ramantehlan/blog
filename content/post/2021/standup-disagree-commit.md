@@ -3,10 +3,10 @@ title: "Standup - Disagree - Commit"
 date: 2021-07-28T17:43:36+05:30
 lastmod: 2021-07-28T17:43:36+05:30
 draft: true
-keywords: []
-description: ""
-tags: []
-categories: []
+keywords: [ "principle", "managment", "teams"]
+description: "“Stand up, disagree and commit” means you are allowed to disagree while making a decision, but once taken, everybody must commit to it"
+tags: [ "principle", "team-work"]
+categories: [ "principle", "team-work"]
 author: ""
 
 images: ["../../../assets/cover/standup-disagree-commit.jpeg"]
