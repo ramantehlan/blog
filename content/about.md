@@ -9,17 +9,15 @@ comment: false
 
 ---
 
-<b>Hey Stranger/Friend</b>,
+<b>Hey! I'm Raman.</b>
 
-Welcome to my tiny corner on the internet!
+Welcome to my tiny space on the internet.
 
-<p align="justify">
-I am <a href="https://ramantehlan.com">Raman Tehlan</a>, a software engineer. Working at <a href="https://stockgro.club">StockGro</a> to democratize and socialize investing. I love designing and building distributed, scalable and high performing systems. I have previously worked at Google Summer of Code, Udacity, IBM Research etc.
-</p>
+I am a software engineer currently working at <a href="https://stockgro.com">Stockgro</a>, helping build the distributed infrastructure to make investing social. I have previously worked at Google Summer of Code, Udacity, IBM Research etc.
 
-In my free time, I help run a data science community called PyData Delhi. Where we support an open-source data science ecosystem.
+In my free time, I help run a data science community called <a href="https://delhi.pydata.org">PyData Delhi</a>, where we support an open-source data science ecosystem.
 
-I plan to use this space to write about interesting things I encounter on my journey. Mostly interested in the intersection of the following 
+I plan to use this space to write about interesting things I encounter on my journey. It mainly includes stuff from 
 
 - Computer Science
 - Data Science
@@ -27,13 +25,6 @@ I plan to use this space to write about interesting things I encounter on my jou
 - Startups
 
 If you want to stay updated, do <a href="https://tinyletter.com/ramantehlan">subscribe to my newsletter</a>. I don't spam and send a letter once a month.
-
-
-
-
-
-Regards<br>
-**Raman Tehlan**
 
 
 

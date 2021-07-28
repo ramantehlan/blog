@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 01:05:47 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jul 2021 17:43:36 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ramantehlan.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,9 +18,21 @@
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
       <guid>https://blog.ramantehlan.com/about/</guid>
-      <description>Hey Stranger/Friend,
-Welcome to my tiny corner on the internet!
-I am Raman Tehlan, a software engineer. Working at StockGro to democratize and socialize investing. I love designing and building distributed, scalable and high performing systems. I have previously worked at Google Summer of Code, Udacity, IBM Research etc. In my free time, I help run a data science community called PyData Delhi. Where we support an open-source data science ecosystem.</description>
+      <description>Hey! I&amp;rsquo;m Raman.
+Welcome to my tiny space on the internet.
+I am a software engineer currently working at Stockgro, helping build the distributed infrastructure to make investing social. I have previously worked at Google Summer of Code, Udacity, IBM Research etc.
+In my free time, I help run a data science community called PyData Delhi, where we support an open-source data science ecosystem.
+I plan to use this space to write about interesting things I encounter on my journey.</description>
+    </item>
+    
+    <item>
+      <title>Standup - Disagree - Commit</title>
+      <link>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</link>
+      <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</guid>
+      <description>Hero image by Desiray Green on Unsplash 
+I was recently part of a brainstorming session at work. We planned the session to think of new features in our application. We discussed many ideas, and naturally, I agreed and disagreed with a few of them. And I presented both of them to the team. When the meeting came to an end, we decided on some action items. It also had a few ideas I disagreed with, and I couldn&#39;t understand why we chose to go with them.</description>
     </item>
     
     <item>
@@ -65,6 +77,15 @@ I am Raman Tehlan, a software engineer. Working at StockGro to democratize and s
       <pubDate>Thu, 16 Jul 2020 17:59:09 +0530</pubDate>
       
       <guid>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Send notification in Elixir using Firebase and PubSub</title>
+      <link>https://blog.ramantehlan.com/store/cs/send-notification-in-elixir-using-firebase-and-pubsub/</link>
+      <pubDate>Wed, 10 Jun 2020 16:26:45 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/store/cs/send-notification-in-elixir-using-firebase-and-pubsub/</guid>
       <description></description>
     </item>
     

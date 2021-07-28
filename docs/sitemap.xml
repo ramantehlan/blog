@@ -9,21 +9,28 @@
   </url>
   
   <url>
-    <loc>https://blog.ramantehlan.com/post/2021/mathematics/probability/essence_of_probability/</loc>
-    <lastmod>2021-03-08T01:05:47+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.ramantehlan.com/</loc>
-    <lastmod>2021-03-08T01:05:47+05:30</lastmod>
+    <lastmod>2021-07-28T17:43:36+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.ramantehlan.com/post/</loc>
+    <lastmod>2021-07-28T17:43:36+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</loc>
+    <lastmod>2021-07-28T17:43:36+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/post/2021/mathematics/probability/essence_of_probability/</loc>
     <lastmod>2021-03-08T01:05:47+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -53,6 +60,20 @@
   <url>
     <loc>https://blog.ramantehlan.com/post/2020/gsoc/progress-report-2/</loc>
     <lastmod>2020-07-16T17:59:09+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/store/cs/send-notification-in-elixir-using-firebase-and-pubsub/</loc>
+    <lastmod>2020-06-14T16:26:45+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ramantehlan.com/store/</loc>
+    <lastmod>2020-06-14T16:26:45+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
@@ -94,13 +115,6 @@
   
   <url>
     <loc>https://blog.ramantehlan.com/store/data-mining/part1-introduction/</loc>
-    <lastmod>2020-04-07T00:00:19+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ramantehlan.com/store/</loc>
     <lastmod>2020-04-07T00:00:19+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

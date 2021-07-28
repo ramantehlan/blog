@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Send notification in Elixir using Firebase and PubSub - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="1st Progress report by Raman Tehlan on nteract-play project for Google Summer of Code" /><meta name="keywords" content="GSOC, raman tehlan, progress report, nteract-play, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.ramantehlan.com/store/cs/send-notification-in-elixir-using-firebase-and-pubsub/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Send notification in Elixir using Firebase and PubSub" />
+<meta property="og:description" content="1st Progress report by Raman Tehlan on nteract-play project for Google Summer of Code" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.ramantehlan.com/store/cs/send-notification-in-elixir-using-firebase-and-pubsub/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg" />
+<meta property="article:published_time" content="2020-06-10T16:26:45+05:30" />
+<meta property="article:modified_time" content="2020-06-14T16:26:45+05:30" />
+<meta itemprop="name" content="Send notification in Elixir using Firebase and PubSub">
+<meta itemprop="description" content="1st Progress report by Raman Tehlan on nteract-play project for Google Summer of Code">
+
+
+<meta itemprop="datePublished" content="2020-06-10T16:26:45&#43;05:30" />
+<meta itemprop="dateModified" content="2020-06-14T16:26:45&#43;05:30" />
+<meta itemprop="wordCount" content="74">
+
+  <meta itemprop="image" content="https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg"/>
+
+<meta name="twitter:title" content="Send notification in Elixir using Firebase and PubSub"/>
+<meta name="twitter:description" content="1st Progress report by Raman Tehlan on nteract-play project for Google Summer of Code"/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p><img src="https://user-images.githubusercontent.com/29037312/84971664-da7bfe00-b13a-11ea-8b2c-f019f9bcaf87.jpg"></p>
+
+<p style="text-align: justify;">
+Hi
+</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p style="text-align: justify;">
+I am enthused to build my ship as I code it away and get you on board in the process. In the coming days, I will be working on building components and finally integrating Github features in the project. I hope I can complete it on time, *fingers crossed*, so by the end of phase 1 we can have a working prototype for it.
+</p>
+
+<h1 id="acknowledgment">Acknowledgment</h1>
+
+<ul>
+<li>Hero image by <a href="https://unsplash.com/@alonsoreyes">Alonso Reyes</a> on <a href="https://unsplash.com/photos/LWFdBz4d6nE">Unsplash</a></li>
+</ul>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="ramantehlan/blog-comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.ramantehlan.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2021
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script><script>window.flowchartDiagramsOptions = { 'x': 0, 'y': 0, 'line-width':1.5, 'line-length':20, 'text-margin': 10, 'font-size': 12, 'font-color':'black', 'line-color': 'black', 'element-color': 'black', 'fill': 'white', 'yes-text': 'Yes', 'no-text': 'No', 'arrow-end': 'block', 'scale': 0.9 };</script><script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
