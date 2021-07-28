@@ -60,7 +60,7 @@ I decided to discuss this on a 1:1 with my mentor(He was also a part of the call
 </p>
 
 <p align="justify">
-The instance he told me about it, I had one of those aha moments. It is a fundamental team building principle. It can be hard to practice for some(especially if they hold strong opinions tightly bound). But if you can follow it, then it can work as solid glue for the organisation.
+The instance he told me about it, I had one of those "aha!" moments. It is a fundamental team building principle. It can be hard to practice for some(especially if they hold strong opinions tightly bound). But if you can follow it, then it can work as solid glue for the organisation.
 </p>
 
 <p align="justify">
