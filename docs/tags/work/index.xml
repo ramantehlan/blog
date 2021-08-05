@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>team-work on Official Blog of Raman Tehlan</title>
-    <link>https://blog.ramantehlan.com/categories/team-work/</link>
-    <description>Recent content in team-work on Official Blog of Raman Tehlan</description>
+    <title>work on Official Blog of Raman Tehlan</title>
+    <link>https://blog.ramantehlan.com/tags/work/</link>
+    <description>Recent content in work on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
     <lastBuildDate>Thu, 29 Jul 2021 17:43:36 +0530</lastBuildDate>
     
-	<atom:link href="https://blog.ramantehlan.com/categories/team-work/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.ramantehlan.com/tags/work/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://blog.ramantehlan.com/post/2021/parkinsons_law/</guid>
       <description>Hero image by Nathan Dumlao on Unsplash 
 Planning the timeline for a project is one of the hardest things to do. You might have years of experience, but you might still not get it correct. However, with experience, you do get very close to the exact turnaround time. Then, you realize that the best you can do is make the roadmap more adaptable to change. The reason it&#39;s so hard is, the roadmap of any project has so many undefined and unpredictable variables that you can never be sure about it.</description>
-    </item>
-    
-    <item>
-      <title>Standup - Disagree - Commit</title>
-      <link>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</link>
-      <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
-      
-      <guid>https://blog.ramantehlan.com/post/2021/standup-disagree-commit/</guid>
-      <description>Hero image by Desiray Green on Unsplash 
-I was recently part of a brainstorming session at work. We planned the session to think of new features in our application. We discussed many ideas, and naturally, I agreed and disagreed with a few of them. And I presented both of them to the team. When the meeting came to an end, we decided on some action items. It also had a few ideas I disagreed with, and I couldn&#39;t understand why we chose to go with them.</description>
     </item>
     
   </channel>

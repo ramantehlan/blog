@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Wed, 28 Jul 2021 17:43:36 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jul 2021 17:43:36 +0530</lastBuildDate>
     
 	<atom:link href="https://blog.ramantehlan.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,6 +23,16 @@ Welcome to my tiny space on the internet.
 I am a software engineer currently working at Stockgro, helping build the distributed infrastructure to make investing social. I have previously worked at Google Summer of Code, Udacity, IBM Research etc.
 In my free time, I help run a data science community called PyData Delhi, where we support an open-source data science ecosystem.
 I plan to use this space to write about interesting things I encounter on my journey.</description>
+    </item>
+    
+    <item>
+      <title>Parkinson&#39;s Law: Getting more things done, fast!</title>
+      <link>https://blog.ramantehlan.com/post/2021/parkinsons_law/</link>
+      <pubDate>Thu, 29 Jul 2021 17:43:36 +0530</pubDate>
+      
+      <guid>https://blog.ramantehlan.com/post/2021/parkinsons_law/</guid>
+      <description>Hero image by Nathan Dumlao on Unsplash 
+Planning the timeline for a project is one of the hardest things to do. You might have years of experience, but you might still not get it correct. However, with experience, you do get very close to the exact turnaround time. Then, you realize that the best you can do is make the roadmap more adaptable to change. The reason it&#39;s so hard is, the roadmap of any project has so many undefined and unpredictable variables that you can never be sure about it.</description>
     </item>
     
     <item>
