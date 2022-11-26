@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://blog.ramantehlan.com/sitemap.xml
+Sitemap: https://ramantehlan.github.io/blog/sitemap.xml

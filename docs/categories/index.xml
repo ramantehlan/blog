@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Official Blog of Raman Tehlan</title>
-    <link>https://blog.ramantehlan.com/categories/</link>
+    <link>https://ramantehlan.github.io/blog/categories/</link>
     <description>Recent content in Categories on Official Blog of Raman Tehlan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
     <lastBuildDate>Thu, 29 Jul 2021 17:43:36 +0530</lastBuildDate>
     
-	<atom:link href="https://blog.ramantehlan.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ramantehlan.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>law</title>
-      <link>https://blog.ramantehlan.com/categories/law/</link>
+      <link>https://ramantehlan.github.io/blog/categories/law/</link>
       <pubDate>Thu, 29 Jul 2021 17:43:36 +0530</pubDate>
       
-      <guid>https://blog.ramantehlan.com/categories/law/</guid>
+      <guid>https://ramantehlan.github.io/blog/categories/law/</guid>
       <description></description>
     </item>
     
     <item>
       <title>productivity</title>
-      <link>https://blog.ramantehlan.com/categories/productivity/</link>
+      <link>https://ramantehlan.github.io/blog/categories/productivity/</link>
       <pubDate>Thu, 29 Jul 2021 17:43:36 +0530</pubDate>
       
-      <guid>https://blog.ramantehlan.com/categories/productivity/</guid>
+      <guid>https://ramantehlan.github.io/blog/categories/productivity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>principle</title>
-      <link>https://blog.ramantehlan.com/categories/principle/</link>
+      <link>https://ramantehlan.github.io/blog/categories/principle/</link>
       <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
       
-      <guid>https://blog.ramantehlan.com/categories/principle/</guid>
+      <guid>https://ramantehlan.github.io/blog/categories/principle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>team</title>
-      <link>https://blog.ramantehlan.com/categories/team/</link>
+      <link>https://ramantehlan.github.io/blog/categories/team/</link>
       <pubDate>Wed, 28 Jul 2021 17:43:36 +0530</pubDate>
       
-      <guid>https://blog.ramantehlan.com/categories/team/</guid>
+      <guid>https://ramantehlan.github.io/blog/categories/team/</guid>
       <description></description>
     </item>
     
