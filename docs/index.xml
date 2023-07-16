@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Thu, 29 Jul 2021 17:43:36 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jul 2023 02:41:25 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,6 +23,16 @@ Welcome to my tiny space on the internet.
 I am a software engineer currently working at Stockgro, helping build the distributed infrastructure to make investing social. I have previously worked at Google Summer of Code, Udacity, IBM Research etc.
 In my free time, I help run a data science community called PyData Delhi, where we support an open-source data science ecosystem.
 I plan to use this space to write about interesting things I encounter on my journey.</description>
+    </item>
+    
+    <item>
+      <title>Development Setup with Ubuntu on ThinkPad T480</title>
+      <link>https://ramantehlan.github.io/blog/post/2023/work-setup/</link>
+      <pubDate>Mon, 17 Jul 2023 02:41:25 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2023/work-setup/</guid>
+      <description>After using Arch Linux for about 4 years, and various Linux distros like Mint and Debian before that, I have finally decided to settle with Ubuntu. I have been using Ubuntu for about 6 months now and it&amp;rsquo;s a great distro for Computer Engineering.
+Is it the best distro for development? I am not saying it&amp;rsquo;s perfect, it&amp;rsquo;s slow at times(especially snap apps), and it&amp;rsquo;s hard to back up and restore.</description>
     </item>
     
     <item>

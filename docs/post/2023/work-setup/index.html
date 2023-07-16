@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Development Setup with Ubuntu on ThinkPad T480 - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="Development Setup with Ubuntu used by Raman Tehlan" /><meta name="keywords" content="ubuntu, development, setup" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/work-setup/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Development Setup with Ubuntu on ThinkPad T480" />
+<meta property="og:description" content="Development Setup with Ubuntu used by Raman Tehlan" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/work-setup/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-07-17T02:41:25+05:30" />
+<meta property="article:modified_time" content="2023-07-17T02:41:25+05:30" />
+<meta itemprop="name" content="Development Setup with Ubuntu on ThinkPad T480">
+<meta itemprop="description" content="Development Setup with Ubuntu used by Raman Tehlan">
+
+
+<meta itemprop="datePublished" content="2023-07-17T02:41:25&#43;05:30" />
+<meta itemprop="dateModified" content="2023-07-17T02:41:25&#43;05:30" />
+<meta itemprop="wordCount" content="1072">
+
+
+
+<meta itemprop="keywords" content="setup," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="Development Setup with Ubuntu on ThinkPad T480"/>
+<meta name="twitter:description" content="Development Setup with Ubuntu used by Raman Tehlan"/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Development Setup with Ubuntu on ThinkPad T480</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-07-17 </span>
+        
+          <span class="more-meta"> 1072 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#is-it-the-best-distro-for-development">Is it the best distro for development?</a></li>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#arch-wiki">Arch Wiki</a>
+<ul>
+<li><a href="#cpu-throttling">CPU Throttling</a></li>
+<li><a href="#fingerprint-reader">Fingerprint Reader</a></li>
+<li><a href="#battery-optimization">Battery Optimization</a></li>
+</ul></li>
+<li><a href="#extensions-settigns">Extensions &amp; Settigns</a>
+<ul>
+<li><a href="#fonts">Fonts</a></li>
+<li><a href="#appearance">Appearance</a></li>
+<li><a href="#top-bar">Top Bar</a></li>
+<li><a href="#display">Display</a></li>
+<li><a href="#preload">Preload</a></li>
+</ul></li>
+<li><a href="#applications-packages">Applications &amp; Packages</a>
+<ul>
+<li><a href="#chrome">Chrome</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#bleachbit">Bleachbit</a></li>
+<li><a href="#font-manager">Font Manager</a></li>
+<li><a href="#zsh">ZSH</a></li>
+<li><a href="#vim">VIM</a></li>
+<li><a href="#tmux">Tmux</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#other-important-packages">Other Important Packages</a></li>
+<li><a href="#snap-packages">Snap Packages</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>After using Arch Linux for about 4 years, and various Linux distros like Mint and Debian before that, I have finally decided to settle with Ubuntu. I have been using Ubuntu for about 6 months now and it&rsquo;s a great distro for Computer Engineering.</p>
+
+<h1 id="is-it-the-best-distro-for-development">Is it the best distro for development?</h1>
+
+<p>I am not saying it&rsquo;s perfect, it&rsquo;s slow at times(especially snap apps), and it&rsquo;s hard to back up and restore. Linux in general is not very well supported by proprietary software vendors, as no official desktop apps are available for some of the most popular services like Notion(Which I use alot, and has apps for both Mac and Windows).</p>
+
+<p>Some might say that&rsquo;s not the philosophy of Linux, but I am not a purist. I believe in being productive and getting things done, in the most efficient way possible. Which also raises the question that why I am using Linux in the first place? which required a lot of tinkering and time investment.</p>
+
+<p>The reason I love Linux and still use it, instead of just using MacOS, which is a great OS too for developers(I use that for work). Is because it teaches you a lot about how computers work, and how to use them efficiently. It&rsquo;s a great learning experience, and it&rsquo;s fun. I loved it the first time I got my hands on it, and I still do.</p>
+
+<p>Well, let&rsquo;s come back to the topic. Ubuntu is <strong>stable</strong>, <strong>easy to use</strong>, comes with <strong>support for most of the hardware out of the box, has a huge community</strong>, and it&rsquo;s easy to find solutions to most of the problems you might face. Which makes it a great distro for daily use, and development for me.</p>
+
+<h1 id="hardware">Hardware</h1>
+
+<p>I use pretty modest hardware, and I don&rsquo;t do any heavy lifting on my machine. I mostly use it for writing code, and browsing the web. So, I don&rsquo;t need a lot of power. I have a <strong>Thinkpad T480, with 32GB RAM, 512GB SSD, Intel i7-8550U, and Nvidia MX150</strong>. I use the integrated graphics most of the time, and only use the Nvidia GPU when required.</p>
+
+<p><img src="../assets/thinkpad.jpg" width="100%" /></p>
+
+<h1 id="setup">Setup</h1>
+
+<p>I have installed Ubuntu 22.04 LTS on my machine, and I am using the default Gnome desktop environment.</p>
+
+<p>I try to keep most of the settings default and only change the things that I find not suitable for my workflow. I made no changes to GNOME settings, just switch to the dark mode.</p>
+
+<h2 id="arch-wiki">Arch Wiki</h2>
+
+<p>I am not using Arch Linux anymore, but I still use Arch Wiki for most things. It&rsquo;s the best documentation for Linux, and it&rsquo;s very well written.</p>
+
+<p>We will look at the compatibility of Linux with my hardware, and then we will install the required drivers and software. Here is the wiki for <a href="https://wiki.archlinux.org/title/Lenovo_ThinkPad_T480">Thinkpad T480</a>.</p>
+
+<h3 id="cpu-throttling">CPU Throttling</h3>
+
+<p>Thinkpad with Linux has throttling issues, and the CPU is not able to reach its full potential. We can fix this by installing <a href="https://github.com/erpalma/throttled"><code>throttled</code></a></p>
+
+<h3 id="fingerprint-reader">Fingerprint Reader</h3>
+
+<p>Thinkpad T480 has a fingerprint reader, which can be used to log in to the system. However, it&rsquo;s not supported by Ubuntu out of the box. You can find instructions on the wiki to fix this.</p>
+
+<h3 id="battery-optimization">Battery Optimization</h3>
+
+<p>Thinkpad T480 has two batteries, one internal and one external. The external battery is hot-swappable, which means you can remove it without shutting down the system.</p>
+
+<p>We will use <a href="https://wiki.archlinux.org/title/TLP"><code>tlp</code></a> to optimize the battery life. I did a recalibration of the battery to better estimate the battery life.</p>
+
+<h2 id="extensions-settigns">Extensions &amp; Settigns</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install gnome-shell-extensions gnome-tweaks gnome-shell-extension-manager -y</code></pre></td></tr></table>
+</div>
+</div>
+<p>I have installed the following extensions:
+- Clipboard Indicator
+- EasyScreenCast
+- Impatience
+- OpenWeather
+- Vitals
+- WinTile</p>
+
+<p>Post this, I go to tweaks and make the following changes:</p>
+
+<h3 id="fonts">Fonts</h3>
+
+<ul>
+<li>Interface Text: Nimbus Sans Regular 11</li>
+<li>Document Test: Sans Regular 11</li>
+<li>Monospace Text: Noto Mono Regular 11</li>
+<li>Legacy Window Titles: Nimbus Sans Bold 11</li>
+</ul>
+
+<blockquote>
+<p>Here, we don&rsquo;t need to install any fonts, as Ubuntu comes with all the fonts we need.</p>
+</blockquote>
+
+<h3 id="appearance">Appearance</h3>
+
+<ul>
+<li>Applications: Yaru-olive-dark</li>
+<li>Cursor: DMZ-Black</li>
+<li>Icons: Yaru-olive-dark</li>
+</ul>
+
+<h3 id="top-bar">Top Bar</h3>
+
+<ul>
+<li>Weekday: Enabled</li>
+<li>Date: Enabled</li>
+<li>Seconds: Enabled</li>
+</ul>
+
+<h3 id="display">Display</h3>
+
+<ul>
+<li>Add backup wallpapers to the list</li>
+<li>Night Light: Sunset to Sunrise <code>Enabled</code></li>
+</ul>
+
+<h3 id="preload">Preload</h3>
+
+<p>To speed up the boot time, we can enable preload.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install preload -y
+sudo systemctl <span class="nb">enable</span> preload</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="applications-packages">Applications &amp; Packages</h2>
+
+<h3 id="chrome">Chrome</h3>
+
+<p>I prefer to use Chrome instead of Chromium, as it allows me to sync my bookmarks and other data across devices.</p>
+
+<h3 id="git">Git</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  sudo apt install git -y
+  <span class="c1"># Post his copy the .gitconfig file from the repo to your home directory</span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Github SSH Setup</a></p>
+</blockquote>
+
+<h3 id="bleachbit">Bleachbit</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install bleachbit -y</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="font-manager">Font Manager</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install font-manager -y</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="zsh">ZSH</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install zsh -y
+
+sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+
+git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/romkatv/powerlevel10k.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.oh-my-zsh/custom</span><span class="si">}</span>/themes/powerlevel10k
+
+<span class="c1"># Post this, copy the .zshrc file from the repo to your home directory</span>
+
+<span class="c1"># Two plugins will need to be seperatly installed</span>
+- zsh-autosuggestions
+- zsh-syntax-highlighting</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="vim">VIM</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install vim -y
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+<span class="c1"># Post this, copy the .vimrc file from the repo to your home directory</span>
+<span class="c1"># Launch vim and run :PluginInstall</span>
+
+
+<span class="c1"># To work with YouCompleteMe</span>
+apt install build-essential cmake vim-nox python3-dev -y
+apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm -y
+<span class="nb">cd</span> ~/.vim/bundle/YouCompleteMe
+python3 install.py --all
+ </code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="tmux">Tmux</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  sudo apt-get install tmux
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  <span class="c1"># Post this, copy the .tmux.conf file from the repo to your home directory</span>
+  <span class="c1"># Then run the following command in tmux</span>
+  <span class="c1">#prefix(ctrl+b) + I [This will install all the plugins]</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="docker">Docker</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># https://docs.docker.com/engine/install/ubuntu/</span>
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+<span class="c1"># Post this, we also need to install docker Desktop</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="other-important-packages">Other Important Packages</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install curl htop neofetch -y
+
+<span class="c1"># Get Genymotion</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="snap-packages">Snap Packages</h3>
+
+<p>Snap isn&rsquo;t the best choice for Linux, as it&rsquo;s known to have a slow startup time. An alternative can be to use Flatpak. But that doesn&rsquo;t support auto-update. So, for now, I am living with Snap</p>
+
+<ul>
+<li>VLC</li>
+<li>Spotify</li>
+<li>Slack</li>
+<li>Pycharm-community</li>
+<li>postman</li>
+<li>ngrok</li>
+<li>miro</li>
+<li>kubectl</li>
+<li>kontena-lens</li>
+<li>helm</li>
+<li>heroku</li>
+<li>goland</li>
+<li>go</li>
+<li>drawio</li>
+<li>discord</li>
+<li>beekeeper-studio</li>
+</ul>
+
+<blockquote>
+<p>Some of the above packages will require login to sync data across devices.</p>
+</blockquote>
+
+<p>That&rsquo;s it, this is my setup. I will keep updating this post as I make changes to my setup.</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/blog/tags/setup/">setup</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2021/parkinsons_law/">
+            <span class="next-text nav-default">Parkinson&#39;s Law: Getting more things done, fast!</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
