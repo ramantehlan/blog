@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Reliable Scalable Maintainable Systems - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="Introduction As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?
+In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry." /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/data/reliable-scalable-maintainable-systems/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Reliable Scalable Maintainable Systems" />
+<meta property="og:description" content="Introduction As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?
+In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/data/reliable-scalable-maintainable-systems/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-07-18T01:29:21+05:30" />
+<meta property="article:modified_time" content="2023-07-18T01:29:21+05:30" />
+<meta itemprop="name" content="Reliable Scalable Maintainable Systems">
+<meta itemprop="description" content="Introduction As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?
+In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry.">
+
+
+<meta itemprop="datePublished" content="2023-07-18T01:29:21&#43;05:30" />
+<meta itemprop="dateModified" content="2023-07-18T01:29:21&#43;05:30" />
+<meta itemprop="wordCount" content="1105">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="Reliable Scalable Maintainable Systems"/>
+<meta name="twitter:description" content="Introduction As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?
+In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry."/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Reliable Scalable Maintainable Systems</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-07-18 </span>
+        
+          <span class="more-meta"> 1105 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#data-intensive-vs-compute-intensive">Data Intensive vs Compute Intensive</a>
+<ul>
+<li><a href="#data-intensive">Data Intensive</a></li>
+<li><a href="#compute-intensive">Compute Intensive</a></li>
+</ul></li>
+<li><a href="#reliable">Reliable</a>
+<ul>
+<li><a href="#hardware-failures">Hardware Failures</a>
+<ul>
+<li><a href="#how-do-we-handle-them"><em>How do we handle them?</em></a></li>
+</ul></li>
+<li><a href="#software-failures">Software Failures</a>
+<ul>
+<li><a href="#how-do-we-handle-them-1"><em>How do we handle them?</em></a></li>
+</ul></li>
+<li><a href="#human-errors">Human Errors</a>
+<ul>
+<li><a href="#how-do-we-handle-them-2"><em>How do we handle them?</em></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<p>As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?</p>
+
+<p>In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry.</p>
+
+<h2 id="data-intensive-vs-compute-intensive">Data Intensive vs Compute Intensive</h2>
+
+<p>Before we start, let&rsquo;s talk about the two types of systems we can build. Data Intensive and Compute Intensive.</p>
+
+<h3 id="data-intensive">Data Intensive</h3>
+
+<p>Data Intensive systems are the ones that deal with a lot of data. They are usually built to solve problems that require a lot of data to be stored, transferred and retrieve. For example:</p>
+
+<ul>
+<li>Store huge amounts of data, that&rsquo;s available across systems distributed all over the world, a <strong>database</strong>.</li>
+<li>Remembers the result of an expensive operation, so reading it again is fast. A <strong>cache</strong>.</li>
+<li>Allows searching through huge amounts of data, with keywords or filters. A <strong>search index</strong>.</li>
+<li>Transfer huge amounts of data, from one system to another. A <strong>message queue</strong>.</li>
+</ul>
+
+<p>All these Data Systems are categorized differently, but they all are very similar, in one way or another, they are dealing with a lot of data.</p>
+
+<h3 id="compute-intensive">Compute Intensive</h3>
+
+<p>Compute Intensive systems are the ones that deal with a lot of computation. For example, a system that processes images, a system that processes videos, or a system that processes text. These systems are usually built to solve problems that require a lot of computation to be done. For example:</p>
+
+<ul>
+<li>Machine Learning Models like CNN, RNN etc.</li>
+<li>Gaming and 3D Rendering Engines, like Unity, Unreal etc.</li>
+<li>High-Frequency Trading Systems, like Algo Trading etc.</li>
+<li>Video Encoding and Decoding Systems, like H.264, H.265 etc.</li>
+<li>Cryptography Systems, like Bitcoin etc.</li>
+<li>Web Scraping Systems, like Google Search etc.</li>
+<li>Weather Forecasting Systems.</li>
+<li>Data Mining Systems, like Google Maps etc.</li>
+<li>High-Performance Computing Systems, like Supercomputers etc.</li>
+<li>Engineering Simulations like FEA, CFD etc.</li>
+<li>Computer Vision Systems, like Self Driving Cars etc.</li>
+</ul>
+
+<p>All these Compute Systems are categorized differently, but they all are very similar, in one way or another, they are dealing with a lot of computation.</p>
+
+<p>In this, we focus on optimizing the algorithm and the code, to make it run faster. We also focus on parallelizing the code, to make it run on multiple cores and multiple machines. We also focus on optimizing the hardware, to make it run faster.</p>
+
+<h2 id="reliable">Reliable</h2>
+
+<p>Reliability is the ability of a system to work correctly under all circumstances. It should</p>
+
+<ul>
+<li>Handle failures and errors, and recover from them.</li>
+<li>Handle load and stress.</li>
+<li>Prevent any unauthorized access.</li>
+<li>Prevent any data loss or data corruption. Due to hardware failure, software failure, or human errors.</li>
+</ul>
+
+<p>There is a limit to how reliable we can make a system. We can&rsquo;t make a system 100% reliable. For example, if a meteor hits the earth, and destroys all the data centers, there is nothing we can do about it.</p>
+
+<p>However, let&rsquo;s say if internet lines connecting Asia with the rest of the world are cut, we can still make our system work. We can have a data backup and services in another region, and we can switch to them.</p>
+
+<p>There are many tests we can perform to check the reliability of a system. For example, we can do load testing, Chaos Moneky testing, and many more.</p>
+
+<p>Let&rsquo;s see all the failues that can happen, and how we can handle them.</p>
+
+<h3 id="hardware-failures">Hardware Failures</h3>
+
+<p>Hardware failures are the most common failures that can happen. They can be caused by many things, like</p>
+
+<ul>
+<li>Power outages.</li>
+<li>Overheating</li>
+<li>Physical damage to SSDs, RAMs, CPUs etc.</li>
+<li>SSDs or Hard Disks have a limited number of read and write cycles, and they can fail after that. MTTF(Mean Time To Failure) is a metric that tells us how long a hardware component will last.</li>
+</ul>
+
+<h4 id="how-do-we-handle-them"><em>How do we handle them?</em></h4>
+
+<ul>
+<li>We can have dual or triple power supplies, so if one fails, we can switch to the other.</li>
+<li>We can have cooling systems, so the hardware doesn&rsquo;t overheat.</li>
+<li>We can have hot-swappable CPUs, RAMs, SSDs etc. So if one fails, we can replace it with another one, without shutting down the system.</li>
+<li>Disks have RAID, which is a way to store data on multiple disks, so if one disk fails, we can still recover the data from the other disks.</li>
+</ul>
+
+<p>This can&rsquo;t guarantee that the system will never fail, but it will add redundancy to the system, and make it more reliable.</p>
+
+<h3 id="software-failures">Software Failures</h3>
+
+<p>Hardware failures have weak correlations, which means they don&rsquo;t happen together. If one disk fails, it doesn&rsquo;t mean the other will fail too. But software failures have strong correlations, which means they happen together. If one service fails, it can cause other services to fail too.</p>
+
+<ul>
+<li>A runtime process using too much memory, and causing other processes to crash.</li>
+<li>A slow database query, causes other queries to slow down too.</li>
+<li>A service that systems depend on, going down, causing other systems to go down too.
+<br /></li>
+</ul>
+
+<p>These failures are hard to handle, as they are not predictable. We can&rsquo;t predict when a service will go down, or when a query will be slow.</p>
+
+<h4 id="how-do-we-handle-them-1"><em>How do we handle them?</em></h4>
+
+<ul>
+<li>We can have a monitoring system, that monitors the health of all the services, and alerts us when something goes wrong.</li>
+<li>Thinking carefully about assumptions and interactions in the system, and making sure they are correct.</li>
+<li>Through testing, we can make sure that the system works correctly, and doesn&rsquo;t fail.</li>
+<li>Deep understanding of abstracted systems, like databases, caches, message queues etc. So we can use them correctly.</li>
+<li>Process Isolation, so if one process fails, it doesn&rsquo;t affect other processes.</li>
+<li>Process Restarting.</li>
+<li>Analysis of libraries and frameworks, to make sure they are reliable.</li>
+</ul>
+
+<h3 id="human-errors">Human Errors</h3>
+
+<p>Humans are the most unreliable part of the system. They can make mistakes, and cause the system to fail. We add a lot of complexity to the system, and that makes it hard to understand and maintain, hides bugs and errors, and makes it hard to test.</p>
+
+<h4 id="how-do-we-handle-them-2"><em>How do we handle them?</em></h4>
+
+<ul>
+<li>We can have a good onboarding process, so new people can understand the system easily.</li>
+<li>Well-defined processes, so people know what to do, and what not to do.</li>
+<li>APIs and admin interfaces with well-designed abstractions.</li>
+<li>Decouple the system, so that if one part fails, it doesn&rsquo;t affect the other parts.</li>
+<li>Test the system, so we can find bugs and errors.</li>
+<li>Telemetry, so we can monitor the system.</li>
+</ul>
+
+<p><img src="../../assets/data/chapter_1.webp" width="100%" /></p>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications</a></li>
+<li><a href="https://trunin.com/en/2021/12/designing-data-intensive-apps-part01/">Chater 1 Notes</a></li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/blog/post/2023/minikube/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Setup Minikube on Ubuntu 22.04 LTS</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/post/2023/work-setup/">
+            <span class="next-text nav-default">Development Setup with Ubuntu on ThinkPad T480</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

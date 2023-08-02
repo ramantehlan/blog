@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Mon, 17 Jul 2023 02:41:25 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 03 Aug 2023 01:47:56 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setup Minikube on Ubuntu 22.04 LTS</title>
+      <link>https://ramantehlan.github.io/blog/post/2023/minikube/</link>
+      <pubDate>Thu, 03 Aug 2023 01:47:56 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2023/minikube/</guid>
+      <description>I always wanted to have a home server, which I could ssh into from anywhere, and run my side projects on it. Last month I decided to create one, and I am documenting the process here.
+Hardware I had an old laptop lying around, which I decided to use as my home server. It&amp;rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&amp;rsquo;s working great.</description>
+    </item>
+    
+    <item>
+      <title>Reliable Scalable Maintainable Systems</title>
+      <link>https://ramantehlan.github.io/blog/post/2023/data/reliable-scalable-maintainable-systems/</link>
+      <pubDate>Tue, 18 Jul 2023 01:29:21 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2023/data/reliable-scalable-maintainable-systems/</guid>
+      <description>Introduction As Software/Computer Engineers we are often tasked with building systems that are reliable, scalable and maintainable. But what does that mean? How do we build such systems? What are the trade-offs? How do we decide what to optimize for?
+In this series of posts, I will try to answer just that. I will try to break it down into small philosophies and explain them in detail. I will also try to give examples from my own experience, and from the industry.</description>
+    </item>
     
     <item>
       <title>Development Setup with Ubuntu on ThinkPad T480</title>

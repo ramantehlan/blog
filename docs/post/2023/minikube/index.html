@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Setup Minikube on Ubuntu 22.04 LTS - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="I always wanted to have a home server, which I could ssh into from anywhere, and run my side projects on it. Last month I decided to create one, and I am documenting the process here.
+Hardware I had an old laptop lying around, which I decided to use as my home server. It&amp;rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&amp;rsquo;s working great." /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/minikube/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Setup Minikube on Ubuntu 22.04 LTS" />
+<meta property="og:description" content="I always wanted to have a home server, which I could ssh into from anywhere, and run my side projects on it. Last month I decided to create one, and I am documenting the process here.
+Hardware I had an old laptop lying around, which I decided to use as my home server. It&rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&rsquo;s working great." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/minikube/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-08-03T01:47:56+05:30" />
+<meta property="article:modified_time" content="2023-08-03T01:47:56+05:30" />
+<meta itemprop="name" content="Setup Minikube on Ubuntu 22.04 LTS">
+<meta itemprop="description" content="I always wanted to have a home server, which I could ssh into from anywhere, and run my side projects on it. Last month I decided to create one, and I am documenting the process here.
+Hardware I had an old laptop lying around, which I decided to use as my home server. It&rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&rsquo;s working great.">
+
+
+<meta itemprop="datePublished" content="2023-08-03T01:47:56&#43;05:30" />
+<meta itemprop="dateModified" content="2023-08-03T01:47:56&#43;05:30" />
+<meta itemprop="wordCount" content="541">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="Setup Minikube on Ubuntu 22.04 LTS"/>
+<meta name="twitter:description" content="I always wanted to have a home server, which I could ssh into from anywhere, and run my side projects on it. Last month I decided to create one, and I am documenting the process here.
+Hardware I had an old laptop lying around, which I decided to use as my home server. It&rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&rsquo;s working great."/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Setup Minikube on Ubuntu 22.04 LTS</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-08-03 </span>
+        
+          <span class="more-meta"> 541 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#software">Software</a></li>
+<li><a href="#installing-docker">Installing Docker</a></li>
+<li><a href="#installing-minikube">Installing Minikube</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>I always wanted to have a home server, which I could ssh into from
+anywhere, and run my side projects on it. Last month I decided to
+create one, and I am documenting the process here.</p>
+
+<h2 id="hardware">Hardware</h2>
+
+<p>I had an old laptop lying around, which I decided to use as my home server. It&rsquo;s ThinkPad T480, 16GB RAM, 512GB SSD, and i5 8th gen processor. I installed Ubuntu 22.04 LTS on it, and it&rsquo;s working great. Unfortunately, It doesn&rsquo;t have virtualization support, so I can&rsquo;t run VMs on it. But I can run containers, which is enough for my use case.</p>
+
+<h2 id="software">Software</h2>
+
+<p>I was going through different options for running containers, and I decided to go with Kubernetes. It&rsquo;s a great tool for running containers, and it&rsquo;s used by most of the big companies. However, instead of installing Kubernetes, I decided to run a development/learning on my server. This server isn&rsquo;t intended to be used in production anyway.</p>
+
+<p>There are many tools to create a k8s learning/development environment, Like Kind, Kubectl, or even Docker Desktop was an option.</p>
+
+<p>Docker Desktop however needs virtualization support, which my laptop doesn&rsquo;t have. So I thought of using Kind or Minikube, and I couldn&rsquo;t find any major difference between the two. Though, Minikube is more popular.</p>
+
+<h2 id="installing-docker">Installing Docker</h2>
+
+<p>You can find the instructions here: <a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+
+sudo install -m <span class="m">0755</span> -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+<span class="nb">echo</span> <span class="se">\
+</span><span class="se"></span>  <span class="s2">&#34;deb [arch=&#34;</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2">&#34; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+</span><span class="s2">  &#34;</span><span class="k">$(</span>. /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34; stable&#34;</span> <span class="p">|</span> <span class="se">\
+</span><span class="se"></span>  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="installing-minikube">Installing Minikube</h2>
+
+<p>You can find the instructions here: <a href="https://minikube.sigs.k8s.io/docs/start/">https://minikube.sigs.k8s.io/docs/start/</a>
+Minikube supports multiple drivers, like docker, kvm2, virtualbox, etc. I am using docker driver, as it&rsquo;s the only one which works on my laptop. Podman is experimental, KVM, VirtualBox, QEMU require virtualization support, which my laptop doesn&rsquo;t have. (I wish I had a better laptop :P)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">minikube config <span class="nb">set</span> driver docker</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">minikube start --alsologtostderr -v<span class="o">=</span><span class="m">1</span> --extra-config<span class="o">=</span>kubelet.resolve-conf<span class="o">=</span>/etc/resolv.conf --container-runtime<span class="o">=</span>containerd --cpus <span class="m">6</span> --memory <span class="m">14000</span>
+<span class="c1"># --alsologtostderr is optional, it&#39;s used to print logs to stdout</span>
+<span class="c1"># -v is used to set the log level, 1 is the lowest level, and 5 is the highest</span>
+<span class="c1"># --extra-config=kubelet.resolve-conf=/etc/resolv.conf is used to fix the DNS issue, which I was facingA</span>
+<span class="c1"># --container-runtime=containerd is used to set the container runtime to containerd, which is required for the docker driverA</span>
+<span class="c1"># --cpus 6 is used to set the number of CPUs to 6</span>
+<span class="c1"># --memory 14000 is used to set the memory to 14GB</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>That&rsquo;s all folks, that&rsquo;s all it takes to set up your mini Kubernetes cluster on your laptop. You can now use kubectl to interact with your cluster.</p>
+
+<p>I will talk about connecting to the k8s cluster from your local machine in the next post and connecting it to SSH, we will also set up a reverse proxy to access the k8s dashboard from outside the server.</p>
+
+<p>The plan is to eventually setup different projects on this server. Stay tuned for more updates.</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2023/data/reliable-scalable-maintainable-systems/">
+            <span class="next-text nav-default">Reliable Scalable Maintainable Systems</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
