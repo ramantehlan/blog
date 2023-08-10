@@ -1,13 +1,13 @@
 ---
-title: "Setup Minikube on Ubuntu 22.04 LTS"
+title: "Setup Minikube on Ubuntu 22.04 LTS without virtualization support"
 date: 2023-08-03T01:47:56+05:30
 lastmod: 2023-08-03T01:47:56+05:30
 draft: true
 keywords: []
-description: ""
-tags: []
+description: "Setup Minikube in Thinkpad  T480 without virtualization support"
+tags: ["kubernetes", "minikube"]
 categories: []
-author: ""
+author: "Raman Tehlan"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
