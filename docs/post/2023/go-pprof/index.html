@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Go Server Profiling with pprof - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&amp;rsquo;s alright with you, we can begin.
+What is profiling? It&amp;rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources." /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/go-pprof/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Go Server Profiling with pprof" />
+<meta property="og:description" content="Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&rsquo;s alright with you, we can begin.
+What is profiling? It&rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/go-pprof/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-08-10T23:46:11+05:30" />
+<meta property="article:modified_time" content="2023-08-10T23:46:11+05:30" />
+<meta itemprop="name" content="Go Server Profiling with pprof">
+<meta itemprop="description" content="Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&rsquo;s alright with you, we can begin.
+What is profiling? It&rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources.">
+
+
+<meta itemprop="datePublished" content="2023-08-10T23:46:11&#43;05:30" />
+<meta itemprop="dateModified" content="2023-08-10T23:46:11&#43;05:30" />
+<meta itemprop="wordCount" content="1034">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="Go Server Profiling with pprof"/>
+<meta name="twitter:description" content="Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&rsquo;s alright with you, we can begin.
+What is profiling? It&rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources."/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Go Server Profiling with pprof</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-08-10 </span>
+        
+          <span class="more-meta"> 1034 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-profiling">What is profiling?</a></li>
+<li><a href="#integration">Integration</a>
+<ul>
+<li><a href="#install-the-pprof-package">Install the pprof package</a></li>
+<li><a href="#import-the-package">Import the package</a></li>
+<li><a href="#add-pprof-server">Add pprof server</a></li>
+</ul></li>
+<li><a href="#profiling">Profiling</a>
+<ul>
+<li><a href="#visualize-the-profile">Visualize the profile</a></li>
+<li><a href="#web-output">Web Output</a></li>
+<li><a href="#image-output">Image Output</a></li>
+<li><a href="#profiles">Profiles</a></li>
+<li><a href="#query-parameters">Query Parameters</a></li>
+</ul></li>
+<li><a href="#understanding-the-result">Understanding the result</a>
+<ul>
+<li><a href="#memory-profiling">Memory Profiling</a></li>
+<li><a href="#cpu-profiling">CPU Profiling</a></li>
+<li><a href="#trace-profiling">Trace Profiling</a></li>
+<li><a href="#goroutine-profiling">Goroutine Profiling</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&rsquo;s alright with you, we can begin.</p>
+
+<h2 id="what-is-profiling">What is profiling?</h2>
+
+<p>It&rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources. <code>pprof</code> is a profiling tool for a Golang application.</p>
+
+<h2 id="integration">Integration</h2>
+
+<h3 id="install-the-pprof-package">Install the pprof package</h3>
+
+<p>First, we will need to download the package.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go get -u github.com/google/pprof</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="import-the-package">Import the package</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">import</span> <span class="nx">_</span> <span class="s">&#34;net/http/pprof&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="add-pprof-server">Add pprof server</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">go</span> <span class="kd">func</span><span class="p">(){</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;localhost:6060&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">))</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Post this, just start your application.</p>
+
+<h2 id="profiling">Profiling</h2>
+
+<p>Now, that we have integrated pprof, we can start profiling our application.</p>
+
+<h3 id="visualize-the-profile">Visualize the profile</h3>
+
+<p>To visualize the out, we will need graphviz and gv installed. Since I am on ubuntu, I will use apt to install them.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install graphviz gv</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="web-output">Web Output</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go tool pprof -http<span class="o">=</span>:9090 http://localhost:8080/debug/pprof/profile</code></pre></td></tr></table>
+</div>
+</div>
+<p>This will start a server on port 9090. You can access the profiling data on this server. Further, you can replace the <code>profile</code> with any of the profile descriptions mentioned above.</p>
+
+<h3 id="image-output">Image Output</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go tool pprof -png http://localhost:8080/debug/pprof/profile &gt; profile.png</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="profiles">Profiles</h3>
+
+<ul>
+<li><strong>allocs</strong>: A sampling of all past memory allocations</li>
+<li><strong>block</strong>: Stack traces that led to blocking on synchronization primitives</li>
+<li><strong>cmdline</strong>: The command line invocation of the current program</li>
+<li><strong>goroutine</strong>: Stack traces of all current goroutines</li>
+<li><strong>heap</strong>: A sampling of memory allocations of live objects. You can specify the gc GET parameter to run GC before taking the heap sample.</li>
+<li><strong>mutex</strong>: Stack traces of holders of contended mutexes</li>
+<li><strong>profile</strong>: CPU profile. You can specify the duration in the seconds GET parameter. After you get the profile file, use the go tool pprof command to investigate the profile.</li>
+<li><strong>threadcreate</strong>: Stack traces that led to the creation of new OS threads</li>
+<li><strong>trace</strong>: A trace of execution of the current program. You can specify the duration in the seconds GET parameter. After you get the trace file, use the go tool trace command to investigate the trace.</li>
+</ul>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p>You can also pass following queries to the url, parameters can be passed via GET query params:</p>
+
+<ul>
+<li><strong>debug=N</strong> (all profiles): response format: N = 0: binary (default), N &gt; 0: plaintext</li>
+<li><strong>gc=N</strong> (heap profile): N &gt; 0: run a garbage collection cycle before profiling</li>
+<li><strong>seconds=N</strong> (allocs, block, goroutine, heap, mutex, threadcreate profiles): return a delta profile</li>
+<li><strong>seconds=N</strong> (cpu (profile), trace profiles): profile for the given duration.</li>
+</ul>
+
+<h2 id="understanding-the-result">Understanding the result</h2>
+
+<p>The result is a graph of the function calls. The nodes are the functions and the edges are the calls between them. The width of the edges is proportional to the number of calls or the amount of resources used by or between the call.</p>
+
+<h3 id="memory-profiling">Memory Profiling</h3>
+
+<p>Here are the kind of allocations that are tracked:</p>
+
+<ul>
+<li><strong>inuse_space</strong> - inuse_space is the number of bytes in use by the runtime to manage the heap. This includes all stack and global variables, as well as memory used by the runtime itself.</li>
+<li><strong>inuse_object</strong> - inuse_object is the number of allocated objects. This includes all objects allocated by the runtime and all objects allocated by application code.</li>
+<li><strong>alloc_space</strong>  - alloc_space is the total number of bytes allocated on the heap.</li>
+<li><strong>alloc_objects</strong> - alloc_objects is the total number of allocated objects.</li>
+</ul>
+
+<p>You can either track allocs or heap. The difference between the two is that allocs track all allocations, while heap tracks only live objects.</p>
+
+<p>Below is a sample memory profile for <code>inuse_space</code>:</p>
+
+<p><img src="../assets/pprof/memory.png" width="100%" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go tool pprof -http<span class="o">=</span>:9090 http://localhost:8080/debug/pprof/allocs</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="cpu-profiling">CPU Profiling</h3>
+
+<p>The CPU profile shows how much time is spent in each function. The time is divided into two categories: total time and own time. Total time is the amount of time spent executing the function, including the time spent in functions it calls. Own time is the amount of time spent executing the function, not including the time spent in functions it calls.</p>
+
+<p>Below is a sample CPU profile:
+<img src="../assets/pprof/cpu.png" width="120%" /></p>
+
+<blockquote>
+<p>I personally don&rsquo;t prefer graph view, I prefer the flame graph. Even the <code>top</code> is helpful.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go tool pprof -http<span class="o">=</span>:9090 http://localhost:8080/debug/pprof/profile<span class="se">\?</span>seconds<span class="se">\=</span><span class="m">10</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="trace-profiling">Trace Profiling</h3>
+
+<p>The trace profile shows the execution of the program in a fixed time interval, with one line per goroutine. The fields are:</p>
+
+<ul>
+<li><strong>Start</strong>: The start time of the goroutine.</li>
+<li><strong>Duration</strong>: The total amount of time the goroutine was executing on a processor.</li>
+<li><strong>Idle</strong>: The total amount of time the goroutine was waiting for a processor.</li>
+<li><strong>User</strong>: The total amount of time spent executing user code in this goroutine.</li>
+<li><strong>Sys</strong>: The total amount of time spent executing system code in this goroutine.</li>
+<li><strong>Blocks</strong>: The number of times this goroutine blocked waiting for a lock.</li>
+<li><strong>Sched</strong>: The number of times this goroutine was voluntarily scheduled off the processor.</li>
+<li><strong>GC</strong>: The number of times this goroutine was involuntarily scheduled off the processor for garbage collection.</li>
+<li><strong>Sweep</strong>: The number of times this goroutine was involuntarily scheduled off the processor to sweep memory.</li>
+<li><strong>Duty</strong>: The total time this goroutine was scheduled on the processor.</li>
+<li><strong>P</strong>: The processor number.</li>
+<li><strong>Wait</strong>: The number of nanoseconds this goroutine spent blocked in a syscall.</li>
+<li><strong>IO</strong>: The number of nanoseconds this goroutine spent blocked in an I/O syscall.</li>
+<li><strong>Syscall</strong>: The number of nanoseconds this goroutine spent blocked in a non-IO syscall.</li>
+<li><strong>Err</strong>: The number of nanoseconds this goroutine spent blocked in a syscall that returned an error.</li>
+</ul>
+
+<h3 id="goroutine-profiling">Goroutine Profiling</h3>
+
+<p>The goroutine profile shows the stack traces of all current goroutines. The first line of each stack trace is the stack of the goroutine that requested the stack trace; subsequent lines are the stacks of the parents of that goroutine. The goroutines are listed in order of creation, with the newest goroutines at the bottom of the list.</p>
+
+<p><img src="../assets/pprof/goroutine.png" width="100%" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go tool pprof -http<span class="o">=</span>:9090 http://localhost:8080/debug/pprof/goroutine</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this article helped you understand how to profile your Go application. I have tried to cover the basics of profiling. There are a lot of other things that you can do with pprof. I would recommend you to read the resources mentioned below to learn more about pprof.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+<li><a href="https://blog.golang.org/pprof">Profiling Go Programs</a></li>
+<li><a href="https://golang.org/pkg/net/http/pprof/">pprof Package</a></li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2023/minikube/">
+            <span class="next-text nav-default">Setup Minikube on Ubuntu 22.04 LTS without virtualization support</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

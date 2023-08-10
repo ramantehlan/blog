@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Raman Tehlan</copyright>
-    <lastBuildDate>Thu, 03 Aug 2023 01:47:56 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 10 Aug 2023 23:46:11 +0530</lastBuildDate>
     
 	<atom:link href="https://ramantehlan.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,7 +26,17 @@ I plan to use this space to write about interesting things I encounter on my jou
     </item>
     
     <item>
-      <title>Setup Minikube on Ubuntu 22.04 LTS</title>
+      <title>Go Server Profiling with pprof</title>
+      <link>https://ramantehlan.github.io/blog/post/2023/go-pprof/</link>
+      <pubDate>Thu, 10 Aug 2023 23:46:11 +0530</pubDate>
+      
+      <guid>https://ramantehlan.github.io/blog/post/2023/go-pprof/</guid>
+      <description>Before I start writing about profiling, I would like to mention that this blog is not a comprehensive guide to profiling. This is more like a quick start guide for me. I am sharing it here, just in case it helps someone else.If it&amp;rsquo;s alright with you, we can begin.
+What is profiling? It&amp;rsquo;s a way to measure the performance of your application. It can be used to find bottlenecks in CPU, memeory, and other resources.</description>
+    </item>
+    
+    <item>
+      <title>Setup Minikube on Ubuntu 22.04 LTS without virtualization support</title>
       <link>https://ramantehlan.github.io/blog/post/2023/minikube/</link>
       <pubDate>Thu, 03 Aug 2023 01:47:56 +0530</pubDate>
       
