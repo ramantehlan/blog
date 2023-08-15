@@ -5,9 +5,9 @@ lastmod: 2023-08-10T23:46:11+05:30
 draft: true
 keywords: []
 description: ""
-tags: []
-categories: []
-author: ""
+tags: ["go"]
+categories: ["go", "profiling"]
+author: "Raman Tehlan"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed

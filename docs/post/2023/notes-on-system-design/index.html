@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Notes on System Design - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="Here are some notes on system design. I will keep updating this post as I learn more about system design.
+Requirement Gathering The first step is to understand what is it that you are building, who are you building it for, and how are they going to use it?
+The best way to do the requirement gathering is by asking questions. Here are some questions that you can ask:" /><meta name="keywords" content="Raman Tehlan, Blog, Personal Page, ramantehlan" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/notes-on-system-design/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="Notes on System Design" />
+<meta property="og:description" content="Here are some notes on system design. I will keep updating this post as I learn more about system design.
+Requirement Gathering The first step is to understand what is it that you are building, who are you building it for, and how are they going to use it?
+The best way to do the requirement gathering is by asking questions. Here are some questions that you can ask:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/notes-on-system-design/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-08-13T23:54:30+05:30" />
+<meta property="article:modified_time" content="2023-08-13T23:54:30+05:30" />
+<meta itemprop="name" content="Notes on System Design">
+<meta itemprop="description" content="Here are some notes on system design. I will keep updating this post as I learn more about system design.
+Requirement Gathering The first step is to understand what is it that you are building, who are you building it for, and how are they going to use it?
+The best way to do the requirement gathering is by asking questions. Here are some questions that you can ask:">
+
+
+<meta itemprop="datePublished" content="2023-08-13T23:54:30&#43;05:30" />
+<meta itemprop="dateModified" content="2023-08-13T23:54:30&#43;05:30" />
+<meta itemprop="wordCount" content="1267">
+
+
+
+<meta itemprop="keywords" content="system-design," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="Notes on System Design"/>
+<meta name="twitter:description" content="Here are some notes on system design. I will keep updating this post as I learn more about system design.
+Requirement Gathering The first step is to understand what is it that you are building, who are you building it for, and how are they going to use it?
+The best way to do the requirement gathering is by asking questions. Here are some questions that you can ask:"/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Notes on System Design</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-08-13 </span>
+        <div class="post-category">
+            <a href="/blog/categories/system-design/"> system-design </a>
+            </div>
+          <span class="more-meta"> 1267 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#requirement-gathering">Requirement Gathering</a>
+<ul>
+<li><a href="#functional-requirements">Functional Requirements</a></li>
+<li><a href="#non-functional-requirements">Non-Functional Requirements</a>
+<ul>
+<li><a href="#back-of-the-envelope-calculation">Back-of-the-envelope calculation</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#design">Design</a>
+<ul>
+<li><a href="#high-level-design">High-Level Design</a></li>
+<li><a href="#api-design">API Design</a></li>
+<li><a href="#low-level-design">Low-Level Design</a></li>
+<li><a href="#database-design">Database Design</a>
+<ul>
+<li><a href="#conceptual-design">Conceptual Design</a></li>
+<li><a href="#logical-design">Logical Design</a></li>
+<li><a href="#physical-design">Physical Design</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#scale">Scale</a></li>
+<li><a href="#availability">Availability</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>Here are some notes on system design. I will keep updating this post as I learn more about system design.</p>
+
+<h1 id="requirement-gathering">Requirement Gathering</h1>
+
+<p>The first step is to understand what is it that you are building, who are you building it for, and how are they going to use it?</p>
+
+<p>The best way to do the requirement gathering is by asking questions. Here are some questions that you can ask:</p>
+
+<ul>
+<li>What is the problem that we are trying to solve?</li>
+<li>What feature can we build to solve this problem?</li>
+<li>Who are we building this feature for?</li>
+<li>How are they going to use this feature?<br /></li>
+<li>How many users are going to use this feature?</li>
+</ul>
+
+<p>Based on the questions above, you can start building the requirements. There are two types of requirements:</p>
+
+<ul>
+<li>Functional Requirements</li>
+<li>Non-Functional Requirements</li>
+</ul>
+
+<h2 id="functional-requirements">Functional Requirements</h2>
+
+<p>Functional requirements are the features that you are going to build. Different features will have different requirements. For example, if you are building a chat application, you will need to build a feature that allows users to send messages to each other. If you are building a social media application, you will need to build a feature that allows users to post content on the platform.</p>
+
+<h2 id="non-functional-requirements">Non-Functional Requirements</h2>
+
+<p>Non-Functional Requirements are the requirements expected from the system by default. Like, the system should be available <sup>24</sup>&frasl;<sub>7</sub>, the system should be able to handle 1000 requests per second, etc.</p>
+
+<h3 id="back-of-the-envelope-calculation">Back-of-the-envelope calculation</h3>
+
+<p>Before we start designing, we should answer the following questions:</p>
+
+<ul>
+<li><p>How many users are going to use this feature?</p>
+
+<ul>
+<li>Let&rsquo;s say you have 10M daily active users. Assume they are going to use this feature 10 times a day on average. That means you will have 100M requests per day. This means you will have 100M/24/60/60 = 1157 requests per second.</li>
+</ul></li>
+
+<li><p>Where are the users located?</p>
+
+<ul>
+<li>This helps you decide the location of your servers. If your users are located in the US, you can have your servers in the US. If your users are located in India, you can have your servers in India.</li>
+</ul></li>
+</ul>
+
+<h1 id="design">Design</h1>
+
+<p>Once you have the requirements, you can start designing the system. There are multiple design phases:</p>
+
+<ul>
+<li>High-Level Design</li>
+<li>API Design</li>
+<li>Low-Level Design</li>
+<li>Database Design</li>
+</ul>
+
+<h2 id="high-level-design">High-Level Design</h2>
+
+<p>High-Level Design is the first step in the design process. It is used to define the architecture of the system. It is also used to define the components of the system.</p>
+
+<p>This is usually deciding the services or components that you are going to build or technologies you are going to use. It&rsquo;s going to evolve as you go through the design process.</p>
+
+<p>The choices you make in this step depend on multiple factors like the requirements, the team, the budget, etc. Here are some important things to consider</p>
+
+<ul>
+<li>How are different components going to communicate with each other?<br />
+
+<ul>
+<li>REST API</li>
+<li>Messaging Queue</li>
+<li>RPC</li>
+<li>WebSockets</li>
+<li>Dumping data to a file and reading it from another component</li>
+<li>etc.</li>
+</ul></li>
+<li>Database type: There are many kinds of databases you can choose from based on the requirements.
+
+<ul>
+<li>NoSQL</li>
+<li>SQL</li>
+<li>Key-Value</li>
+<li>Graph</li>
+<li>Time-Series</li>
+<li>In-Memory Databases</li>
+</ul></li>
+<li>Read vs Write ratio
+
+<ul>
+<li>If the read-to-write ratio is high, you can use a caching layer to improve the performance or you can read from secondary databases.</li>
+<li>If the write-to-read ratio is high, you can use a database that is optimized for writing.</li>
+</ul></li>
+<li>Do you need a caching layer?
+
+<ul>
+<li>If you have a high read-to-write ratio, and the frequency of reads is high, you can use a caching layer to improve the performance.</li>
+</ul></li>
+</ul>
+
+<h2 id="api-design">API Design</h2>
+
+<p>API Design is the second step in the design process. It is used to define the API of the system. It is also used to define the endpoints of the system. We also define the request and response format in this step. We also define other aspects of the API like authentication, authorization, language etc.</p>
+
+<h2 id="low-level-design">Low-Level Design</h2>
+
+<p>This is the third step in the design process. It is used to define the internal architecture of the system. It is also used to define the internal components of the system. We also define the internal communication between the components in this step.</p>
+
+<p>The Algorithm which we pick has a huge impact on the performance of the system. We should pick the algorithm based on the requirements. Having a deep understanding of the algorithm is very important, as it&rsquo;s going to help you pick the right algorithm for the right problem. Every algorithm has a trade-off, some have better time complexity, some have better space complexity, some are better for small data, some are better for large data, some are better for sorted data, some are better for unsorted data, etc.</p>
+
+<h2 id="database-design">Database Design</h2>
+
+<p>This is the fourth step in the design process. It is used to define the database schema of the system. It is also used to define the tables of the system. We also define the relationships between the tables in this step.</p>
+
+<p>Just like an algorithm, a database schema has trade-offs too, if insert into a database that requires locking, it will be more expensive than the one which doesn&rsquo;t. You also need to consider that eventually, your schema will evolve, so you need to pick a schema that is easy to enhance.</p>
+
+<p>There are 3 steps to designing a database schema:</p>
+
+<h3 id="conceptual-design">Conceptual Design</h3>
+
+<p>It is a high-level design of different tables/collections. It is used to define different dependencies.</p>
+
+<h3 id="logical-design">Logical Design</h3>
+
+<p>It is a mid-level design, where we decide the rough schema of data to be stored in them, keys to link them, etc. If you are going to have a nested list(requires locking on update) or a separate row/document for each item(requires more space), etc.</p>
+
+<h3 id="physical-design">Physical Design</h3>
+
+<p>It is a low-level design, where we decide the exact schema of data to be stored in them, their datatypes, etc. It might make a huge difference if the key is an int32 or int64, or if the value is a string or a byte array. It also sets the limitations of the data point, like min and max values you can store in them, or the timezone you pick.</p>
+
+<p>You can also define the indexes in this step. Based on the access policy, you can define the indexes. If you are going to access the data based on a key, you can define a primary key. If you are going to access the data based on a range, you can define a secondary index. If you are going to access the data based on a combination of keys, you can define a composite index.</p>
+
+<h1 id="scale">Scale</h1>
+
+<p>Scale is done based on the expected load, in terms of QPS(Queries Per Second), number of connections, etc.</p>
+
+<h1 id="availability">Availability</h1>
+
+<p>Availability is done based on where your users are located and put the servers or caching layer near them, in their zones. Then you also gotta have backup servers in case the primary servers go down, having multiple zones also helps with this.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>System Design is a vast concept, and it&rsquo;s not possible to cover everything in a single article. There are many more things to consider, like security, monitoring, backups, reconciliation of different components, etc. This is just a high-level overview of the system design process.</p>
+
+<p>Also note, this is not the only way to design a system, there are many other ways to design a system. This is just one of the ways to design a system.</p>
+
+<p>I will try to come back and update this blog as I discover more important concepts, in the mean time, you also continue reading more about it, and do share if you find something important.</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li>[Microservices] Primer](<a href="https://microservices.io/">https://microservices.io/</a>)</li>
+<li><a href="https://github.com/InterviewReady/system-design-resources">System Design Resources</a></li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/blog/tags/system-design/">system-design</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2023/go-pprof/">
+            <span class="next-text nav-default">Go Server Profiling with pprof</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
