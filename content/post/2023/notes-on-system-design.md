@@ -163,5 +163,5 @@ I will try to come back and update this blog as I discover more important concep
 
 # References
 
-- [Microservices] Primer](https://microservices.io/)
+- [Microservices] (https://microservices.io/)
 - [System Design Resources](https://github.com/InterviewReady/system-design-resources)

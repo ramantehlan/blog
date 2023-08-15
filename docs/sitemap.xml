@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/tags/system-design/</loc>
+    <loc>https://ramantehlan.github.io/blog/categories/system-design/</loc>
     <lastmod>2023-08-13T23:54:30+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/system-design/</loc>
+    <loc>https://ramantehlan.github.io/blog/tags/system-design/</loc>
     <lastmod>2023-08-13T23:54:30+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/tags/go/</loc>
+    <loc>https://ramantehlan.github.io/blog/categories/go/</loc>
     <lastmod>2023-08-10T23:46:11+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/go/</loc>
+    <loc>https://ramantehlan.github.io/blog/tags/go/</loc>
     <lastmod>2023-08-10T23:46:11+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
