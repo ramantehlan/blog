@@ -9,6 +9,27 @@
   </url>
   
   <url>
+    <loc>https://ramantehlan.github.io/blog/post/2023/k6/</loc>
+    <lastmod>2023-09-27T22:50:16+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/</loc>
+    <lastmod>2023-09-27T22:50:16+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramantehlan.github.io/blog/post/</loc>
+    <lastmod>2023-09-27T22:50:16+05:30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ramantehlan.github.io/blog/categories/</loc>
     <lastmod>2023-08-13T23:54:30+05:30</lastmod>
     <changefreq>always</changefreq>
@@ -17,20 +38,6 @@
   
   <url>
     <loc>https://ramantehlan.github.io/blog/post/2023/notes-on-system-design/</loc>
-    <lastmod>2023-08-13T23:54:30+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/</loc>
-    <lastmod>2023-08-13T23:54:30+05:30</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ramantehlan.github.io/blog/post/</loc>
     <lastmod>2023-08-13T23:54:30+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -58,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/categories/go/</loc>
+    <loc>https://ramantehlan.github.io/blog/tags/go/</loc>
     <lastmod>2023-08-10T23:46:11+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ramantehlan.github.io/blog/tags/go/</loc>
+    <loc>https://ramantehlan.github.io/blog/categories/go/</loc>
     <lastmod>2023-08-10T23:46:11+05:30</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

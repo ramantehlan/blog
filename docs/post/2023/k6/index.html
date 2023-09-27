@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>K6 - Load Testing Microservices in Kubernetes &amp; Prometheus - Official Blog of Raman Tehlan</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Raman Tehlan" /><meta name="description" content="K6 Load Testing for Microservices in Kubernetes & Prometheus" /><meta name="keywords" content="k6, load testing, microservices, Kubernetes, Prometheus" />
+
+
+
+<meta name="google-site-verification" content="oegxVvjA3e52gy8vB8O0tuhV6wBDxc5wh6MjdhhMujY" />
+
+
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
+
+
+<link rel="canonical" href="https://ramantehlan.github.io/blog/post/2023/k6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="manifest" href="/blog/manifest.json">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
+
+<link href="/blog/dist/even.f09e9cdc.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<meta property="og:title" content="K6 - Load Testing Microservices in Kubernetes &amp; Prometheus" />
+<meta property="og:description" content="K6 Load Testing for Microservices in Kubernetes &amp; Prometheus" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ramantehlan.github.io/blog/post/2023/k6/" />
+
+<meta property="og:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg" />
+<meta property="article:published_time" content="2023-09-27T22:50:16+05:30" />
+<meta property="article:modified_time" content="2023-09-27T22:50:16+05:30" />
+<meta itemprop="name" content="K6 - Load Testing Microservices in Kubernetes &amp; Prometheus">
+<meta itemprop="description" content="K6 Load Testing for Microservices in Kubernetes &amp; Prometheus">
+
+
+<meta itemprop="datePublished" content="2023-09-27T22:50:16&#43;05:30" />
+<meta itemprop="dateModified" content="2023-09-27T22:50:16&#43;05:30" />
+<meta itemprop="wordCount" content="1223">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/29037312/79056188-50fb0c00-7c71-11ea-9d29-cacc670486e0.jpg"/>
+
+<meta name="twitter:title" content="K6 - Load Testing Microservices in Kubernetes &amp; Prometheus"/>
+<meta name="twitter:description" content="K6 Load Testing for Microservices in Kubernetes &amp; Prometheus"/>
+<meta name="twitter:site" content="@ramantehlan"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">Raman Tehlan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/blog/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/blog/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/blog/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Raman Tehlan</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/blog/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/blog/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">K6 - Load Testing Microservices in Kubernetes &amp; Prometheus</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-09-27 </span>
+        
+          <span class="more-meta"> 1223 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-k6">What is K6?</a></li>
+<li><a href="#pre-requisites">Pre-requisites</a></li>
+<li><a href="#running-locally">Running Locally</a>
+<ul>
+<li><a href="#writing-test-cases">Writing Test Cases</a></li>
+<li><a href="#running-test-cases">Running Test Cases</a></li>
+</ul></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#setup-kubernetes">Setup Kubernetes</a></li>
+<li><a href="#setup-prometheus-grafana">Setup Prometheus &amp; Grafana</a></li>
+<li><a href="#setup-k6">Setup K6</a></li>
+</ul></li>
+<li><a href="#running-on-k8s">Running on K8s</a>
+<ul>
+<li><a href="#create-test-file-configmap">Create test file configmap</a></li>
+<li><a href="#create-k6-crd">Create k6 CRD</a></li>
+<li><a href="#apply-the-k6-crd">Apply the k6 CRD</a></li>
+</ul></li>
+<li><a href="#k6-ci-cd-pipeline">K6 CI/CD Pipeline</a>
+<ul>
+<li><a href="#action-file">Action File</a></li>
+<li><a href="#repo-structure">Repo Structure</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+<li><a href="#resources">Resources</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>In this blog, I will talk about how I load test microservices in Kubernetes using K6 and Prometheus. We will use Prometheus to collect metrics from the microservices and k6 and display the metrics in Grafana.</p>
+
+<p>Please note, that this blog is for advanced readers and assumes you already understand the above technologies, if you don&rsquo;t, please read about them first. I won&rsquo;t be covering the basics of these technologies in this blog. I will talk about the setup of k6 and the practices I use to run the tests.</p>
+
+<h2 id="what-is-k6">What is K6?</h2>
+
+<p>K6 is an Open-Source and Hosted service for Load Testing Services. It&rsquo;s created by Grafana Labs and is written in golang, the test cases are written in Javascript. You can read more about it <a href="https://k6.io/open-source/">here</a>.</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<ul>
+<li>Promethius &amp; Grafana: This blog assumes you understand how Prometheus and Grafana work. If you don&rsquo;t know about them, you can read about them <a href="https://Prometheus.io/docs/visualization/grafana/">here</a>.</li>
+<li>Kubernetes: This blog assumes you understand how Kubernetes works. If you don&rsquo;t know about them, you can read about them <a href="https://Kubernetes.io/">here</a>.</li>
+</ul>
+
+<h2 id="running-locally">Running Locally</h2>
+
+<h3 id="writing-test-cases">Writing Test Cases</h3>
+
+<p>K6 test cases are written in Javascript. You can take help from the <a href="https://k6.io/docs/">documentation</a>.</p>
+
+<p>We will start with a very simple test case, where we will hit a single endpoint of a microservice and check the response code.</p>
+
+<p>You can read more about the logic of the test cases from the documentation and examples.</p>
+
+<ul>
+<li><p><strong>test_CASE_NAME.js</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">http</span> <span class="nx">from</span> <span class="s1">&#39;k6/http&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">check</span><span class="p">,</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;k6&#39;</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+<span class="nx">stages</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="s1">&#39;5m&#39;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span> <span class="mi">2000</span><span class="p">},</span>
+    <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="s1">&#39;10m&#39;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span> <span class="mi">2000</span><span class="p">},</span>
+<span class="p">],</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="k">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&#34;http://domain/v1/home&#34;</span>
+<span class="k">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="s1">&#39;Bearer TOKEN&#39;</span>
+    <span class="p">},</span>
+<span class="p">};</span>
+<span class="k">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">params</span><span class="p">);</span>
+<span class="nx">check</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;status was 200&#39;</span><span class="o">:</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">})</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h3 id="running-test-cases">Running Test Cases</h3>
+
+<ul>
+<li><p>Run a simple test</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">k6 run test_CASE_NAME.js</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Run a test with options and save the results</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">k6 run --vus <span class="m">10</span> --duration 30s --out <span class="nv">json</span><span class="o">=</span>test_CASE_NAME.json test_CASE_NAME.js </code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Run the test and save the results to Prometheus</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">k6 run -o experimental-Prometheus-rw test_CASE_NAME.js </code></pre></td></tr></table>
+</div>
+</div>
+<p>Here, it will save the results to Prometheus, and it pushes data to <code>http://localhost:9090/api/v1/write</code>. You can read about it <a href="https://k6.io/docs/results-output/real-time/Prometheus-remote-write/">here</a>.</p></li>
+</ul>
+
+<p>You can then use Grafan to visualize the results. You can find the <a href="https://gist.github.com/ramantehlan/46fbb522e37c032e40e6dc4fc6ae14f4">dashboard here</a></p>
+
+<blockquote>
+<p>Please note, that this is experimental right now and might change in the future.</p>
+</blockquote>
+
+<h2 id="setup">Setup</h2>
+
+<p>Now, we will run our tests in Kubernetes. We will set up Prometheus and Grafana to collect the metrics from k6 and microservices. We will also set up a k6-operator to run the tests in Kubernetes.</p>
+
+<h3 id="setup-kubernetes">Setup Kubernetes</h3>
+
+<p>You can either host it on any cloud provider or use the <a href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a> to run it locally. I will be using minikube for this blog. Here is the blog to set  up minikube on Ubuntu 20.04: <a href="https://ramantehlan.github.io/blog/post/2023/minikube/">Setup Minikube on Ubuntu 20.04</a></p>
+
+<h3 id="setup-prometheus-grafana">Setup Prometheus &amp; Grafana</h3>
+
+<p>I use Kube-Prometheus-Stack Helm Chart to setup Prometheus and Grafana. Below are the steps to set Prometheus and Grafana using Helm Chart:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Add the Prometheus-community repo</span>
+helm repo add Prometheus-community https://Prometheus-community.github.io/helm-charts
+helm repo update
+
+<span class="c1"># Install the kube-Prometheus-stack helm chart</span>
+helm install Prometheus Prometheus-community/kube-Prometheus-stack</code></pre></td></tr></table>
+</div>
+</div>
+<p>You can optionally provide a value file and provide the version of the chart you wanna deploy. With that, you can provide it with a domain name and it will setup the ingress for you. It assumes you already have a ingress controller setup.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">helm upgrade --install Prometheus Prometheus-community/kube-Prometheus-stack -f VALUE-FILE.yaml -n monitoring --version<span class="o">=</span><span class="m">37</span>.2.0</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="setup-k6">Setup K6</h3>
+
+<p>K6 can run locally or in a docker container, which runs inside the Kubernetes cluster.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/grafana/k6-operator <span class="o">&amp;&amp;</span> <span class="nb">cd</span> k6-operator
+make deploy</code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>Ideally, deploy the k6-operator in a different namespace than the namespace you are running your tests in or the namespace you are running your microservices in or Prometheus in.</p>
+</blockquote>
+
+<h2 id="running-on-k8s">Running on K8s</h2>
+
+<h3 id="create-test-file-configmap">Create test file configmap</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Create a configmap for the test cases</span>
+kubectl create configmap test_CASE_NAME --from-file<span class="o">=</span>test_CASE_NAME.js -n NAMESPACE
+
+<span class="c1"># Check if the configmap is created</span>
+kubectl describe configmap test_CASE_NAME -n NAMESPACE</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="create-k6-crd">Create k6 CRD</h3>
+
+<p>Create a k6 CRD file, which will run the test cases in Kubernetes.</p>
+
+<ul>
+<li><p><strong>test_k6.yaml</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">apiVersion<span class="p">:</span><span class="w"> </span>k6.io/v1alpha1<span class="w">
+</span><span class="w"></span>kind<span class="p">:</span><span class="w"> </span>K6<span class="w">
+</span><span class="w"></span>metadata<span class="p">:</span><span class="w">
+</span><span class="w"></span>name<span class="p">:</span><span class="w"> </span>load-test<span class="w">
+</span><span class="w"></span>spec<span class="p">:</span><span class="w">
+</span><span class="w"></span>parallelism<span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span><span class="w"></span>arguments<span class="p">:</span><span class="w"> </span>--out<span class="w"> </span>experimental-Prometheus-rw<span class="w">
+</span><span class="w"></span>script<span class="p">:</span><span class="w">
+</span><span class="w"></span>configMap<span class="p">:</span><span class="w">
+</span><span class="w">  </span>name<span class="p">:</span><span class="w"> </span>load-test<span class="w">
+</span><span class="w">  </span>file<span class="p">:</span><span class="w"> </span>test_rhino.js<span class="w">
+</span><span class="w"></span>runner<span class="p">:</span><span class="w">
+</span><span class="w"></span>env<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>K6_Prometheus_RW_SERVER_URL<span class="w">
+</span><span class="w">    </span>value<span class="p">:</span><span class="w"> </span>http<span class="p">:</span>//kube-Prometheus-stack-Prometheus.monitoring.svc.cluster.local<span class="p">:</span><span class="m">9090</span>/api/v1/write</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>Here, we are passing the experimental Prometheus output flag, <code>--out experimental-Prometheus-rw</code>, to save the results to Prometheus.</p>
+
+<p>Also note, we are replacing a env variable, <code>K6_Prometheus_RW_SERVER_URL</code>, from its default value of <code>http://localhost:9090/api/v1/write</code> and replaceing it with the Prometheus URL, in this case, locally running in the cluster. You can also use the domain name of Prometheus, if you have setup the ingress for it.</p>
+
+<h3 id="apply-the-k6-crd">Apply the k6 CRD</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Apply the k6 crd file</span>
+kubectl apply -f test_k6.yaml -n NAMESPACE</code></pre></td></tr></table>
+</div>
+</div>
+<p>This will deploy k6 dockers in NAMESPACE, which will run the test_CASE_NAME.js file. You can check the logs of the k6 pods to see the results of the test cases and the metrics.</p>
+
+<h2 id="k6-ci-cd-pipeline">K6 CI/CD Pipeline</h2>
+
+<p>This is probably the key takeaway from this blog. How do we make the test cases run automatically? How do we make sure the team has access to the test cases, and abstract the k6 setup to make it easy?</p>
+
+<p>I keep all the test cases in a central place, accessible to the team, in my case Github. Then use a CI/CD pipeline, to deploy my test cases automatically. I use Github Actions to deploy the k6 test cases. But, you can use any CI/CD tool you want.</p>
+
+<h3 id="action-file">Action File</h3>
+
+<ul>
+<li><p><strong>.github/workflows/k6.yaml</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">name<span class="p">:</span><span class="w"> </span>Deploy-Test<span class="w">
+</span><span class="w"></span>on<span class="p">:</span><span class="w">
+</span><span class="w"></span>push<span class="p">:</span><span class="w">
+</span><span class="w"></span>branches<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w">
+</span><span class="w"></span>env<span class="p">:</span><span class="w">
+</span><span class="w"></span>GPID<span class="p">:</span><span class="w"> </span><span class="cp">******</span><span class="w">
+</span><span class="w"></span>GKE_ZONE<span class="p">:</span><span class="w"> </span><span class="cp">******</span><span class="w">
+</span><span class="w"></span>GKE_CLUSTER<span class="p">:</span><span class="w"> </span><span class="cp">******</span><span class="w">
+</span><span class="w"></span>GITHUB_SHA<span class="p">:</span><span class="w"> </span><span class="cp">******</span><span class="w">
+</span><span class="w"></span>CA_FILE<span class="p">:</span><span class="w"> </span>test_CASE_NAME.js<span class="w">
+</span><span class="w"></span>jobs<span class="p">:</span><span class="w">
+</span><span class="w"></span>setup-build-publish-deploy<span class="p">:</span><span class="w">
+</span><span class="w"></span>name<span class="p">:</span><span class="w"> </span>setup-build-publish-deploy<span class="w">
+</span><span class="w"></span>runs-on<span class="p">:</span><span class="w"> </span>ubuntu-latest<span class="w">
+</span><span class="w"></span>steps<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Checkout<span class="w"> </span>Repo<span class="w">
+</span><span class="w">    </span>uses<span class="p">:</span><span class="w"> </span>actions/checkout@v2<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>id<span class="p">:</span><span class="w"> </span>include-google-actions<span class="w">
+</span><span class="w">    </span>uses<span class="p">:</span><span class="w"> </span>google-github-actions/auth@v1<span class="w">
+</span><span class="w">    </span>with<span class="p">:</span><span class="w">
+</span><span class="w">      </span>credentials_json<span class="p">:</span><span class="w"> </span>${{<span class="w"> </span>secrets.GCP_CREDENTIALS_QA<span class="w"> </span>}}<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>setup-GCLOUD<span class="w">
+</span><span class="w">    </span>uses<span class="p">:</span><span class="w"> </span>google-github-actions/setup-gcloud@v1<span class="w">
+</span><span class="w">    </span>with<span class="p">:</span><span class="w">
+</span><span class="w">      </span>install_components<span class="p">:</span><span class="w"> </span><span class="s1">&#39;gke-gcloud-auth-plugin&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>yq<span class="w">
+</span><span class="w">    </span>run<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64</span><span class="w">
+</span><span class="w">      </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/yq<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Delete<span class="w"> </span>old<span class="w"> </span>k6s-test<span class="w">
+</span><span class="w">    </span>id<span class="p">:</span><span class="w"> </span>delete<span class="w">
+</span><span class="w">    </span>run<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      export USE_GKE_GCLOUD_AUTH_PLUGIN=True</span><span class="w">
+</span><span class="w">      </span>gcloud<span class="w"> </span>container<span class="w"> </span>clusters<span class="w"> </span>get-credentials<span class="w"> </span>$GKE_CLUSTER<span class="w"> </span>--zone<span class="w"> </span>$GKE_ZONE<span class="w"> </span>--project<span class="w"> </span>$GPID<span class="w">
+</span><span class="w">      </span>kubectl<span class="w"> </span>delete<span class="w"> </span>k6s.k6.io<span class="w"> </span>load-test<span class="w"> </span>-n<span class="w"> </span>NAMESPACE<span class="w">
+</span><span class="w">    </span>continue-on-error<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Deploy<span class="w">
+</span><span class="w">    </span>id<span class="p">:</span><span class="w"> </span>extract<span class="w">
+</span><span class="w">    </span>run<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      export USE_GKE_GCLOUD_AUTH_PLUGIN=True</span><span class="w">
+</span><span class="w">      </span>gcloud<span class="w"> </span>container<span class="w"> </span>clusters<span class="w"> </span>get-credentials<span class="w"> </span>$GKE_CLUSTER<span class="w"> </span>--zone<span class="w"> </span>$GKE_ZONE<span class="w"> </span>--project<span class="w"> </span>$GPID<span class="w">
+</span><span class="w">      </span>FIELD_VALUE=$(yq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.spec.script.configMap.file&#39;</span><span class="w"> </span>$CA_FILE)<span class="w">
+</span><span class="w">      </span>kubectl<span class="w"> </span>create<span class="w"> </span>configmap<span class="w"> </span>load-test<span class="w"> </span>--from-file=k6/$FIELD_VALUE<span class="w"> </span>--dry-run=client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>-n<span class="w"> </span>NAMESPACE<span class="w"> </span>|<span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span><span class="sd">-
+</span><span class="sd">      kubectl apply -f $CA_FILE -n NAMESPACE</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>Here is the what&rsquo;s happening in the above file:
+- Checkout the repo
+- Setup Google Cloud
+- Install yq
+  - It&rsquo;s used to read the value of the file from the k6 CRD file
+- Delete the old k6 CRD
+  - This is optional, but I prefer to delete the old CRD before deploying the new one.
+- Deploy the new k6 CRD
+  - We first create the configmap for the test cases and then apply the k6 CRD file.</p>
+
+<p>This is a basic setup, to get started, but similar setup can be made with other CI/CD tools as well. You can also configure it to run multiple test cases.</p>
+
+<p>Also note, run load-testing only in the QA or Stage environment.</p>
+
+<h3 id="repo-structure">Repo Structure</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.
+├── k6
+│   ├── k6
+│   ├── test_CASE_NAME.js
+│   └── test_CASE_NAME_2.js
+└── test_config.yaml</pre></td></tr></table>
+</div>
+</div>
+<h3 id="conclusion">Conclusion</h3>
+
+<p>This is how I run load testing in Kubernetes. I hope you find this blog useful. If you have any questions, please feel free to reach out to me on <a href="https://twitter.com/ramantehlan">Twitter</a> or <a href="https://www.linkedin.com/in/ramantehlan/">LinkedIn</a>.</p>
+
+<p>This is a very basic setup, and you can extend it to run multiple test cases, run it in multiple environments, and also run it in parallel.</p>
+
+<p>Thank you for reading.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+<li><a href="https://k6.io/">K6</a></li>
+<li><a href="https://github.com/grafana/k6-learn">K6-Learn</a></li>
+<li><a href="https://k6.io/docs/examples/tutorials/get-started-with-k6/">Test Cases Docs</a></li>
+<li><a href="https://github.com/grafana/k6/tree/master/examples">Examples</a></li>
+<li><a href="https://github.com/grafana/awesome-k6">Awesome-k6</a></li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/post/2023/notes-on-system-design/">
+            <span class="next-text nav-default">Notes on System Design</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+
+    </footer>
+  </article>
+<form style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/ramantehlan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ramantehlan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to my newsletter</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+<div class="social-links">
+      <a href="https://twitter.com/ramantehlan" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/ramantehlan" class="iconfont icon-github" title="github"></a>
+  <a href="https://ramantehlan.github.io/blog/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+
+<div class="copyright">
+
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+  
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/blog/dist/even.701c53df.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
